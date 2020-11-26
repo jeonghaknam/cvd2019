@@ -1,0 +1,5094 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>Corona2019 (COVID-19) 韩国数据报告</title>
+	<meta property="og:type" content="website"> 
+    <meta property="og:title" content="Corona2019 (COVID-19) 韩国数据报告">
+    <meta property="og:description" content="新型冠状病毒肺炎(COVID-19)世界各国的统计数据和新闻，并提供实时信息">
+    <meta property="og:image" content="https://cvd2019.kr/static/images/cnogimage.jpg">
+    <meta property="og:url" content="https://cvd2019.kr">
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+	<script type="text/javascript" src="/static/js/set_root.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/navigation.css">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+	<section class="et-slide" id="tab-top"></section>
+	<div class="main_wrap">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<a class="logo"><img src="/static/images/logo.png" alt="cvd2019 logo" title="新型冠状病毒肺炎(COVID-19) 韩国数据报告"></a>
+					<div class="language">
+						<div class="dropdown">
+						  <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+						    语言
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu dropdown-menu-xs dropdown-menu-left">
+						    <li><a href="https://cvd2019.kr" target="_blank">韩国</a></li>
+						    <li><a href="/static/enindex.html" target="_blank">美国</a></li>
+						  </ul>
+						</div>
+					</div>
+					<div class="page-header">
+					  <h1>新型冠状病毒肺炎(COVID-19)<br />韩国数据报告</h1>
+					  	<h3>最后更新时间: 2020년 11월 26일 8:21 오후
+					  		<button type="button" class="btn btn-xs" onClick="document.location.reload()">
+						  	<span>↻</span>
+							</button>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="center">
+			<div class="top_info container">
+				<h1>全世界疫情</h1>
+				<div class="row world">
+					<div class="col-xs-6">
+						<span>现有确诊</span><br />
+						<strong style="color:#ff6f72;">17244860</strong><br />
+						<b>昨日<em style="color: red;" id="numberColor">203054</em></b>
+					</div>
+					<div class="col-xs-6">
+						<span>累计治愈</span><br />
+						<strong style="color: #10aeb5;">42160807</strong><br />
+						<b>昨日<em style="color: #10aeb5;">+796692</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>累计确诊</span><br />
+						<strong style="color: #e83132;">60834776</strong><br />
+						<b>昨日<em>+1020584</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>死亡率</span><br />
+						<strong style="color: #476da0;">3.3%</strong><br />
+					</div>
+					<div class="col-xs-4">
+						<span>累计死亡</span><br />
+						<strong style="color: #4d5054;">1429109</strong><br />
+						<b>昨日<em>+20838</em></b>
+					</div>
+				</div>
+
+				<h1>韩国</h1>
+				<div class="row Country">
+					<div class="col-xs-4">
+						<span>现有确诊</span><br />
+						<strong style="color:#ff6f72;" >4853</strong><br />
+						<b>昨日<em style="color: red;" id="numberColor">732</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>境外输入</span><br />
+						<strong style="color: #476da0;">4504</strong><br />
+						<b>昨日<em>+ 0</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>累计治愈</span><br />
+						<strong style="color: #10aeb5;">26950</strong><br />
+						<b>昨日<em>+228</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>累计确诊</span><br />
+						<strong style="color: #e83132;">32318</strong><br />
+						<b>昨日<em>+965</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>死亡率</span><br />
+						<strong style="color: #e86d48;">1.9%</strong><br />
+					</div>
+					<div class="col-xs-4">
+						<span>累计死亡</span><br />
+						<strong style="color: #4d5054;">515</strong><br />
+						<b>昨日<em>+5</em></b>
+					</div>
+				</div>
+				<div class="description" style="text-align: center;">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="/static/images/question.png" alt="说明">
+						<span>&nbsp;&nbsp;数据说明</span>
+					</button>
+
+					<div class="modal fade bs-example-modal-sm bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					  	<div class="modal-dialog modal-dialog-centered" role="document">
+					  		<div class="modal-content">
+					  	 		<div class="modal-header">
+							        <h4 class="modal-title">数据说明</h4>
+							    </div>
+
+							  	<div class="modal-body">
+							  		<p>* 昨日+ = 比前一天增加</p>
+							  		<p>* 死亡率(%) = 累计死亡/(累计死亡+累计治愈)</p>
+							  		<p>* 现有确诊 = 累计确诊 - 累计治愈 - 累计死亡</p>
+							  		<p>* 境外输入 = 海外入境 确诊患者</p>
+                                    <p>* 韩国数据是根据 韩国疾病控制与预防中心(KCDC) 新闻稿为标准。</p>
+									<p>有关详情信息，请参阅主页底部的出处。</p>
+							  	</div>
+							  	<div class="modal-footer">
+					        		<button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+					      		</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="breadcrumb">
+				<section class="et-hero-tabs" >
+				    <div class="et-hero-tabs-container">
+				        <a class="et-hero-tab" href="#tab-es6">世界疫情</a>
+				        <a class="et-hero-tab" href="#tab-flexbox">韩国疫情</a>
+				        <a class="et-hero-tab" href="#tab-react">预防守则</a>
+				        <a class="et-hero-tab" href="#tab-angular">新闻</a>
+				        <a class="et-hero-tab" href="#tab-top">↑TOP</a>
+				        <span class="et-hero-tab-slider"></span>
+				    </div>
+				</section>
+
+
+				<!-- Main -->
+				<main class="et-main">
+				    <section class="et-slide" id="tab-es6">
+				    	<div class="world">
+					        <h1 style="text-align: center;">世界疫情</h1>
+					        <div id="worldmap" style="height:13rem; border:0px solid #ccc;padding:0px;position: relative;">
+					        </div>
+
+					        <div class="TabBox">
+								<table class="data-table" width="100%">
+								  <thead>
+								    <tr>
+								      <th class="nosort">国家</th>
+								      <th>现有</th>
+								      <th>累计确诊</th>
+								      <th>治愈</th>
+								      <th>死亡</th>
+								      <th>死亡率</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">None</td>
+								      <td data-order="7">7<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="9">9<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">美国</td>
+								      <td data-order="5063561">5063561<br />
+								      	<span style="color: red;" id="numberColor">83471</span>
+								      </td>
+								      <td data-order="13139882">13139882<br />
+								      	<span>+337965</span>
+								      </td>
+								      <td data-order="7808059">7808059<br />
+								      	<span>+250376</span>
+								      </td>
+								      <td data-order="268262">268262<br />
+								      	<span>+4118</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">印度</td>
+								      <td data-order="452306">452306<br />
+								      	<span style="color: red;" id="numberColor">11152</span>
+								      </td>
+								      <td data-order="9266705">9266705<br />
+								      	<span>+72723</span>
+								      </td>
+								      <td data-order="8679138">8679138<br />
+								      	<span>+60693</span>
+								      </td>
+								      <td data-order="135261">135261<br />
+								      	<span>+878</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴西</td>
+								      <td data-order="483252">483252<br />
+								      	<span style="color: red;" id="numberColor">7719</span>
+								      </td>
+								      <td data-order="6166898">6166898<br />
+								      	<span>+76701</span>
+								      </td>
+								      <td data-order="5512847">5512847<br />
+								      	<span>+67752</span>
+								      </td>
+								      <td data-order="170799">170799<br />
+								      	<span>+1230</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">俄罗斯</td>
+								      <td data-order="464436">464436<br />
+								      	<span style="color: red;" id="numberColor">-2690</span>
+								      </td>
+								      <td data-order="2187990">2187990<br />
+								      	<span>+49162</span>
+								      </td>
+								      <td data-order="1685492">1685492<br />
+								      	<span>+50821</span>
+								      </td>
+								      <td data-order="38062">38062<br />
+								      	<span>+1031</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">法国</td>
+								      <td data-order="1962927">1962927<br />
+								      	<span style="color: red;" id="numberColor">20091</span>
+								      </td>
+								      <td data-order="2170097">2170097<br />
+								      	<span>+25437</span>
+								      </td>
+								      <td data-order="156552">156552<br />
+								      	<span>+3960</span>
+								      </td>
+								      <td data-order="50618">50618<br />
+								      	<span>+1386</span>
+								      </td>
+								      <td>24.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">西班牙</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1622632">1622632<br />
+								      	<span>+15727</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="44037">44037<br />
+								      	<span>+906</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">英国</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1557007">1557007<br />
+								      	<span>+18213</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="56533">56533<br />
+								      	<span>+695</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">意大利</td>
+								      <td data-order="791697">791697<br />
+								      	<span style="color: red;" id="numberColor">-6689</span>
+								      </td>
+								      <td data-order="1480874">1480874<br />
+								      	<span>+25852</span>
+								      </td>
+								      <td data-order="637149">637149<br />
+								      	<span>+31819</span>
+								      </td>
+								      <td data-order="52028">52028<br />
+								      	<span>+722</span>
+								      </td>
+								      <td>7.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿根廷</td>
+								      <td data-order="135390">135390<br />
+								      	<span style="color: red;" id="numberColor">1681</span>
+								      </td>
+								      <td data-order="1390388">1390388<br />
+								      	<span>+15757</span>
+								      </td>
+								      <td data-order="1217284">1217284<br />
+								      	<span>+13484</span>
+								      </td>
+								      <td data-order="37714">37714<br />
+								      	<span>+592</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">哥伦比亚</td>
+								      <td data-order="60172">60172<br />
+								      	<span style="color: red;" id="numberColor">-431</span>
+								      </td>
+								      <td data-order="1270991">1270991<br />
+								      	<span>+16012</span>
+								      </td>
+								      <td data-order="1174959">1174959<br />
+								      	<span>+16062</span>
+								      </td>
+								      <td data-order="35860">35860<br />
+								      	<span>+381</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">墨西哥</td>
+								      <td data-order="168853">168853<br />
+								      	<span style="color: red;" id="numberColor">6114</span>
+								      </td>
+								      <td data-order="1070487">1070487<br />
+								      	<span>+21129</span>
+								      </td>
+								      <td data-order="798037">798037<br />
+								      	<span>+13344</span>
+								      </td>
+								      <td data-order="103597">103597<br />
+								      	<span>+1671</span>
+								      </td>
+								      <td>11.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">德国</td>
+								      <td data-order="294096">294096<br />
+								      	<span style="color: red;" id="numberColor">-10214</span>
+								      </td>
+								      <td data-order="985604">985604<br />
+								      	<span>+29799</span>
+								      </td>
+								      <td data-order="676100">676100<br />
+								      	<span>+39400</span>
+								      </td>
+								      <td data-order="15408">15408<br />
+								      	<span>+613</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">秘鲁</td>
+								      <td data-order="33985">33985<br />
+								      	<span style="color: red;" id="numberColor">-286</span>
+								      </td>
+								      <td data-order="954459">954459<br />
+								      	<span>+3902</span>
+								      </td>
+								      <td data-order="884747">884747<br />
+								      	<span>+4102</span>
+								      </td>
+								      <td data-order="35727">35727<br />
+								      	<span>+86</span>
+								      </td>
+								      <td>3.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">波兰</td>
+								      <td data-order="430675">430675<br />
+								      	<span style="color: red;" id="numberColor">-9360</span>
+								      </td>
+								      <td data-order="941112">941112<br />
+								      	<span>+32046</span>
+								      </td>
+								      <td data-order="494869">494869<br />
+								      	<span>+40152</span>
+								      </td>
+								      <td data-order="15568">15568<br />
+								      	<span>+1254</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">伊朗</td>
+								      <td data-order="222572">222572<br />
+								      	<span style="color: red;" id="numberColor">5483</span>
+								      </td>
+								      <td data-order="894385">894385<br />
+								      	<span>+13843</span>
+								      </td>
+								      <td data-order="625606">625606<br />
+								      	<span>+7891</span>
+								      </td>
+								      <td data-order="46207">46207<br />
+								      	<span>+469</span>
+								      </td>
+								      <td>6.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">南非</td>
+								      <td data-order="37857">37857<br />
+								      	<span style="color: red;" id="numberColor">261</span>
+								      </td>
+								      <td data-order="775502">775502<br />
+								      	<span>+5743</span>
+								      </td>
+								      <td data-order="716444">716444<br />
+								      	<span>+5249</span>
+								      </td>
+								      <td data-order="21201">21201<br />
+								      	<span>+233</span>
+								      </td>
+								      <td>2.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">乌克兰</td>
+								      <td data-order="348077">348077<br />
+								      	<span style="color: red;" id="numberColor">10722</span>
+								      </td>
+								      <td data-order="677189">677189<br />
+								      	<span>+29213</span>
+								      </td>
+								      <td data-order="317395">317395<br />
+								      	<span>+18037</span>
+								      </td>
+								      <td data-order="11717">11717<br />
+								      	<span>+454</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">比利时</td>
+								      <td data-order="512321">512321<br />
+								      	<span style="color: red;" id="numberColor">4218</span>
+								      </td>
+								      <td data-order="564967">564967<br />
+								      	<span>+5065</span>
+								      </td>
+								      <td data-order="36569">36569<br />
+								      	<span>+525</span>
+								      </td>
+								      <td data-order="16077">16077<br />
+								      	<span>+322</span>
+								      </td>
+								      <td>30.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">智利</td>
+								      <td data-order="8774">8774<br />
+								      	<span style="color: red;" id="numberColor">-348</span>
+								      </td>
+								      <td data-order="544092">544092<br />
+								      	<span>+1005</span>
+								      </td>
+								      <td data-order="520180">520180<br />
+								      	<span>+1346</span>
+								      </td>
+								      <td data-order="15138">15138<br />
+								      	<span>+7</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">伊拉克</td>
+								      <td data-order="58047">58047<br />
+								      	<span style="color: red;" id="numberColor">113</span>
+								      </td>
+								      <td data-order="542187">542187<br />
+								      	<span>+2438</span>
+								      </td>
+								      <td data-order="472054">472054<br />
+								      	<span>+2270</span>
+								      </td>
+								      <td data-order="12086">12086<br />
+								      	<span>+55</span>
+								      </td>
+								      <td>2.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">印度尼西亚</td>
+								      <td data-order="66752">66752<br />
+								      	<span style="color: red;" id="numberColor">1874</span>
+								      </td>
+								      <td data-order="516753">516753<br />
+								      	<span>+10451</span>
+								      </td>
+								      <td data-order="433649">433649<br />
+								      	<span>+8336</span>
+								      </td>
+								      <td data-order="16352">16352<br />
+								      	<span>+241</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">捷克</td>
+								      <td data-order="82259">82259<br />
+								      	<span style="color: red;" id="numberColor">-3363</span>
+								      </td>
+								      <td data-order="507549">507549<br />
+								      	<span>+7718</span>
+								      </td>
+								      <td data-order="417657">417657<br />
+								      	<span>+10931</span>
+								      </td>
+								      <td data-order="7633">7633<br />
+								      	<span>+150</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">荷兰</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="498653">498653<br />
+								      	<span>+4909</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="9109">9109<br />
+								      	<span>+74</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">土耳其</td>
+								      <td data-order="69410">69410<br />
+								      	<span style="color: red;" id="numberColor">2735</span>
+								      </td>
+								      <td data-order="467730">467730<br />
+								      	<span>+6814</span>
+								      </td>
+								      <td data-order="385480">385480<br />
+								      	<span>+3911</span>
+								      </td>
+								      <td data-order="12840">12840<br />
+								      	<span>+168</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">孟加拉国</td>
+								      <td data-order="78461">78461<br />
+								      	<span style="color: red;" id="numberColor">-204</span>
+								      </td>
+								      <td data-order="456438">456438<br />
+								      	<span>+4448</span>
+								      </td>
+								      <td data-order="371453">371453<br />
+								      	<span>+4576</span>
+								      </td>
+								      <td data-order="6524">6524<br />
+								      	<span>+76</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">罗马尼亚</td>
+								      <td data-order="115123">115123<br />
+								      	<span style="color: red;" id="numberColor">-921</span>
+								      </td>
+								      <td data-order="449349">449349<br />
+								      	<span>+18744</span>
+								      </td>
+								      <td data-order="323514">323514<br />
+								      	<span>+19326</span>
+								      </td>
+								      <td data-order="10712">10712<br />
+								      	<span>+339</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">菲律宾</td>
+								      <td data-order="28789">28789<br />
+								      	<span style="color: red;" id="numberColor">2044</span>
+								      </td>
+								      <td data-order="424297">424297<br />
+								      	<span>+2575</span>
+								      </td>
+								      <td data-order="387266">387266<br />
+								      	<span>+474</span>
+								      </td>
+								      <td data-order="8242">8242<br />
+								      	<span>+57</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴基斯坦</td>
+								      <td data-order="43963">43963<br />
+								      	<span style="color: red;" id="numberColor">3584</span>
+								      </td>
+								      <td data-order="386198">386198<br />
+								      	<span>+6315</span>
+								      </td>
+								      <td data-order="334392">334392<br />
+								      	<span>+2632</span>
+								      </td>
+								      <td data-order="7843">7843<br />
+								      	<span>+99</span>
+								      </td>
+								      <td>2.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">沙特阿拉伯</td>
+								      <td data-order="5455">5455<br />
+								      	<span style="color: red;" id="numberColor">-164</span>
+								      </td>
+								      <td data-order="356067">356067<br />
+								      	<span>+326</span>
+								      </td>
+								      <td data-order="344787">344787<br />
+								      	<span>+476</span>
+								      </td>
+								      <td data-order="5825">5825<br />
+								      	<span>+14</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">加拿大</td>
+								      <td data-order="58524">58524<br />
+								      	<span style="color: red;" id="numberColor">1957</span>
+								      </td>
+								      <td data-order="347466">347466<br />
+								      	<span>+7778</span>
+								      </td>
+								      <td data-order="277232">277232<br />
+								      	<span>+5691</span>
+								      </td>
+								      <td data-order="11710">11710<br />
+								      	<span>+130</span>
+								      </td>
+								      <td>4.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">摩洛哥</td>
+								      <td data-order="46471">46471<br />
+								      	<span style="color: red;" id="numberColor">-311</span>
+								      </td>
+								      <td data-order="336506">336506<br />
+								      	<span>+4979</span>
+								      </td>
+								      <td data-order="284496">284496<br />
+								      	<span>+5220</span>
+								      </td>
+								      <td data-order="5539">5539<br />
+								      	<span>+70</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">以色列</td>
+								      <td data-order="9422">9422<br />
+								      	<span style="color: red;" id="numberColor">518</span>
+								      </td>
+								      <td data-order="332317">332317<br />
+								      	<span>+1822</span>
+								      </td>
+								      <td data-order="320069">320069<br />
+								      	<span>+1296</span>
+								      </td>
+								      <td data-order="2826">2826<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">瑞士</td>
+								      <td data-order="90660">90660<br />
+								      	<span style="color: red;" id="numberColor">1844</span>
+								      </td>
+								      <td data-order="313978">313978<br />
+								      	<span>+9385</span>
+								      </td>
+								      <td data-order="218900">218900<br />
+								      	<span>+7400</span>
+								      </td>
+								      <td data-order="4418">4418<br />
+								      	<span>+141</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">葡萄牙</td>
+								      <td data-order="80528">80528<br />
+								      	<span style="color: red;" id="numberColor">96</span>
+								      </td>
+								      <td data-order="274011">274011<br />
+								      	<span>+5290</span>
+								      </td>
+								      <td data-order="189356">189356<br />
+								      	<span>+5123</span>
+								      </td>
+								      <td data-order="4127">4127<br />
+								      	<span>+71</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">奥地利</td>
+								      <td data-order="68786">68786<br />
+								      	<span style="color: red;" id="numberColor">-727</span>
+								      </td>
+								      <td data-order="260512">260512<br />
+								      	<span>+5802</span>
+								      </td>
+								      <td data-order="189059">189059<br />
+								      	<span>+6439</span>
+								      </td>
+								      <td data-order="2667">2667<br />
+								      	<span>+90</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">瑞典</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="230514">230514<br />
+								      	<span>+4954</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="6555">6555<br />
+								      	<span>+55</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">尼泊尔</td>
+								      <td data-order="16639">16639<br />
+								      	<span style="color: red;" id="numberColor">-1220</span>
+								      </td>
+								      <td data-order="226026">226026<br />
+								      	<span>+1948</span>
+								      </td>
+								      <td data-order="207998">207998<br />
+								      	<span>+3140</span>
+								      </td>
+								      <td data-order="1389">1389<br />
+								      	<span>+28</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">约旦</td>
+								      <td data-order="64398">64398<br />
+								      	<span style="color: red;" id="numberColor">-785</span>
+								      </td>
+								      <td data-order="198021">198021<br />
+								      	<span>+5025</span>
+								      </td>
+								      <td data-order="131181">131181<br />
+								      	<span>+5748</span>
+								      </td>
+								      <td data-order="2442">2442<br />
+								      	<span>+62</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">匈牙利</td>
+								      <td data-order="138202">138202<br />
+								      	<span style="color: red;" id="numberColor">4349</span>
+								      </td>
+								      <td data-order="192047">192047<br />
+								      	<span>+10166</span>
+								      </td>
+								      <td data-order="49616">49616<br />
+								      	<span>+5596</span>
+								      </td>
+								      <td data-order="4229">4229<br />
+								      	<span>+221</span>
+								      </td>
+								      <td>7.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">厄瓜多尔</td>
+								      <td data-order="9933">9933<br />
+								      	<span style="color: red;" id="numberColor">770</span>
+								      </td>
+								      <td data-order="187230">187230<br />
+								      	<span>+794</span>
+								      </td>
+								      <td data-order="164009">164009<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="13288">13288<br />
+								      	<span>+24</span>
+								      </td>
+								      <td>7.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿拉伯联合酋长国</td>
+								      <td data-order="11055">11055<br />
+								      	<span style="color: red;" id="numberColor">510</span>
+								      </td>
+								      <td data-order="162662">162662<br />
+								      	<span>+1297</span>
+								      </td>
+								      <td data-order="151044">151044<br />
+								      	<span>+783</span>
+								      </td>
+								      <td data-order="563">563<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴拿马</td>
+								      <td data-order="16174">16174<br />
+								      	<span style="color: red;" id="numberColor">493</span>
+								      </td>
+								      <td data-order="158532">158532<br />
+								      	<span>+2874</span>
+								      </td>
+								      <td data-order="139356">139356<br />
+								      	<span>+2352</span>
+								      </td>
+								      <td data-order="3002">3002<br />
+								      	<span>+29</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">玻利维亚</td>
+								      <td data-order="15134">15134<br />
+								      	<span style="color: red;" id="numberColor">-436</span>
+								      </td>
+								      <td data-order="144276">144276<br />
+								      	<span>+242</span>
+								      </td>
+								      <td data-order="120209">120209<br />
+								      	<span>+661</span>
+								      </td>
+								      <td data-order="8933">8933<br />
+								      	<span>+17</span>
+								      </td>
+								      <td>6.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">科威特</td>
+								      <td data-order="6313">6313<br />
+								      	<span style="color: red;" id="numberColor">-205</span>
+								      </td>
+								      <td data-order="141217">141217<br />
+								      	<span>+422</span>
+								      </td>
+								      <td data-order="134033">134033<br />
+								      	<span>+626</span>
+								      </td>
+								      <td data-order="871">871<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">塞尔维亚</td>
+								      <td data-order="107757">107757<br />
+								      	<span style="color: red;" id="numberColor">7538</span>
+								      </td>
+								      <td data-order="140608">140608<br />
+								      	<span>+7579</span>
+								      </td>
+								      <td data-order="31536">31536<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1315">1315<br />
+								      	<span>+41</span>
+								      </td>
+								      <td>4.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">多米尼加共和国</td>
+								      <td data-order="23818">23818<br />
+								      	<span style="color: red;" id="numberColor">154</span>
+								      </td>
+								      <td data-order="139396">139396<br />
+								      	<span>+285</span>
+								      </td>
+								      <td data-order="113263">113263<br />
+								      	<span>+129</span>
+								      </td>
+								      <td data-order="2315">2315<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">卡塔尔</td>
+								      <td data-order="2664">2664<br />
+								      	<span style="color: red;" id="numberColor">-44</span>
+								      </td>
+								      <td data-order="137851">137851<br />
+								      	<span>+209</span>
+								      </td>
+								      <td data-order="134950">134950<br />
+								      	<span>+252</span>
+								      </td>
+								      <td data-order="237">237<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">日本</td>
+								      <td data-order="18674">18674<br />
+								      	<span style="color: red;" id="numberColor">74</span>
+								      </td>
+								      <td data-order="135400">135400<br />
+								      	<span>+1471</span>
+								      </td>
+								      <td data-order="114725">114725<br />
+								      	<span>+1385</span>
+								      </td>
+								      <td data-order="2001">2001<br />
+								      	<span>+12</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">哥斯达黎加</td>
+								      <td data-order="50235">50235<br />
+								      	<span style="color: red;" id="numberColor">917</span>
+								      </td>
+								      <td data-order="134520">134520<br />
+								      	<span>+2225</span>
+								      </td>
+								      <td data-order="82611">82611<br />
+								      	<span>+1275</span>
+								      </td>
+								      <td data-order="1674">1674<br />
+								      	<span>+33</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">保加利亚</td>
+								      <td data-order="87073">87073<br />
+								      	<span style="color: red;" id="numberColor">3402</span>
+								      </td>
+								      <td data-order="133060">133060<br />
+								      	<span>+8094</span>
+								      </td>
+								      <td data-order="42620">42620<br />
+								      	<span>+4394</span>
+								      </td>
+								      <td data-order="3367">3367<br />
+								      	<span>+298</span>
+								      </td>
+								      <td>7.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">亚美尼亚</td>
+								      <td data-order="25747">25747<br />
+								      	<span style="color: red;" id="numberColor">-829</span>
+								      </td>
+								      <td data-order="130870">130870<br />
+								      	<span>+3348</span>
+								      </td>
+								      <td data-order="103055">103055<br />
+								      	<span>+4111</span>
+								      </td>
+								      <td data-order="2068">2068<br />
+								      	<span>+66</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">白俄罗斯</td>
+								      <td data-order="20115">20115<br />
+								      	<span style="color: red;" id="numberColor">109</span>
+								      </td>
+								      <td data-order="130012">130012<br />
+								      	<span>+3059</span>
+								      </td>
+								      <td data-order="108769">108769<br />
+								      	<span>+2934</span>
+								      </td>
+								      <td data-order="1128">1128<br />
+								      	<span>+16</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">哈萨克斯坦</td>
+								      <td data-order="11589">11589<br />
+								      	<span style="color: red;" id="numberColor">320</span>
+								      </td>
+								      <td data-order="128400">128400<br />
+								      	<span>+1540</span>
+								      </td>
+								      <td data-order="114821">114821<br />
+								      	<span>+1175</span>
+								      </td>
+								      <td data-order="1990">1990<br />
+								      	<span>+45</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿曼</td>
+								      <td data-order="7332">7332<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="122579">122579<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="113856">113856<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1391">1391<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">黎巴嫩</td>
+								      <td data-order="48155">48155<br />
+								      	<span style="color: red;" id="numberColor">939</span>
+								      </td>
+								      <td data-order="120341">120341<br />
+								      	<span>+1636</span>
+								      </td>
+								      <td data-order="71236">71236<br />
+								      	<span>+681</span>
+								      </td>
+								      <td data-order="950">950<br />
+								      	<span>+16</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">危地马拉</td>
+								      <td data-order="7028">7028<br />
+								      	<span style="color: red;" id="numberColor">116</span>
+								      </td>
+								      <td data-order="119989">119989<br />
+								      	<span>+640</span>
+								      </td>
+								      <td data-order="108854">108854<br />
+								      	<span>+516</span>
+								      </td>
+								      <td data-order="4107">4107<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">佐治亚州</td>
+								      <td data-order="18785">18785<br />
+								      	<span style="color: red;" id="numberColor">233</span>
+								      </td>
+								      <td data-order="118690">118690<br />
+								      	<span>+6872</span>
+								      </td>
+								      <td data-order="98781">98781<br />
+								      	<span>+6566</span>
+								      </td>
+								      <td data-order="1124">1124<br />
+								      	<span>+73</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">克罗地亚</td>
+								      <td data-order="21725">21725<br />
+								      	<span style="color: red;" id="numberColor">2564</span>
+								      </td>
+								      <td data-order="115626">115626<br />
+								      	<span>+7612</span>
+								      </td>
+								      <td data-order="92349">92349<br />
+								      	<span>+4941</span>
+								      </td>
+								      <td data-order="1552">1552<br />
+								      	<span>+107</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">埃及</td>
+								      <td data-order="5321">5321<br />
+								      	<span style="color: red;" id="numberColor">481</span>
+								      </td>
+								      <td data-order="114107">114107<br />
+								      	<span>+726</span>
+								      </td>
+								      <td data-order="102201">102201<br />
+								      	<span>+220</span>
+								      </td>
+								      <td data-order="6585">6585<br />
+								      	<span>+25</span>
+								      </td>
+								      <td>6.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">埃塞俄比亚</td>
+								      <td data-order="38871">38871<br />
+								      	<span style="color: red;" id="numberColor">-41</span>
+								      </td>
+								      <td data-order="107109">107109<br />
+								      	<span>+518</span>
+								      </td>
+								      <td data-order="66574">66574<br />
+								      	<span>+556</span>
+								      </td>
+								      <td data-order="1664">1664<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>2.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">洪都拉斯</td>
+								      <td data-order="56222">56222<br />
+								      	<span style="color: red;" id="numberColor">496</span>
+								      </td>
+								      <td data-order="106116">106116<br />
+								      	<span>+905</span>
+								      </td>
+								      <td data-order="47006">47006<br />
+								      	<span>+390</span>
+								      </td>
+								      <td data-order="2888">2888<br />
+								      	<span>+19</span>
+								      </td>
+								      <td>5.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿塞拜疆</td>
+								      <td data-order="34209">34209<br />
+								      	<span style="color: red;" id="numberColor">2210</span>
+								      </td>
+								      <td data-order="102396">102396<br />
+								      	<span>+3469</span>
+								      </td>
+								      <td data-order="66963">66963<br />
+								      	<span>+1229</span>
+								      </td>
+								      <td data-order="1224">1224<br />
+								      	<span>+30</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">斯洛伐克</td>
+								      <td data-order="44130">44130<br />
+								      	<span style="color: red;" id="numberColor">-1916</span>
+								      </td>
+								      <td data-order="101257">101257<br />
+								      	<span>+3764</span>
+								      </td>
+								      <td data-order="56378">56378<br />
+								      	<span>+5640</span>
+								      </td>
+								      <td data-order="749">749<br />
+								      	<span>+40</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">摩尔多瓦</td>
+								      <td data-order="15205">15205<br />
+								      	<span style="color: red;" id="numberColor">95</span>
+								      </td>
+								      <td data-order="101203">101203<br />
+								      	<span>+1570</span>
+								      </td>
+								      <td data-order="83789">83789<br />
+								      	<span>+1454</span>
+								      </td>
+								      <td data-order="2209">2209<br />
+								      	<span>+21</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">委内瑞拉</td>
+								      <td data-order="4268">4268<br />
+								      	<span style="color: red;" id="numberColor">-17</span>
+								      </td>
+								      <td data-order="100817">100817<br />
+								      	<span>+674</span>
+								      </td>
+								      <td data-order="95669">95669<br />
+								      	<span>+684</span>
+								      </td>
+								      <td data-order="880">880<br />
+								      	<span>+7</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">希腊</td>
+								      <td data-order="85397">85397<br />
+								      	<span style="color: red;" id="numberColor">2064</span>
+								      </td>
+								      <td data-order="97288">97288<br />
+								      	<span>+2151</span>
+								      </td>
+								      <td data-order="9989">9989<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1902">1902<br />
+								      	<span>+87</span>
+								      </td>
+								      <td>16.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">突尼斯</td>
+								      <td data-order="21865">21865<br />
+								      	<span style="color: red;" id="numberColor">-623</span>
+								      </td>
+								      <td data-order="91307">91307<br />
+								      	<span>+2111</span>
+								      </td>
+								      <td data-order="66459">66459<br />
+								      	<span>+2613</span>
+								      </td>
+								      <td data-order="2983">2983<br />
+								      	<span>+121</span>
+								      </td>
+								      <td>4.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴林</td>
+								      <td data-order="1509">1509<br />
+								      	<span style="color: red;" id="numberColor">-21</span>
+								      </td>
+								      <td data-order="86185">86185<br />
+								      	<span>+299</span>
+								      </td>
+								      <td data-order="84335">84335<br />
+								      	<span>+318</span>
+								      </td>
+								      <td data-order="341">341<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">乌兰巴托</td>
+								      <td data-order="18390">18390<br />
+								      	<span style="color: red;" id="numberColor">-1097</span>
+								      </td>
+								      <td data-order="83566">83566<br />
+								      	<span>+1330</span>
+								      </td>
+								      <td data-order="63366">63366<br />
+								      	<span>+2401</span>
+								      </td>
+								      <td data-order="1810">1810<br />
+								      	<span>+26</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">波黑</td>
+								      <td data-order="32689">32689<br />
+								      	<span style="color: red;" id="numberColor">869</span>
+								      </td>
+								      <td data-order="83328">83328<br />
+								      	<span>+1589</span>
+								      </td>
+								      <td data-order="48210">48210<br />
+								      	<span>+685</span>
+								      </td>
+								      <td data-order="2429">2429<br />
+								      	<span>+35</span>
+								      </td>
+								      <td>4.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">利比亚</td>
+								      <td data-order="27682">27682<br />
+								      	<span style="color: red;" id="numberColor">-84</span>
+								      </td>
+								      <td data-order="80407">80407<br />
+								      	<span>+1227</span>
+								      </td>
+								      <td data-order="51585">51585<br />
+								      	<span>+1281</span>
+								      </td>
+								      <td data-order="1140">1140<br />
+								      	<span>+30</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">肯尼亚</td>
+								      <td data-order="24931">24931<br />
+								      	<span style="color: red;" id="numberColor">537</span>
+								      </td>
+								      <td data-order="79322">79322<br />
+								      	<span>+810</span>
+								      </td>
+								      <td data-order="52974">52974<br />
+								      	<span>+265</span>
+								      </td>
+								      <td data-order="1417">1417<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴拉圭</td>
+								      <td data-order="21162">21162<br />
+								      	<span style="color: red;" id="numberColor">801</span>
+								      </td>
+								      <td data-order="78878">78878<br />
+								      	<span>+1806</span>
+								      </td>
+								      <td data-order="56025">56025<br />
+								      	<span>+979</span>
+								      </td>
+								      <td data-order="1691">1691<br />
+								      	<span>+26</span>
+								      </td>
+								      <td>2.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿尔及利亚</td>
+								      <td data-order="24984">24984<br />
+								      	<span style="color: red;" id="numberColor">363</span>
+								      </td>
+								      <td data-order="78025">78025<br />
+								      	<span>+1025</span>
+								      </td>
+								      <td data-order="50712">50712<br />
+								      	<span>+642</span>
+								      </td>
+								      <td data-order="2329">2329<br />
+								      	<span>+20</span>
+								      </td>
+								      <td>4.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴勒斯坦</td>
+								      <td data-order="15563">15563<br />
+								      	<span style="color: red;" id="numberColor">1221</span>
+								      </td>
+								      <td data-order="76727">76727<br />
+								      	<span>+1720</span>
+								      </td>
+								      <td data-order="60499">60499<br />
+								      	<span>+490</span>
+								      </td>
+								      <td data-order="665">665<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">丹麦</td>
+								      <td data-order="15254">15254<br />
+								      	<span style="color: red;" id="numberColor">105</span>
+								      </td>
+								      <td data-order="74204">74204<br />
+								      	<span>+1183</span>
+								      </td>
+								      <td data-order="58148">58148<br />
+								      	<span>+1073</span>
+								      </td>
+								      <td data-order="802">802<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">乌兹别克斯坦</td>
+								      <td data-order="2206">2206<br />
+								      	<span style="color: red;" id="numberColor">65</span>
+								      </td>
+								      <td data-order="72289">72289<br />
+								      	<span>+304</span>
+								      </td>
+								      <td data-order="69477">69477<br />
+								      	<span>+237</span>
+								      </td>
+								      <td data-order="606">606<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">爱尔兰</td>
+								      <td data-order="45790">45790<br />
+								      	<span style="color: red;" id="numberColor">466</span>
+								      </td>
+								      <td data-order="71187">71187<br />
+								      	<span>+476</span>
+								      </td>
+								      <td data-order="23364">23364<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2033">2033<br />
+								      	<span>+10</span>
+								      </td>
+								      <td>8.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">吉尔吉斯斯坦</td>
+								      <td data-order="7376">7376<br />
+								      	<span style="color: red;" id="numberColor">-156</span>
+								      </td>
+								      <td data-order="71171">71171<br />
+								      	<span>+805</span>
+								      </td>
+								      <td data-order="62544">62544<br />
+								      	<span>+951</span>
+								      </td>
+								      <td data-order="1251">1251<br />
+								      	<span>+10</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">斯洛文尼亚</td>
+								      <td data-order="20337">20337<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="69306">69306<br />
+								      	<span>+2226</span>
+								      </td>
+								      <td data-order="47770">47770<br />
+								      	<span>+2183</span>
+								      </td>
+								      <td data-order="1199">1199<br />
+								      	<span>+43</span>
+								      </td>
+								      <td>2.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">尼日利亚</td>
+								      <td data-order="3143">3143<br />
+								      	<span style="color: red;" id="numberColor">113</span>
+								      </td>
+								      <td data-order="66805">66805<br />
+								      	<span>+366</span>
+								      </td>
+								      <td data-order="62493">62493<br />
+								      	<span>+252</span>
+								      </td>
+								      <td data-order="1169">1169<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马来西亚</td>
+								      <td data-order="11348">11348<br />
+								      	<span style="color: red;" id="numberColor">-3005</span>
+								      </td>
+								      <td data-order="60752">60752<br />
+								      	<span>+1905</span>
+								      </td>
+								      <td data-order="49056">49056<br />
+								      	<span>+4903</span>
+								      </td>
+								      <td data-order="348">348<br />
+								      	<span>+7</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">新加坡</td>
+								      <td data-order="76">76<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="58195">58195<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="58091">58091<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="28">28<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">北马其顿</td>
+								      <td data-order="20881">20881<br />
+								      	<span style="color: red;" id="numberColor">194</span>
+								      </td>
+								      <td data-order="57451">57451<br />
+								      	<span>+2324</span>
+								      </td>
+								      <td data-order="34970">34970<br />
+								      	<span>+2076</span>
+								      </td>
+								      <td data-order="1600">1600<br />
+								      	<span>+54</span>
+								      </td>
+								      <td>4.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">立陶宛</td>
+								      <td data-order="40653">40653<br />
+								      	<span style="color: red;" id="numberColor">3264</span>
+								      </td>
+								      <td data-order="53757">53757<br />
+								      	<span>+4364</span>
+								      </td>
+								      <td data-order="12655">12655<br />
+								      	<span>+1060</span>
+								      </td>
+								      <td data-order="449">449<br />
+								      	<span>+40</span>
+								      </td>
+								      <td>3.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">加纳</td>
+								      <td data-order="775">775<br />
+								      	<span style="color: red;" id="numberColor">-244</span>
+								      </td>
+								      <td data-order="51225">51225<br />
+								      	<span>+284</span>
+								      </td>
+								      <td data-order="50127">50127<br />
+								      	<span>+528</span>
+								      </td>
+								      <td data-order="323">323<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿富汗</td>
+								      <td data-order="7747">7747<br />
+								      	<span style="color: red;" id="numberColor">301</span>
+								      </td>
+								      <td data-order="45716">45716<br />
+								      	<span>+436</span>
+								      </td>
+								      <td data-order="36232">36232<br />
+								      	<span>+110</span>
+								      </td>
+								      <td data-order="1737">1737<br />
+								      	<span>+25</span>
+								      </td>
+								      <td>4.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">萨尔瓦多</td>
+								      <td data-order="2191">2191<br />
+								      	<span style="color: red;" id="numberColor">-12</span>
+								      </td>
+								      <td data-order="37884">37884<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="34595">34595<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1098">1098<br />
+								      	<span>+12</span>
+								      </td>
+								      <td>3.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿尔巴尼亚</td>
+								      <td data-order="17170">17170<br />
+								      	<span style="color: red;" id="numberColor">271</span>
+								      </td>
+								      <td data-order="34944">34944<br />
+								      	<span>+644</span>
+								      </td>
+								      <td data-order="17031">17031<br />
+								      	<span>+365</span>
+								      </td>
+								      <td data-order="743">743<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>4.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">挪威</td>
+								      <td data-order="12996">12996<br />
+								      	<span style="color: red;" id="numberColor">835</span>
+								      </td>
+								      <td data-order="34268">34268<br />
+								      	<span>+837</span>
+								      </td>
+								      <td data-order="20956">20956<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="316">316<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">黑山</td>
+								      <td data-order="11120">11120<br />
+								      	<span style="color: red;" id="numberColor">9</span>
+								      </td>
+								      <td data-order="32808">32808<br />
+								      	<span>+620</span>
+								      </td>
+								      <td data-order="21229">21229<br />
+								      	<span>+602</span>
+								      </td>
+								      <td data-order="459">459<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">韩国</td>
+								      <td data-order="4853">4853<br />
+								      	<span style="color: red;" id="numberColor">732</span>
+								      </td>
+								      <td data-order="32318">32318<br />
+								      	<span>+965</span>
+								      </td>
+								      <td data-order="26950">26950<br />
+								      	<span>+228</span>
+								      </td>
+								      <td data-order="515">515<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">卢森堡</td>
+								      <td data-order="9182">9182<br />
+								      	<span style="color: red;" id="numberColor">170</span>
+								      </td>
+								      <td data-order="32100">32100<br />
+								      	<span>+616</span>
+								      </td>
+								      <td data-order="22630">22630<br />
+								      	<span>+441</span>
+								      </td>
+								      <td data-order="288">288<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">澳大利亚</td>
+								      <td data-order="1395">1395<br />
+								      	<span style="color: red;" id="numberColor">-11</span>
+								      </td>
+								      <td data-order="27867">27867<br />
+								      	<span>+20</span>
+								      </td>
+								      <td data-order="25565">25565<br />
+								      	<span>+31</span>
+								      </td>
+								      <td data-order="907">907<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">喀麦隆</td>
+								      <td data-order="1301">1301<br />
+								      	<span style="color: red;" id="numberColor">71</span>
+								      </td>
+								      <td data-order="23915">23915<br />
+								      	<span>+73</span>
+								      </td>
+								      <td data-order="22177">22177<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="437">437<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">芬兰</td>
+								      <td data-order="5960">5960<br />
+								      	<span style="color: red;" id="numberColor">-645</span>
+								      </td>
+								      <td data-order="23148">23148<br />
+								      	<span>+859</span>
+								      </td>
+								      <td data-order="16800">16800<br />
+								      	<span>+1500</span>
+								      </td>
+								      <td data-order="388">388<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>2.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">斯里兰卡</td>
+								      <td data-order="5557">5557<br />
+								      	<span style="color: red;" id="numberColor">-354</span>
+								      </td>
+								      <td data-order="21469">21469<br />
+								      	<span>+502</span>
+								      </td>
+								      <td data-order="15816">15816<br />
+								      	<span>+854</span>
+								      </td>
+								      <td data-order="96">96<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">科特迪瓦</td>
+								      <td data-order="194">194<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="21168">21168<br />
+								      	<span>+20</span>
+								      </td>
+								      <td data-order="20843">20843<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="131">131<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">乌干达</td>
+								      <td data-order="9867">9867<br />
+								      	<span style="color: red;" id="numberColor">411</span>
+								      </td>
+								      <td data-order="18890">18890<br />
+								      	<span>+484</span>
+								      </td>
+								      <td data-order="8832">8832<br />
+								      	<span>+68</span>
+								      </td>
+								      <td data-order="191">191<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">赞比亚</td>
+								      <td data-order="423">423<br />
+								      	<span style="color: red;" id="numberColor">21</span>
+								      </td>
+								      <td data-order="17535">17535<br />
+								      	<span>+69</span>
+								      </td>
+								      <td data-order="16755">16755<br />
+								      	<span>+48</span>
+								      </td>
+								      <td data-order="357">357<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马达加斯加</td>
+								      <td data-order="433">433<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="17341">17341<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="16657">16657<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="251">251<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">苏丹</td>
+								      <td data-order="5531">5531<br />
+								      	<span style="color: red;" id="numberColor">156</span>
+								      </td>
+								      <td data-order="16649">16649<br />
+								      	<span>+218</span>
+								      </td>
+								      <td data-order="9908">9908<br />
+								      	<span>+54</span>
+								      </td>
+								      <td data-order="1210">1210<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>10.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">塞内加尔</td>
+								      <td data-order="71">71<br />
+								      	<span style="color: red;" id="numberColor">21</span>
+								      </td>
+								      <td data-order="15960">15960<br />
+								      	<span>+52</span>
+								      </td>
+								      <td data-order="15558">15558<br />
+								      	<span>+31</span>
+								      </td>
+								      <td data-order="331">331<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">莫桑比克</td>
+								      <td data-order="1715">1715<br />
+								      	<span style="color: red;" id="numberColor">19</span>
+								      </td>
+								      <td data-order="15302">15302<br />
+								      	<span>+71</span>
+								      </td>
+								      <td data-order="13459">13459<br />
+								      	<span>+51</span>
+								      </td>
+								      <td data-order="128">128<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">安哥拉</td>
+								      <td data-order="6964">6964<br />
+								      	<span style="color: red;" id="numberColor">18</span>
+								      </td>
+								      <td data-order="14821">14821<br />
+								      	<span>+187</span>
+								      </td>
+								      <td data-order="7517">7517<br />
+								      	<span>+166</span>
+								      </td>
+								      <td data-order="340">340<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>4.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">拉脱维亚</td>
+								      <td data-order="12403">12403<br />
+								      	<span style="color: red;" id="numberColor">536</span>
+								      </td>
+								      <td data-order="14273">14273<br />
+								      	<span>+580</span>
+								      </td>
+								      <td data-order="1686">1686<br />
+								      	<span>+35</span>
+								      </td>
+								      <td data-order="184">184<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>9.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">纳米比亚</td>
+								      <td data-order="522">522<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="14006">14006<br />
+								      	<span>+68</span>
+								      </td>
+								      <td data-order="13339">13339<br />
+								      	<span>+67</span>
+								      </td>
+								      <td data-order="145">145<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">法属波利尼西亚</td>
+								      <td data-order="8871">8871<br />
+								      	<span style="color: red;" id="numberColor">495</span>
+								      </td>
+								      <td data-order="13783">13783<br />
+								      	<span>+497</span>
+								      </td>
+								      <td data-order="4842">4842<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">几内亚</td>
+								      <td data-order="951">951<br />
+								      	<span style="color: red;" id="numberColor">40</span>
+								      </td>
+								      <td data-order="12949">12949<br />
+								      	<span>+86</span>
+								      </td>
+								      <td data-order="11922">11922<br />
+								      	<span>+45</span>
+								      </td>
+								      <td data-order="76">76<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马尔代夫</td>
+								      <td data-order="1127">1127<br />
+								      	<span style="color: red;" id="numberColor">30</span>
+								      </td>
+								      <td data-order="12854">12854<br />
+								      	<span>+96</span>
+								      </td>
+								      <td data-order="11681">11681<br />
+								      	<span>+66</span>
+								      </td>
+								      <td data-order="46">46<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">刚果金</td>
+								      <td data-order="601">601<br />
+								      	<span style="color: red;" id="numberColor">55</span>
+								      </td>
+								      <td data-order="12365">12365<br />
+								      	<span>+55</span>
+								      </td>
+								      <td data-order="11433">11433<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="331">331<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">塔吉克斯坦</td>
+								      <td data-order="527">527<br />
+								      	<span style="color: red;" id="numberColor">-3</span>
+								      </td>
+								      <td data-order="12008">12008<br />
+								      	<span>+37</span>
+								      </td>
+								      <td data-order="11395">11395<br />
+								      	<span>+40</span>
+								      </td>
+								      <td data-order="86">86<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">法属圭亚那</td>
+								      <td data-order="1051">1051<br />
+								      	<span style="color: red;" id="numberColor">37</span>
+								      </td>
+								      <td data-order="11116">11116<br />
+								      	<span>+37</span>
+								      </td>
+								      <td data-order="9995">9995<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">爱沙尼亚</td>
+								      <td data-order="4359">4359<br />
+								      	<span style="color: red;" id="numberColor">308</span>
+								      </td>
+								      <td data-order="10955">10955<br />
+								      	<span>+796</span>
+								      </td>
+								      <td data-order="6497">6497<br />
+								      	<span>+483</span>
+								      </td>
+								      <td data-order="99">99<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">佛得角</td>
+								      <td data-order="522">522<br />
+								      	<span style="color: red;" id="numberColor">115</span>
+								      </td>
+								      <td data-order="10526">10526<br />
+								      	<span>+224</span>
+								      </td>
+								      <td data-order="9900">9900<br />
+								      	<span>+109</span>
+								      </td>
+								      <td data-order="104">104<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">牙买加</td>
+								      <td data-order="4618">4618<br />
+								      	<span style="color: red;" id="numberColor">11</span>
+								      </td>
+								      <td data-order="10488">10488<br />
+								      	<span>+66</span>
+								      </td>
+								      <td data-order="5623">5623<br />
+								      	<span>+51</span>
+								      </td>
+								      <td data-order="247">247<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>4.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">博茨瓦纳</td>
+								      <td data-order="2269">2269<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="9992">9992<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="7692">7692<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="31">31<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">津巴布韦</td>
+								      <td data-order="898">898<br />
+								      	<span style="color: red;" id="numberColor">151</span>
+								      </td>
+								      <td data-order="9508">9508<br />
+								      	<span>+200</span>
+								      </td>
+								      <td data-order="8336">8336<br />
+								      	<span>+48</span>
+								      </td>
+								      <td data-order="274">274<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">塞浦路斯</td>
+								      <td data-order="7351">7351<br />
+								      	<span style="color: red;" id="numberColor">503</span>
+								      </td>
+								      <td data-order="9453">9453<br />
+								      	<span>+506</span>
+								      </td>
+								      <td data-order="2055">2055<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="47">47<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马耳他</td>
+								      <td data-order="2069">2069<br />
+								      	<span style="color: red;" id="numberColor">-13</span>
+								      </td>
+								      <td data-order="9253">9253<br />
+								      	<span>+116</span>
+								      </td>
+								      <td data-order="7062">7062<br />
+								      	<span>+124</span>
+								      </td>
+								      <td data-order="122">122<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">海地</td>
+								      <td data-order="1100">1100<br />
+								      	<span style="color: red;" id="numberColor">-6</span>
+								      </td>
+								      <td data-order="9248">9248<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="7916">7916<br />
+								      	<span>+30</span>
+								      </td>
+								      <td data-order="232">232<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">加蓬</td>
+								      <td data-order="98">98<br />
+								      	<span style="color: red;" id="numberColor">6</span>
+								      </td>
+								      <td data-order="9173">9173<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="9016">9016<br />
+								      	<span>+17</span>
+								      </td>
+								      <td data-order="59">59<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">瓜德罗普岛</td>
+								      <td data-order="5953">5953<br />
+								      	<span style="color: red;" id="numberColor">114</span>
+								      </td>
+								      <td data-order="8344">8344<br />
+								      	<span>+119</span>
+								      </td>
+								      <td data-order="2242">2242<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="149">149<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>6.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">毛里塔尼亚</td>
+								      <td data-order="429">429<br />
+								      	<span style="color: red;" id="numberColor">40</span>
+								      </td>
+								      <td data-order="8246">8246<br />
+								      	<span>+79</span>
+								      </td>
+								      <td data-order="7646">7646<br />
+								      	<span>+37</span>
+								      </td>
+								      <td data-order="171">171<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">古巴</td>
+								      <td data-order="423">423<br />
+								      	<span style="color: red;" id="numberColor">34</span>
+								      </td>
+								      <td data-order="8026">8026<br />
+								      	<span>+76</span>
+								      </td>
+								      <td data-order="7470">7470<br />
+								      	<span>+42</span>
+								      </td>
+								      <td data-order="133">133<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">留尼汪</td>
+								      <td data-order="1137">1137<br />
+								      	<span style="color: red;" id="numberColor">143</span>
+								      </td>
+								      <td data-order="7836">7836<br />
+								      	<span>+147</span>
+								      </td>
+								      <td data-order="6660">6660<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="39">39<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴哈马</td>
+								      <td data-order="1573">1573<br />
+								      	<span style="color: red;" id="numberColor">-43</span>
+								      </td>
+								      <td data-order="7469">7469<br />
+								      	<span>+38</span>
+								      </td>
+								      <td data-order="5733">5733<br />
+								      	<span>+81</span>
+								      </td>
+								      <td data-order="163">163<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">叙利亚</td>
+								      <td data-order="3797">3797<br />
+								      	<span style="color: red;" id="numberColor">37</span>
+								      </td>
+								      <td data-order="7459">7459<br />
+								      	<span>+164</span>
+								      </td>
+								      <td data-order="3271">3271<br />
+								      	<span>+116</span>
+								      </td>
+								      <td data-order="391">391<br />
+								      	<span>+11</span>
+								      </td>
+								      <td>10.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">特立尼达和多巴哥</td>
+								      <td data-order="732">732<br />
+								      	<span style="color: red;" id="numberColor">-6</span>
+								      </td>
+								      <td data-order="6503">6503<br />
+								      	<span>+28</span>
+								      </td>
+								      <td data-order="5655">5655<br />
+								      	<span>+33</span>
+								      </td>
+								      <td data-order="116">116<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">安道尔</td>
+								      <td data-order="810">810<br />
+								      	<span style="color: red;" id="numberColor">38</span>
+								      </td>
+								      <td data-order="6428">6428<br />
+								      	<span>+77</span>
+								      </td>
+								      <td data-order="5542">5542<br />
+								      	<span>+39</span>
+								      </td>
+								      <td data-order="76">76<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">埃斯瓦蒂尼</td>
+								      <td data-order="251">251<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="6272">6272<br />
+								      	<span>+39</span>
+								      </td>
+								      <td data-order="5901">5901<br />
+								      	<span>+32</span>
+								      </td>
+								      <td data-order="120">120<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马拉维</td>
+								      <td data-order="383">383<br />
+								      	<span style="color: red;" id="numberColor">2</span>
+								      </td>
+								      <td data-order="6018">6018<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="5450">5450<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="185">185<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">香港</td>
+								      <td data-order="540">540<br />
+								      	<span style="color: red;" id="numberColor">140</span>
+								      </td>
+								      <td data-order="5948">5948<br />
+								      	<span>+166</span>
+								      </td>
+								      <td data-order="5300">5300<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="108">108<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">尼加拉瓜</td>
+								      <td data-order="1399">1399<br />
+								      	<span style="color: red;" id="numberColor">58</span>
+								      </td>
+								      <td data-order="5784">5784<br />
+								      	<span>+59</span>
+								      </td>
+								      <td data-order="4225">4225<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="160">160<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">卢旺达</td>
+								      <td data-order="415">415<br />
+								      	<span style="color: red;" id="numberColor">-67</span>
+								      </td>
+								      <td data-order="5779">5779<br />
+								      	<span>+53</span>
+								      </td>
+								      <td data-order="5317">5317<br />
+								      	<span>+120</span>
+								      </td>
+								      <td data-order="47">47<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">吉布提</td>
+								      <td data-order="34">34<br />
+								      	<span style="color: red;" id="numberColor">-5</span>
+								      </td>
+								      <td data-order="5670">5670<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="5575">5575<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="61">61<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">刚果布</td>
+								      <td data-order="551">551<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="5632">5632<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="4988">4988<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="93">93<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">伯利兹</td>
+								      <td data-order="2308">2308<br />
+								      	<span style="color: red;" id="numberColor">56</span>
+								      </td>
+								      <td data-order="5423">5423<br />
+								      	<span>+174</span>
+								      </td>
+								      <td data-order="2986">2986<br />
+								      	<span>+109</span>
+								      </td>
+								      <td data-order="129">129<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>4.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马提尼克</td>
+								      <td data-order="5275">5275<br />
+								      	<span style="color: red;" id="numberColor">678</span>
+								      </td>
+								      <td data-order="5413">5413<br />
+								      	<span>+681</span>
+								      </td>
+								      <td data-order="98">98<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="40">40<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>29.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">冰岛</td>
+								      <td data-order="176">176<br />
+								      	<span style="color: red;" id="numberColor">-10</span>
+								      </td>
+								      <td data-order="5312">5312<br />
+								      	<span>+14</span>
+								      </td>
+								      <td data-order="5110">5110<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="26">26<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">苏里南</td>
+								      <td data-order="4">4<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="5305">5305<br />
+								      	<span>+8</span>
+								      </td>
+								      <td data-order="5184">5184<br />
+								      	<span>+11</span>
+								      </td>
+								      <td data-order="117">117<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圭亚那</td>
+								      <td data-order="847">847<br />
+								      	<span style="color: red;" id="numberColor">-127</span>
+								      </td>
+								      <td data-order="5236">5236<br />
+								      	<span>+82</span>
+								      </td>
+								      <td data-order="4242">4242<br />
+								      	<span>+208</span>
+								      </td>
+								      <td data-order="147">147<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马约特</td>
+								      <td data-order="2168">2168<br />
+								      	<span style="color: red;" id="numberColor">59</span>
+								      </td>
+								      <td data-order="5181">5181<br />
+								      	<span>+59</span>
+								      </td>
+								      <td data-order="2964">2964<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="49">49<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">赤道几内亚</td>
+								      <td data-order="47">47<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="5137">5137<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="5005">5005<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="85">85<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">乌拉圭</td>
+								      <td data-order="992">992<br />
+								      	<span style="color: red;" id="numberColor">64</span>
+								      </td>
+								      <td data-order="4988">4988<br />
+								      	<span>+225</span>
+								      </td>
+								      <td data-order="3923">3923<br />
+								      	<span>+159</span>
+								      </td>
+								      <td data-order="73">73<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">中非</td>
+								      <td data-order="2924">2924<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4911">4911<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1924">1924<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="63">63<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">阿鲁巴</td>
+								      <td data-order="101">101<br />
+								      	<span style="color: red;" id="numberColor">16</span>
+								      </td>
+								      <td data-order="4778">4778<br />
+								      	<span>+41</span>
+								      </td>
+								      <td data-order="4632">4632<br />
+								      	<span>+25</span>
+								      </td>
+								      <td data-order="45">45<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马里</td>
+								      <td data-order="1253">1253<br />
+								      	<span style="color: red;" id="numberColor">117</span>
+								      </td>
+								      <td data-order="4461">4461<br />
+								      	<span>+135</span>
+								      </td>
+								      <td data-order="3060">3060<br />
+								      	<span>+16</span>
+								      </td>
+								      <td data-order="148">148<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>4.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">索马里</td>
+								      <td data-order="920">920<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4445">4445<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3412">3412<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="113">113<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">泰国</td>
+								      <td data-order="94">94<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="3942">3942<br />
+								      	<span>+20</span>
+								      </td>
+								      <td data-order="3788">3788<br />
+								      	<span>+16</span>
+								      </td>
+								      <td data-order="60">60<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">冈比亚</td>
+								      <td data-order="17">17<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="3727">3727<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="3587">3587<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="123">123<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">南苏丹</td>
+								      <td data-order="74">74<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="3073">3073<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="2938">2938<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="61">61<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">贝宁</td>
+								      <td data-order="352">352<br />
+								      	<span style="color: red;" id="numberColor">58</span>
+								      </td>
+								      <td data-order="2974">2974<br />
+								      	<span>+58</span>
+								      </td>
+								      <td data-order="2579">2579<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="43">43<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">多哥</td>
+								      <td data-order="505">505<br />
+								      	<span style="color: red;" id="numberColor">-11</span>
+								      </td>
+								      <td data-order="2889">2889<br />
+								      	<span>+35</span>
+								      </td>
+								      <td data-order="2320">2320<br />
+								      	<span>+46</span>
+								      </td>
+								      <td data-order="64">64<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">布基纳法索</td>
+								      <td data-order="142">142<br />
+								      	<span style="color: red;" id="numberColor">8</span>
+								      </td>
+								      <td data-order="2777">2777<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="2567">2567<br />
+								      	<span>+15</span>
+								      </td>
+								      <td data-order="68">68<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">几内亚比绍</td>
+								      <td data-order="70">70<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="2422">2422<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2309">2309<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="43">43<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">塞拉利昂</td>
+								      <td data-order="505">505<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="2408">2408<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="1829">1829<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="74">74<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">也门</td>
+								      <td data-order="39">39<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="2124">2124<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="1474">1474<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="611">611<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>29.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">莱索托</td>
+								      <td data-order="771">771<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="2092">2092<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1277">1277<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="44">44<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">新西兰</td>
+								      <td data-order="60">60<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="2040">2040<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="1955">1955<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="25">25<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">库拉索岛</td>
+								      <td data-order="869">869<br />
+								      	<span style="color: red;" id="numberColor">130</span>
+								      </td>
+								      <td data-order="1929">1929<br />
+								      	<span>+156</span>
+								      </td>
+								      <td data-order="1057">1057<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">乍得</td>
+								      <td data-order="60">60<br />
+								      	<span style="color: red;" id="numberColor">-11</span>
+								      </td>
+								      <td data-order="1655">1655<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="1494">1494<br />
+								      	<span>+18</span>
+								      </td>
+								      <td data-order="101">101<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>6.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">利比里亚</td>
+								      <td data-order="155">155<br />
+								      	<span style="color: red;" id="numberColor">17</span>
+								      </td>
+								      <td data-order="1578">1578<br />
+								      	<span>+27</span>
+								      </td>
+								      <td data-order="1340">1340<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="83">83<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>5.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣马力诺</td>
+								      <td data-order="227">227<br />
+								      	<span style="color: red;" id="numberColor">-8</span>
+								      </td>
+								      <td data-order="1492">1492<br />
+								      	<span>+64</span>
+								      </td>
+								      <td data-order="1221">1221<br />
+								      	<span>+72</span>
+								      </td>
+								      <td data-order="44">44<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">尼日尔</td>
+								      <td data-order="179">179<br />
+								      	<span style="color: red;" id="numberColor">34</span>
+								      </td>
+								      <td data-order="1419">1419<br />
+								      	<span>+38</span>
+								      </td>
+								      <td data-order="1170">1170<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>5.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">越南</td>
+								      <td data-order="130">130<br />
+								      	<span style="color: red;" id="numberColor">2</span>
+								      </td>
+								      <td data-order="1331">1331<br />
+								      	<span>+15</span>
+								      </td>
+								      <td data-order="1166">1166<br />
+								      	<span>+13</span>
+								      </td>
+								      <td data-order="35">35<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">列支敦士登</td>
+								      <td data-order="184">184<br />
+								      	<span style="color: red;" id="numberColor">-9</span>
+								      </td>
+								      <td data-order="1183">1183<br />
+								      	<span>+25</span>
+								      </td>
+								      <td data-order="985">985<br />
+								      	<span>+33</span>
+								      </td>
+								      <td data-order="14">14<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">海峡群岛</td>
+								      <td data-order="139">139<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1147">1147<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="960">960<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="48">48<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>4.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">荷属圣马丁</td>
+								      <td data-order="92">92<br />
+								      	<span style="color: red;" id="numberColor">5</span>
+								      </td>
+								      <td data-order="1036">1036<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="919">919<br />
+								      	<span>+19</span>
+								      </td>
+								      <td data-order="25">25<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">直布罗陀</td>
+								      <td data-order="91">91<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="991">991<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="895">895<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="5">5<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣多美和普林西比</td>
+								      <td data-order="39">39<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="982">982<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="926">926<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="17">17<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">特克斯和凯科斯群岛</td>
+								      <td data-order="40">40<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="746">746<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="700">700<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="6">6<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">蒙古</td>
+								      <td data-order="367">367<br />
+								      	<span style="color: red;" id="numberColor">37</span>
+								      </td>
+								      <td data-order="712">712<br />
+								      	<span>+40</span>
+								      </td>
+								      <td data-order="345">345<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣马丁岛</td>
+								      <td data-order="80">80<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="690">690<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="598">598<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="12">12<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">布隆迪</td>
+								      <td data-order="97">97<br />
+								      	<span style="color: red;" id="numberColor">9</span>
+								      </td>
+								      <td data-order="673">673<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="575">575<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴布亚新几内亚</td>
+								      <td data-order="50">50<br />
+								      	<span style="color: red;" id="numberColor">15</span>
+								      </td>
+								      <td data-order="645">645<br />
+								      	<span>+15</span>
+								      </td>
+								      <td data-order="588">588<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">台湾</td>
+								      <td data-order="63">63<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="625">625<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="555">555<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">科摩罗</td>
+								      <td data-order="21">21<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="607">607<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="579">579<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">摩纳哥</td>
+								      <td data-order="61">61<br />
+								      	<span style="color: red;" id="numberColor">-1</span>
+								      </td>
+								      <td data-order="594">594<br />
+								      	<span>+11</span>
+								      </td>
+								      <td data-order="530">530<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">厄立特里亚</td>
+								      <td data-order="85">85<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="558">558<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="473">473<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">坦桑尼亚</td>
+								      <td data-order="305">305<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="509">509<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="183">183<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="21">21<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>10.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">法罗群岛</td>
+								      <td data-order="2">2<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="500">500<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="498">498<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">毛里求斯</td>
+								      <td data-order="47">47<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="497">497<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="440">440<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="10">10<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">不丹</td>
+								      <td data-order="19">19<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="386">386<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="367">367<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">马恩岛</td>
+								      <td data-order="6">6<br />
+								      	<span style="color: red;" id="numberColor">-2</span>
+								      </td>
+								      <td data-order="369">369<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="338">338<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="25">25<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>6.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">柬埔寨</td>
+								      <td data-order="9">9<br />
+								      	<span style="color: red;" id="numberColor">-1</span>
+								      </td>
+								      <td data-order="307">307<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="298">298<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">开曼群岛</td>
+								      <td data-order="18">18<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="269">269<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="249">249<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">巴巴多斯</td>
+								      <td data-order="13">13<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="263">263<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="243">243<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">百慕大群岛</td>
+								      <td data-order="25">25<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="239">239<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="205">205<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="9">9<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>4.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣卢西亚</td>
+								      <td data-order="124">124<br />
+								      	<span style="color: red;" id="numberColor">9</span>
+								      </td>
+								      <td data-order="235">235<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="109">109<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">塞舌尔</td>
+								      <td data-order="7">7<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="166">166<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="159">159<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">荷兰加勒比区</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="161">161<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="155">155<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">文莱</td>
+								      <td data-order="2">2<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="150">150<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="145">145<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">安提瓜和巴布达</td>
+								      <td data-order="7">7<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="140">140<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="129">129<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="4">4<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣巴特</td>
+								      <td data-order="33">33<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="127">127<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="94">94<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣文森特和格林纳丁斯</td>
+								      <td data-order="6">6<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="84">84<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="78">78<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">多米尼加</td>
+								      <td data-order="14">14<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="77">77<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="63">63<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">英属维尔京群岛</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="71">71<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">澳门</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="46">46<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="46">46<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">格林纳达</td>
+								      <td data-order="11">11<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="41">41<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="30">30<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">老挝</td>
+								      <td data-order="15">15<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="39">39<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="24">24<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">斐济</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">3</span>
+								      </td>
+								      <td data-order="38">38<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="33">33<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>5.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">新喀里多尼亚</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="32">32<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="32">32<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">东帝汶</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="30">30<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="30">30<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">梵蒂冈城</td>
+								      <td data-order="12">12<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="27">27<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="15">15<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣基茨和尼维斯</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">2</span>
+								      </td>
+								      <td data-order="22">22<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="19">19<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">格陵兰岛</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="18">18<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="18">18<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Solomon Islands</td>
+								      <td data-order="12">12<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="17">17<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="5">5<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">福克兰群岛</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="16">16<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="13">13<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">圣皮埃尔密克隆</td>
+								      <td data-order="4">4<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="16">16<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="12">12<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">蒙特塞拉特</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="13">13<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="12">12<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>7.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">西撒哈拉</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="10">10<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="8">8<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>11.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">安圭拉</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4">4<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Marshall Islands</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4">4<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Wallis and Futuna</td>
+								      <td data-order="2">2<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Samoa</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Vanuatu</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">中国</td>
+								      <td data-order="306">306<br />
+								      	<span style="color: red;" id="numberColor">-16</span>
+								      </td>
+								      <td data-order="86490">86490<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="81550">81550<br />
+								      	<span>+42</span>
+								      </td>
+								      <td data-order="4634">4634<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>5.4%</td>
+								    </tr>
+                                  
+								  </tbody>
+								</table>
+							</div>
+							<div id="datasheet" style="height: 17.5rem;"></div>
+							<div id="worldtransition" style="height: 17.5rem;"></div>
+				        </div><!--TabBox-->
+				    </section>
+				    <section class="et-slide" id="tab-flexbox">
+				        <div class="demestic">
+					        <h1 style="text-align: center;">国内疫情</h1>
+					        <div id="province" style="height:17.5rem; border:0px solid #ccc;padding:0px;position: relative;">
+					        </div>
+					        <div class="TabBox">
+								<table class="data-table" width="100%">
+								  <thead>
+								    <tr>
+								      <th class="nosort">地区</th>
+								      <th>现有</th>
+								      <th>累计确诊</th>
+								      <th>治愈</th>
+								      <th>死亡</th>
+								      <th>死亡率</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">总和</td>
+								      <td data-order="4853">4853<br />
+								      	<span style="color: red;" id="numberColor">732</span>
+								      </td>
+								      <td data-order="32318">32318<br />
+								      	<span>+965</span>
+								      </td>
+								      <td data-order="26950">26950<br />
+								      	<span>+228</span>
+								      </td>
+								      <td data-order="515">515<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">首尔</td>
+								      <td data-order="1725">1725<br />
+								      	<span style="color: red;" id="numberColor">289</span>
+								      </td>
+								      <td data-order="8113">8113<br />
+								      	<span>+355</span>
+								      </td>
+								      <td data-order="6300">6300<br />
+								      	<span>+65</span>
+								      </td>
+								      <td data-order="88">88<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">釜山</td>
+								      <td data-order="74">74<br />
+								      	<span style="color: red;" id="numberColor">33</span>
+								      </td>
+								      <td data-order="683">683<br />
+								      	<span>+40</span>
+								      </td>
+								      <td data-order="594">594<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="15">15<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.5%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">大邱</td>
+								      <td data-order="34">34<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="7224">7224<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="6991">6991<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="199">199<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">仁川</td>
+								      <td data-order="234">234<br />
+								      	<span style="color: red;" id="numberColor">56</span>
+								      </td>
+								      <td data-order="1305">1305<br />
+								      	<span>+59</span>
+								      </td>
+								      <td data-order="1060">1060<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="11">11<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">光州</td>
+								      <td data-order="100">100<br />
+								      	<span style="color: red;" id="numberColor">16</span>
+								      </td>
+								      <td data-order="646">646<br />
+								      	<span>+28</span>
+								      </td>
+								      <td data-order="543">543<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.5%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">大田</td>
+								      <td data-order="19">19<br />
+								      	<span style="color: red;" id="numberColor">3</span>
+								      </td>
+								      <td data-order="465">465<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="440">440<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="6">6<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">蔚山</td>
+								      <td data-order="19">19<br />
+								      	<span style="color: red;" id="numberColor">10</span>
+								      </td>
+								      <td data-order="185">185<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="164">164<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">世宗</td>
+								      <td data-order="11">11<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="93">93<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="82">82<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">京畿</td>
+								      <td data-order="1076">1076<br />
+								      	<span style="color: red;" id="numberColor">196</span>
+								      </td>
+								      <td data-order="6864">6864<br />
+								      	<span>+265</span>
+								      </td>
+								      <td data-order="5676">5676<br />
+								      	<span>+67</span>
+								      </td>
+								      <td data-order="112">112<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">江原</td>
+								      <td data-order="235">235<br />
+								      	<span style="color: red;" id="numberColor">-5</span>
+								      </td>
+								      <td data-order="583">583<br />
+								      	<span>+21</span>
+								      </td>
+								      <td data-order="342">342<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="6">6<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">忠北</td>
+								      <td data-order="34">34<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="239">239<br />
+								      	<span>+11</span>
+								      </td>
+								      <td data-order="202">202<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">忠南</td>
+								      <td data-order="186">186<br />
+								      	<span style="color: red;" id="numberColor">15</span>
+								      </td>
+								      <td data-order="833">833<br />
+								      	<span>+34</span>
+								      </td>
+								      <td data-order="639">639<br />
+								      	<span>+19</span>
+								      </td>
+								      <td data-order="8">8<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">全北</td>
+								      <td data-order="94">94<br />
+								      	<span style="color: red;" id="numberColor">21</span>
+								      </td>
+								      <td data-order="268">268<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="172">172<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">全南</td>
+								      <td data-order="189">189<br />
+								      	<span style="color: red;" id="numberColor">15</span>
+								      </td>
+								      <td data-order="382">382<br />
+								      	<span>+17</span>
+								      </td>
+								      <td data-order="191">191<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">庆北</td>
+								      <td data-order="86">86<br />
+								      	<span style="color: red;" id="numberColor">5</span>
+								      </td>
+								      <td data-order="1681">1681<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="1538">1538<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="57">57<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">庆南</td>
+								      <td data-order="168">168<br />
+								      	<span style="color: red;" id="numberColor">48</span>
+								      </td>
+								      <td data-order="537">537<br />
+								      	<span>+56</span>
+								      </td>
+								      <td data-order="368">368<br />
+								      	<span>+8</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.3%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">济州</td>
+								      <td data-order="13">13<br />
+								      	<span style="color: red;" id="numberColor">5</span>
+								      </td>
+								      <td data-order="73">73<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="60">60<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">检疫</td>
+								      <td data-order="556">556<br />
+								      	<span style="color: red;" id="numberColor">10</span>
+								      </td>
+								      <td data-order="2144">2144<br />
+								      	<span>+19</span>
+								      </td>
+								      <td data-order="1588">1588<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								  </tbody>
+								</table>
+							</div>
+							<div id="datasheet2" style="height: 17.5rem;"></div>
+							<div id="transition" style="height: 20rem;"></div>
+				        </div>
+				    </section>
+				    
+				    <section class="et-slide" id="tab-react">
+				    	<div class="prevent">
+					        <h2>预防守则</h2>
+					        <p class="text-center"><a class="text-reset" href="http://ncov.mohw.go.kr/infoBoardView.do?brdId=3&brdGubun=32&dataGubun=&ncvContSeq=586&contSeq=586&board_id=&gubun=#" target="_blank">出处:  MOHW, KCDC</a></p>
+					        <div class="Agraphic" style="width: 18.75rem; margin: 0 auto;">
+					        	<img src="/static/images/cn01.jpg" style="width: 100%;" alt="新型冠状病毒肺炎 预防守则">
+								<img src="/static/images/cn02.jpg" style="width: 100%;" alt="新型冠状病毒肺炎 预防守则">
+					        </div>
+					        <div class="hospital-navigation">
+					        	<div class="title"><h2>紧急联络</h2></div>
+					        	<ul>
+					        		<li>✚
+					        			<a href="https://search.naver.com/search.naver?where=m&sm=mtb_etc&query=%EC%8B%A0%EC%A2%85%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%20%EC%84%A0%EB%B3%84%EC%A7%84%EB%A3%8C%EC%86%8C" target="_blank">查找定点诊所</a>
+									</li>
+									<li>
+										<h2>如果出现可疑症状，请联系呼叫中心咨询,并前往筛查诊所</h2>
+										<h2>📞疾病控制中心 呼叫中心: <a href="tel:1339">1339</a></h2>
+										<h2>📞区域呼叫中心 : 区号+120</h2>
+									</li>
+								</ul>
+                            </div>
+				        </div>
+				    </section>
+				    <section class="et-slide" id="tab-angular">
+						<div class="container">
+				        <h1>新闻</h1>
+							<ul>
+								
+							</ul>
+						</div>
+				    </section>
+				</main>
+				<div class="source">
+					<div class="container">
+						<h2>数据出处</h2>
+						<ul>
+							<li>
+								<a href="http://ncov.mohw.go.kr/" target="_blank">韩国: 疾病控制中心KCDC COVID19</a><br />
+								<a href="https://www.worldometers.info/coronavirus/" target="_blank">Worldometer: COVID-19 CORONAVIRUS OUTBREAK</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="footer">
+        	<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			韩国 <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-xs">
+				<li><a href="#">中国</a></li>
+				<li><a href="#">美国</a></li>
+			</ul>
+			</div>
+				<p>要求更正错误信息 & 意见</p>
+				<p>jhnam1992@gmail.com</p>
+				<p>*本网站上提供的统计数据是根据世界疾病控制中心和新闻稿更新的，但由于这些数据是个人收集的，因此我们对数据的准确性不承担任何责任，也不能用作官方证据.本站提供的内容由引用和使用者本人负责全部责任.</p>
+		</div>
+	</div>
+	<div class="footer"></div>
+<script type="text/javascript" src="/static/js/echarts.min.js"></script>
+<script type="text/javascript" src="/static/js/world.js"></script>
+<script type="text/javascript" src="/static/js/South_Korea.js"></script>
+<script type="text/javascript" src="/static/js/navigation.js"></script>
+<script src="/static/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+		var datasheet11 = [
+				
+					'德国',
+				
+					'乌克兰',
+				
+					'波兰',
+				
+					'印度',
+				
+					'俄罗斯',
+				
+					'巴西',
+				
+					'比利时',
+				
+					'意大利',
+				
+					'法国',
+				
+					'美国',
+				
+			]
+
+		var datasheet12 = [
+			
+					'294096',
+			
+					'348077',
+			
+					'430675',
+			
+					'452306',
+			
+					'464436',
+			
+					'483252',
+			
+					'512321',
+			
+					'791697',
+			
+					'1962927',
+			
+					'5063561',
+			
+			]
+
+		var datasheet21 = [
+				
+					'光州',
+				
+					'庆南',
+				
+					'忠南',
+				
+					'全南',
+				
+					'仁川',
+				
+					'江原',
+				
+					'检疫',
+				
+					'京畿',
+				
+					'首尔',
+				
+					'总和',
+				
+			]
+
+		var datasheet22 = [
+				
+					'100',
+				
+					'168',
+				
+					'186',
+				
+					'189',
+				
+					'234',
+				
+					'235',
+				
+					'556',
+				
+					'1076',
+				
+					'1725',
+				
+					'4853',
+				
+			]
+
+		var worldtransition1 = [
+				
+	        		'2020년 11월 19일',
+				
+	        		'2020년 11월 25일',
+				
+	        		'2020년 11월 26일',
+				
+			]
+
+		var worldtransition2 = [
+				
+		    		'15716184',
+				
+		    		'17041806',
+				
+		    		'17244860',
+				
+			]
+
+		var worldtransition3 = [
+				
+					'0',
+				
+					'0',
+				
+					'796692',
+				
+			]
+
+		var worldtransition4 = [
+				
+					'0',
+				
+					'0',
+				
+					'1020584',
+				
+			]
+
+		var transition1 = [
+				
+	        		'2020년 11월 19일',
+				
+	        		'2020년 11월 25일',
+				
+	        		'2020년 11월 26일',
+				
+		]
+
+		var transition2 = [
+				
+	        		'2842',
+				
+	        		'4121',
+				
+	        		'4853',
+				
+			]
+
+		var transition3 = [
+				
+					'0',
+				
+					'0',
+				
+					'228',
+				
+			]
+
+		var transition4 = [
+				
+					'0',
+				
+					'0',
+				
+					'965',
+				
+			]
+
+
+		var worldmap11 = [
+	            
+	            	{name: 'None', value: 7},
+	            
+	            	{name: '美国', value: 5063561},
+	            
+	            	{name: '印度', value: 452306},
+	            
+	            	{name: '巴西', value: 483252},
+	            
+	            	{name: '俄罗斯', value: 464436},
+	            
+	            	{name: '法国', value: 1962927},
+	            
+	            	{name: '西班牙', value: 0},
+	            
+	            	{name: '英国', value: 0},
+	            
+	            	{name: '意大利', value: 791697},
+	            
+	            	{name: '阿根廷', value: 135390},
+	            
+	            	{name: '哥伦比亚', value: 60172},
+	            
+	            	{name: '墨西哥', value: 168853},
+	            
+	            	{name: '德国', value: 294096},
+	            
+	            	{name: '秘鲁', value: 33985},
+	            
+	            	{name: '波兰', value: 430675},
+	            
+	            	{name: '伊朗', value: 222572},
+	            
+	            	{name: '南非', value: 37857},
+	            
+	            	{name: '乌克兰', value: 348077},
+	            
+	            	{name: '比利时', value: 512321},
+	            
+	            	{name: '智利', value: 8774},
+	            
+	            	{name: '伊拉克', value: 58047},
+	            
+	            	{name: '印度尼西亚', value: 66752},
+	            
+	            	{name: '捷克', value: 82259},
+	            
+	            	{name: '荷兰', value: 0},
+	            
+	            	{name: '土耳其', value: 69410},
+	            
+	            	{name: '孟加拉国', value: 78461},
+	            
+	            	{name: '罗马尼亚', value: 115123},
+	            
+	            	{name: '菲律宾', value: 28789},
+	            
+	            	{name: '巴基斯坦', value: 43963},
+	            
+	            	{name: '沙特阿拉伯', value: 5455},
+	            
+	            	{name: '加拿大', value: 58524},
+	            
+	            	{name: '摩洛哥', value: 46471},
+	            
+	            	{name: '以色列', value: 9422},
+	            
+	            	{name: '瑞士', value: 90660},
+	            
+	            	{name: '葡萄牙', value: 80528},
+	            
+	            	{name: '奥地利', value: 68786},
+	            
+	            	{name: '瑞典', value: 0},
+	            
+	            	{name: '尼泊尔', value: 16639},
+	            
+	            	{name: '约旦', value: 64398},
+	            
+	            	{name: '匈牙利', value: 138202},
+	            
+	            	{name: '厄瓜多尔', value: 9933},
+	            
+	            	{name: '阿拉伯联合酋长国', value: 11055},
+	            
+	            	{name: '巴拿马', value: 16174},
+	            
+	            	{name: '玻利维亚', value: 15134},
+	            
+	            	{name: '科威特', value: 6313},
+	            
+	            	{name: '塞尔维亚', value: 107757},
+	            
+	            	{name: '多米尼加共和国', value: 23818},
+	            
+	            	{name: '卡塔尔', value: 2664},
+	            
+	            	{name: '日本', value: 18674},
+	            
+	            	{name: '哥斯达黎加', value: 50235},
+	            
+	            	{name: '保加利亚', value: 87073},
+	            
+	            	{name: '亚美尼亚', value: 25747},
+	            
+	            	{name: '白俄罗斯', value: 20115},
+	            
+	            	{name: '哈萨克斯坦', value: 11589},
+	            
+	            	{name: '阿曼', value: 7332},
+	            
+	            	{name: '黎巴嫩', value: 48155},
+	            
+	            	{name: '危地马拉', value: 7028},
+	            
+	            	{name: '佐治亚州', value: 18785},
+	            
+	            	{name: '克罗地亚', value: 21725},
+	            
+	            	{name: '埃及', value: 5321},
+	            
+	            	{name: '埃塞俄比亚', value: 38871},
+	            
+	            	{name: '洪都拉斯', value: 56222},
+	            
+	            	{name: '阿塞拜疆', value: 34209},
+	            
+	            	{name: '斯洛伐克', value: 44130},
+	            
+	            	{name: '摩尔多瓦', value: 15205},
+	            
+	            	{name: '委内瑞拉', value: 4268},
+	            
+	            	{name: '希腊', value: 85397},
+	            
+	            	{name: '突尼斯', value: 21865},
+	            
+	            	{name: '巴林', value: 1509},
+	            
+	            	{name: '乌兰巴托', value: 18390},
+	            
+	            	{name: '波黑', value: 32689},
+	            
+	            	{name: '利比亚', value: 27682},
+	            
+	            	{name: '肯尼亚', value: 24931},
+	            
+	            	{name: '巴拉圭', value: 21162},
+	            
+	            	{name: '阿尔及利亚', value: 24984},
+	            
+	            	{name: '巴勒斯坦', value: 15563},
+	            
+	            	{name: '丹麦', value: 15254},
+	            
+	            	{name: '乌兹别克斯坦', value: 2206},
+	            
+	            	{name: '爱尔兰', value: 45790},
+	            
+	            	{name: '吉尔吉斯斯坦', value: 7376},
+	            
+	            	{name: '斯洛文尼亚', value: 20337},
+	            
+	            	{name: '尼日利亚', value: 3143},
+	            
+	            	{name: '马来西亚', value: 11348},
+	            
+	            	{name: '新加坡', value: 76},
+	            
+	            	{name: '北马其顿', value: 20881},
+	            
+	            	{name: '立陶宛', value: 40653},
+	            
+	            	{name: '加纳', value: 775},
+	            
+	            	{name: '阿富汗', value: 7747},
+	            
+	            	{name: '萨尔瓦多', value: 2191},
+	            
+	            	{name: '阿尔巴尼亚', value: 17170},
+	            
+	            	{name: '挪威', value: 12996},
+	            
+	            	{name: '黑山', value: 11120},
+	            
+	            	{name: '韩国', value: 4853},
+	            
+	            	{name: '卢森堡', value: 9182},
+	            
+	            	{name: '澳大利亚', value: 1395},
+	            
+	            	{name: '喀麦隆', value: 1301},
+	            
+	            	{name: '芬兰', value: 5960},
+	            
+	            	{name: '斯里兰卡', value: 5557},
+	            
+	            	{name: '科特迪瓦', value: 194},
+	            
+	            	{name: '乌干达', value: 9867},
+	            
+	            	{name: '赞比亚', value: 423},
+	            
+	            	{name: '马达加斯加', value: 433},
+	            
+	            	{name: '苏丹', value: 5531},
+	            
+	            	{name: '塞内加尔', value: 71},
+	            
+	            	{name: '莫桑比克', value: 1715},
+	            
+	            	{name: '安哥拉', value: 6964},
+	            
+	            	{name: '拉脱维亚', value: 12403},
+	            
+	            	{name: '纳米比亚', value: 522},
+	            
+	            	{name: '法属波利尼西亚', value: 8871},
+	            
+	            	{name: '几内亚', value: 951},
+	            
+	            	{name: '马尔代夫', value: 1127},
+	            
+	            	{name: '刚果金', value: 601},
+	            
+	            	{name: '塔吉克斯坦', value: 527},
+	            
+	            	{name: '法属圭亚那', value: 1051},
+	            
+	            	{name: '爱沙尼亚', value: 4359},
+	            
+	            	{name: '佛得角', value: 522},
+	            
+	            	{name: '牙买加', value: 4618},
+	            
+	            	{name: '博茨瓦纳', value: 2269},
+	            
+	            	{name: '津巴布韦', value: 898},
+	            
+	            	{name: '塞浦路斯', value: 7351},
+	            
+	            	{name: '马耳他', value: 2069},
+	            
+	            	{name: '海地', value: 1100},
+	            
+	            	{name: '加蓬', value: 98},
+	            
+	            	{name: '瓜德罗普岛', value: 5953},
+	            
+	            	{name: '毛里塔尼亚', value: 429},
+	            
+	            	{name: '古巴', value: 423},
+	            
+	            	{name: '留尼汪', value: 1137},
+	            
+	            	{name: '巴哈马', value: 1573},
+	            
+	            	{name: '叙利亚', value: 3797},
+	            
+	            	{name: '特立尼达和多巴哥', value: 732},
+	            
+	            	{name: '安道尔', value: 810},
+	            
+	            	{name: '埃斯瓦蒂尼', value: 251},
+	            
+	            	{name: '马拉维', value: 383},
+	            
+	            	{name: '香港', value: 540},
+	            
+	            	{name: '尼加拉瓜', value: 1399},
+	            
+	            	{name: '卢旺达', value: 415},
+	            
+	            	{name: '吉布提', value: 34},
+	            
+	            	{name: '刚果布', value: 551},
+	            
+	            	{name: '伯利兹', value: 2308},
+	            
+	            	{name: '马提尼克', value: 5275},
+	            
+	            	{name: '冰岛', value: 176},
+	            
+	            	{name: '苏里南', value: 4},
+	            
+	            	{name: '圭亚那', value: 847},
+	            
+	            	{name: '马约特', value: 2168},
+	            
+	            	{name: '赤道几内亚', value: 47},
+	            
+	            	{name: '乌拉圭', value: 992},
+	            
+	            	{name: '中非', value: 2924},
+	            
+	            	{name: '阿鲁巴', value: 101},
+	            
+	            	{name: '马里', value: 1253},
+	            
+	            	{name: '索马里', value: 920},
+	            
+	            	{name: '泰国', value: 94},
+	            
+	            	{name: '冈比亚', value: 17},
+	            
+	            	{name: '南苏丹', value: 74},
+	            
+	            	{name: '贝宁', value: 352},
+	            
+	            	{name: '多哥', value: 505},
+	            
+	            	{name: '布基纳法索', value: 142},
+	            
+	            	{name: '几内亚比绍', value: 70},
+	            
+	            	{name: '塞拉利昂', value: 505},
+	            
+	            	{name: '也门', value: 39},
+	            
+	            	{name: '莱索托', value: 771},
+	            
+	            	{name: '新西兰', value: 60},
+	            
+	            	{name: '库拉索岛', value: 869},
+	            
+	            	{name: '乍得', value: 60},
+	            
+	            	{name: '利比里亚', value: 155},
+	            
+	            	{name: '圣马力诺', value: 227},
+	            
+	            	{name: '尼日尔', value: 179},
+	            
+	            	{name: '越南', value: 130},
+	            
+	            	{name: '列支敦士登', value: 184},
+	            
+	            	{name: '海峡群岛', value: 139},
+	            
+	            	{name: '荷属圣马丁', value: 92},
+	            
+	            	{name: '直布罗陀', value: 91},
+	            
+	            	{name: '圣多美和普林西比', value: 39},
+	            
+	            	{name: '特克斯和凯科斯群岛', value: 40},
+	            
+	            	{name: '蒙古', value: 367},
+	            
+	            	{name: '圣马丁岛', value: 80},
+	            
+	            	{name: '布隆迪', value: 97},
+	            
+	            	{name: '巴布亚新几内亚', value: 50},
+	            
+	            	{name: '台湾', value: 63},
+	            
+	            	{name: '科摩罗', value: 21},
+	            
+	            	{name: '摩纳哥', value: 61},
+	            
+	            	{name: '厄立特里亚', value: 85},
+	            
+	            	{name: '坦桑尼亚', value: 305},
+	            
+	            	{name: '法罗群岛', value: 2},
+	            
+	            	{name: '毛里求斯', value: 47},
+	            
+	            	{name: '不丹', value: 19},
+	            
+	            	{name: '马恩岛', value: 6},
+	            
+	            	{name: '柬埔寨', value: 9},
+	            
+	            	{name: '开曼群岛', value: 18},
+	            
+	            	{name: '巴巴多斯', value: 13},
+	            
+	            	{name: '百慕大群岛', value: 25},
+	            
+	            	{name: '圣卢西亚', value: 124},
+	            
+	            	{name: '塞舌尔', value: 7},
+	            
+	            	{name: '荷兰加勒比区', value: 3},
+	            
+	            	{name: '文莱', value: 2},
+	            
+	            	{name: '安提瓜和巴布达', value: 7},
+	            
+	            	{name: '圣巴特', value: 33},
+	            
+	            	{name: '圣文森特和格林纳丁斯', value: 6},
+	            
+	            	{name: '多米尼加', value: 14},
+	            
+	            	{name: '英属维尔京群岛', value: 0},
+	            
+	            	{name: '澳门', value: 0},
+	            
+	            	{name: '格林纳达', value: 11},
+	            
+	            	{name: '老挝', value: 15},
+	            
+	            	{name: '斐济', value: 3},
+	            
+	            	{name: '新喀里多尼亚', value: 0},
+	            
+	            	{name: '东帝汶', value: 0},
+	            
+	            	{name: '梵蒂冈城', value: 12},
+	            
+	            	{name: '圣基茨和尼维斯', value: 3},
+	            
+	            	{name: '格陵兰岛', value: 0},
+	            
+	            	{name: 'Solomon Islands', value: 12},
+	            
+	            	{name: '福克兰群岛', value: 3},
+	            
+	            	{name: '圣皮埃尔密克隆', value: 4},
+	            
+	            	{name: '蒙特塞拉特', value: 0},
+	            
+	            	{name: '西撒哈拉', value: 1},
+	            
+	            	{name: '安圭拉', value: 1},
+	            
+	            	{name: 'Marshall Islands', value: 3},
+	            
+	            	{name: 'Wallis and Futuna', value: 2},
+	            
+	            	{name: 'Samoa', value: 1},
+	            
+	            	{name: 'Vanuatu', value: 1},
+	            
+	            	{name: '中国', value: 306},
+	            
+            ]
+
+        var province11 = [
+				
+					{name: '总和', value: 4853},
+				
+					{name: '首尔', value: 1725},
+				
+					{name: '釜山', value: 74},
+				
+					{name: '大邱', value: 34},
+				
+					{name: '仁川', value: 234},
+				
+					{name: '光州', value: 100},
+				
+					{name: '大田', value: 19},
+				
+					{name: '蔚山', value: 19},
+				
+					{name: '世宗', value: 11},
+				
+					{name: '京畿', value: 1076},
+				
+					{name: '江原', value: 235},
+				
+					{name: '忠北', value: 34},
+				
+					{name: '忠南', value: 186},
+				
+					{name: '全北', value: 94},
+				
+					{name: '全南', value: 189},
+				
+					{name: '庆北', value: 86},
+				
+					{name: '庆南', value: 168},
+				
+					{name: '济州', value: 13},
+				
+					{name: '检疫', value: 556},
+				
+            ]
+
+        var province22 = [
+                
+					{name: '总和', value: 32318},
+				
+					{name: '首尔', value: 8113},
+				
+					{name: '釜山', value: 683},
+				
+					{name: '大邱', value: 7224},
+				
+					{name: '仁川', value: 1305},
+				
+					{name: '光州', value: 646},
+				
+					{name: '大田', value: 465},
+				
+					{name: '蔚山', value: 185},
+				
+					{name: '世宗', value: 93},
+				
+					{name: '京畿', value: 6864},
+				
+					{name: '江原', value: 583},
+				
+					{name: '忠北', value: 239},
+				
+					{name: '忠南', value: 833},
+				
+					{name: '全北', value: 268},
+				
+					{name: '全南', value: 382},
+				
+					{name: '庆北', value: 1681},
+				
+					{name: '庆南', value: 537},
+				
+					{name: '济州', value: 73},
+				
+					{name: '检疫', value: 2144},
+				
+            ]
+
+        var province33 = [
+                
+					{name: '总和', value: 515},
+				
+					{name: '首尔', value: 88},
+				
+					{name: '釜山', value: 15},
+				
+					{name: '大邱', value: 199},
+				
+					{name: '仁川', value: 11},
+				
+					{name: '光州', value: 3},
+				
+					{name: '大田', value: 6},
+				
+					{name: '蔚山', value: 2},
+				
+					{name: '世宗', value: 0},
+				
+					{name: '京畿', value: 112},
+				
+					{name: '江原', value: 6},
+				
+					{name: '忠北', value: 3},
+				
+					{name: '忠南', value: 8},
+				
+					{name: '全北', value: 2},
+				
+					{name: '全南', value: 2},
+				
+					{name: '庆北', value: 57},
+				
+					{name: '庆南', value: 1},
+				
+					{name: '济州', value: 0},
+				
+					{name: '检疫', value: 0},
+				
+            ]
+</script>
+<script src="/static/js/cn/world-datasheet.js"></script>
+<script src="/static/js/cn/city-datasheet.js"></script>
+<script src="/static/js/cn/world-chart.js"></script>
+<script src="/static/js/cn/city-chart.js"></script>
+<script src="/static/js/cn/world-map.js"></script>
+<script src="/static/js/cn/korea-map.js"></script>
+<script src="/static/js/all-tables.js"></script>
+<script src="/static/js/newstime.js"></script>
+<script type="text/javascript">
+	var dataNumber = document.querySelectorAll('#numberColor');
+	for (i in dataNumber) {
+		if (dataNumber[i].innerText < 0) {
+			dataNumber[i].style.color = '#10aeb5';
+		} else {
+			dataNumber[i].innerText = '+' + dataNumber[i].innerText;
+		}
+	}
+</script>
+</body>
+</htmcn

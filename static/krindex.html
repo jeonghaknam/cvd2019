@@ -1,0 +1,5094 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="canonical" href="https://cvd2019.kr/" />
+	<title>코로나2019 실시간 현황</title>
+	<meta property="og:type" content="website"> 
+    <meta property="og:title" content="코로나2019 실시간 현황">
+    <meta property="og:description" content="코로나19(COVID19)에 관한 세계 각 국가들의 통계 및 뉴스 등을 취합하여 실시간 정보를 제공합니다.">
+    <meta property="og:image" content="https://cvd2019.kr/static/images/krogimage.jpg">
+    <meta property="og:url" content="https://cvd2019.kr">
+	<link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <script type="text/javascript" src="/static/js/set_root.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/navigation.css">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+	<section class="et-slide" id="tab-top"></section>
+	<div class="main_wrap">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<a class="logo"><img src="/static/images/logo.png" alt="cvd2019 logo" title="코로나19(COVID-19) 실시간 현황"></a>
+					<div class="language">
+						<div class="dropdown">
+						  <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+						    언어
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu dropdown-menu-xs dropdown-menu-left">
+						    <li><a href="/static/cnindex.html" target="_blank">중국</a></li>
+						    <li><a href="/static/enindex.html" target="_blank">미국</a></li>
+						  </ul>
+						</div>
+					</div>
+					<div class="page-header">
+					  <h1>코로나19(COVID-19)<br />실시간 현황</h1>
+					  	<h3>마지막업데이트: 2020년 11월 26일 8:21 오후
+					  		<button type="button" class="btn btn-xs" onClick="document.location.reload()">
+						  	<span>↻</span>
+							</button>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="center">
+			<div class="top_info container">
+				<h1>전세계 현황</h1>
+				<div class="row world">
+					<div class="col-xs-6">
+						<span>격리중</span><br />
+						<strong style="color:#ff6f72;" >17244860</strong><br />
+						<b>전일대비<em style="color: red;" id="numberColor">203054</em></b>
+					</div>
+					<div class="col-xs-6">
+						<span>격리해제</span><br />
+						<strong style="color: #10aeb5;">42160807</strong><br />
+						<b>전일대비<em style="color: #10aeb5;">+796692</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>확진환자</span><br />
+						<strong style="color: #e83132;">60834776</strong><br />
+						<b>전일대비<em>+1020584</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>치사율</span><br />
+						<strong style="color: #476da0;">3.3%</strong><br />
+					</div>
+					<div class="col-xs-4">
+						<span>사망자</span><br />
+						<strong style="color: #4d5054;">1429109</strong><br />
+						<b>전일대비<em>+20838</em></b>
+					</div>
+				</div>
+
+				<h1>대한민국</h1>
+				<div class="row Country">
+					<div class="col-xs-4">
+						<span>격리중</span><br />
+						<strong style="color:#ff6f72;" >4853</strong><br />
+						<b>전일대비<em style="color: red;" id="numberColor">732</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>해외유입</span><br />
+						<strong style="color: #476da0;">4504</strong><br />
+						<b>전일대비<em>+ 0</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>격리해제</span><br />
+						<strong style="color: #10aeb5;">26950</strong><br />
+						<b>전일대비<em>+228</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>확진환자</span><br />
+						<strong style="color: #e83132;">32318</strong><br />
+						<b>전일대비<em>+965</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>치사율</span><br />
+						<strong style="color: #e86d48;">1.9%</strong><br />
+					</div>
+					<div class="col-xs-4">
+						<span>사망자</span><br />
+						<strong style="color: #4d5054;">515</strong><br />
+						<b>전일대비<em>+5</em></b>
+					</div>
+				</div>
+				<div class="description" style="text-align: center;">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="/static/images/question.png" alt="설명">
+						<span>&nbsp;&nbsp;용어설명</span>
+					</button>
+
+					<div class="modal fade bs-example-modal-sm bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					  	<div class="modal-dialog modal-dialog-centered" role="document">
+					  		<div class="modal-content">
+					  	 		<div class="modal-header">
+							        <h4 class="modal-title">용어설명</h4>
+							    </div>
+
+							  	<div class="modal-body">
+							  		<p>* 전일대비+ = 전일 대비 증가량</p>
+							  		<p>* 치사율(%) = 사망자/(사망자+격리해제)</p>
+							  		<p>* 격리중 = 확진환자 - 격리해제 - 사망자</p>
+							  		<p>* 해외유입 = 해외입국 확진환자</p>
+                                    <p>* 대한민국 수치는 질병관리본부 보도자료 기준</p>
+									<p>자세한 사항은 홈페이지 하단 출처 참조</p>
+							  	</div>
+							  	<div class="modal-footer">
+					        		<button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+					      		</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="breadcrumb">
+				<section class="et-hero-tabs" >
+				    <div class="et-hero-tabs-container">
+				        <a class="et-hero-tab" href="#tab-es6">세계현황</a>
+				        <a class="et-hero-tab" href="#tab-flexbox">국내현황</a>
+				        <a class="et-hero-tab" href="#tab-react">예방수칙</a>
+				        <a class="et-hero-tab" href="#tab-angular">뉴스</a>
+				        <a class="et-hero-tab" href="#tab-top">↑이동</a>
+				        <span class="et-hero-tab-slider"></span>
+				    </div>
+				</section>
+
+				<!-- Main -->
+				<main class="et-main">
+				    <section class="et-slide" id="tab-es6">
+				    	<div class="world">
+					        <h1 style="text-align: center;">세계 현황</h1>
+					        <div id="worldmap" style="height:13rem; border:0px solid #ccc;padding:0px;position: relative;">
+					        </div>
+
+					        <div class="TabBox">
+								<table class="data-table" width="100%">
+								  <thead>
+								    <tr>
+								      <th class="nosort">국가</th>
+								      <th>격리</th>
+								      <th>확진</th>
+								      <th>해제</th>
+								      <th>사망</th>
+								      <th>치사율</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">None</td>
+								      <td data-order="7">7<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="9">9<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">미국</td>
+								      <td data-order="5063561">5063561<br />
+								      	<span style="color: red;" id="numberColor">83471</span>
+								      </td>
+								      <td data-order="13139882">13139882<br />
+								      	<span>+337965</span>
+								      </td>
+								      <td data-order="7808059">7808059<br />
+								      	<span>+250376</span>
+								      </td>
+								      <td data-order="268262">268262<br />
+								      	<span>+4118</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">인도</td>
+								      <td data-order="452306">452306<br />
+								      	<span style="color: red;" id="numberColor">11152</span>
+								      </td>
+								      <td data-order="9266705">9266705<br />
+								      	<span>+72723</span>
+								      </td>
+								      <td data-order="8679138">8679138<br />
+								      	<span>+60693</span>
+								      </td>
+								      <td data-order="135261">135261<br />
+								      	<span>+878</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">브라질</td>
+								      <td data-order="483252">483252<br />
+								      	<span style="color: red;" id="numberColor">7719</span>
+								      </td>
+								      <td data-order="6166898">6166898<br />
+								      	<span>+76701</span>
+								      </td>
+								      <td data-order="5512847">5512847<br />
+								      	<span>+67752</span>
+								      </td>
+								      <td data-order="170799">170799<br />
+								      	<span>+1230</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">러시아</td>
+								      <td data-order="464436">464436<br />
+								      	<span style="color: red;" id="numberColor">-2690</span>
+								      </td>
+								      <td data-order="2187990">2187990<br />
+								      	<span>+49162</span>
+								      </td>
+								      <td data-order="1685492">1685492<br />
+								      	<span>+50821</span>
+								      </td>
+								      <td data-order="38062">38062<br />
+								      	<span>+1031</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">프랑스</td>
+								      <td data-order="1962927">1962927<br />
+								      	<span style="color: red;" id="numberColor">20091</span>
+								      </td>
+								      <td data-order="2170097">2170097<br />
+								      	<span>+25437</span>
+								      </td>
+								      <td data-order="156552">156552<br />
+								      	<span>+3960</span>
+								      </td>
+								      <td data-order="50618">50618<br />
+								      	<span>+1386</span>
+								      </td>
+								      <td>24.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">스페인</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1622632">1622632<br />
+								      	<span>+15727</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="44037">44037<br />
+								      	<span>+906</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">영국</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1557007">1557007<br />
+								      	<span>+18213</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="56533">56533<br />
+								      	<span>+695</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">이탈리아</td>
+								      <td data-order="791697">791697<br />
+								      	<span style="color: red;" id="numberColor">-6689</span>
+								      </td>
+								      <td data-order="1480874">1480874<br />
+								      	<span>+25852</span>
+								      </td>
+								      <td data-order="637149">637149<br />
+								      	<span>+31819</span>
+								      </td>
+								      <td data-order="52028">52028<br />
+								      	<span>+722</span>
+								      </td>
+								      <td>7.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아르헨티나</td>
+								      <td data-order="135390">135390<br />
+								      	<span style="color: red;" id="numberColor">1681</span>
+								      </td>
+								      <td data-order="1390388">1390388<br />
+								      	<span>+15757</span>
+								      </td>
+								      <td data-order="1217284">1217284<br />
+								      	<span>+13484</span>
+								      </td>
+								      <td data-order="37714">37714<br />
+								      	<span>+592</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">콜롬비아</td>
+								      <td data-order="60172">60172<br />
+								      	<span style="color: red;" id="numberColor">-431</span>
+								      </td>
+								      <td data-order="1270991">1270991<br />
+								      	<span>+16012</span>
+								      </td>
+								      <td data-order="1174959">1174959<br />
+								      	<span>+16062</span>
+								      </td>
+								      <td data-order="35860">35860<br />
+								      	<span>+381</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">멕시코</td>
+								      <td data-order="168853">168853<br />
+								      	<span style="color: red;" id="numberColor">6114</span>
+								      </td>
+								      <td data-order="1070487">1070487<br />
+								      	<span>+21129</span>
+								      </td>
+								      <td data-order="798037">798037<br />
+								      	<span>+13344</span>
+								      </td>
+								      <td data-order="103597">103597<br />
+								      	<span>+1671</span>
+								      </td>
+								      <td>11.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">독일</td>
+								      <td data-order="294096">294096<br />
+								      	<span style="color: red;" id="numberColor">-10214</span>
+								      </td>
+								      <td data-order="985604">985604<br />
+								      	<span>+29799</span>
+								      </td>
+								      <td data-order="676100">676100<br />
+								      	<span>+39400</span>
+								      </td>
+								      <td data-order="15408">15408<br />
+								      	<span>+613</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">페루</td>
+								      <td data-order="33985">33985<br />
+								      	<span style="color: red;" id="numberColor">-286</span>
+								      </td>
+								      <td data-order="954459">954459<br />
+								      	<span>+3902</span>
+								      </td>
+								      <td data-order="884747">884747<br />
+								      	<span>+4102</span>
+								      </td>
+								      <td data-order="35727">35727<br />
+								      	<span>+86</span>
+								      </td>
+								      <td>3.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">폴란드</td>
+								      <td data-order="430675">430675<br />
+								      	<span style="color: red;" id="numberColor">-9360</span>
+								      </td>
+								      <td data-order="941112">941112<br />
+								      	<span>+32046</span>
+								      </td>
+								      <td data-order="494869">494869<br />
+								      	<span>+40152</span>
+								      </td>
+								      <td data-order="15568">15568<br />
+								      	<span>+1254</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">이란</td>
+								      <td data-order="222572">222572<br />
+								      	<span style="color: red;" id="numberColor">5483</span>
+								      </td>
+								      <td data-order="894385">894385<br />
+								      	<span>+13843</span>
+								      </td>
+								      <td data-order="625606">625606<br />
+								      	<span>+7891</span>
+								      </td>
+								      <td data-order="46207">46207<br />
+								      	<span>+469</span>
+								      </td>
+								      <td>6.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">남아프리카공화국</td>
+								      <td data-order="37857">37857<br />
+								      	<span style="color: red;" id="numberColor">261</span>
+								      </td>
+								      <td data-order="775502">775502<br />
+								      	<span>+5743</span>
+								      </td>
+								      <td data-order="716444">716444<br />
+								      	<span>+5249</span>
+								      </td>
+								      <td data-order="21201">21201<br />
+								      	<span>+233</span>
+								      </td>
+								      <td>2.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">우크라이나</td>
+								      <td data-order="348077">348077<br />
+								      	<span style="color: red;" id="numberColor">10722</span>
+								      </td>
+								      <td data-order="677189">677189<br />
+								      	<span>+29213</span>
+								      </td>
+								      <td data-order="317395">317395<br />
+								      	<span>+18037</span>
+								      </td>
+								      <td data-order="11717">11717<br />
+								      	<span>+454</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">벨기에</td>
+								      <td data-order="512321">512321<br />
+								      	<span style="color: red;" id="numberColor">4218</span>
+								      </td>
+								      <td data-order="564967">564967<br />
+								      	<span>+5065</span>
+								      </td>
+								      <td data-order="36569">36569<br />
+								      	<span>+525</span>
+								      </td>
+								      <td data-order="16077">16077<br />
+								      	<span>+322</span>
+								      </td>
+								      <td>30.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">칠레</td>
+								      <td data-order="8774">8774<br />
+								      	<span style="color: red;" id="numberColor">-348</span>
+								      </td>
+								      <td data-order="544092">544092<br />
+								      	<span>+1005</span>
+								      </td>
+								      <td data-order="520180">520180<br />
+								      	<span>+1346</span>
+								      </td>
+								      <td data-order="15138">15138<br />
+								      	<span>+7</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">이라크</td>
+								      <td data-order="58047">58047<br />
+								      	<span style="color: red;" id="numberColor">113</span>
+								      </td>
+								      <td data-order="542187">542187<br />
+								      	<span>+2438</span>
+								      </td>
+								      <td data-order="472054">472054<br />
+								      	<span>+2270</span>
+								      </td>
+								      <td data-order="12086">12086<br />
+								      	<span>+55</span>
+								      </td>
+								      <td>2.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">인도네시아</td>
+								      <td data-order="66752">66752<br />
+								      	<span style="color: red;" id="numberColor">1874</span>
+								      </td>
+								      <td data-order="516753">516753<br />
+								      	<span>+10451</span>
+								      </td>
+								      <td data-order="433649">433649<br />
+								      	<span>+8336</span>
+								      </td>
+								      <td data-order="16352">16352<br />
+								      	<span>+241</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">체코</td>
+								      <td data-order="82259">82259<br />
+								      	<span style="color: red;" id="numberColor">-3363</span>
+								      </td>
+								      <td data-order="507549">507549<br />
+								      	<span>+7718</span>
+								      </td>
+								      <td data-order="417657">417657<br />
+								      	<span>+10931</span>
+								      </td>
+								      <td data-order="7633">7633<br />
+								      	<span>+150</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">네덜란드</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="498653">498653<br />
+								      	<span>+4909</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="9109">9109<br />
+								      	<span>+74</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">터키</td>
+								      <td data-order="69410">69410<br />
+								      	<span style="color: red;" id="numberColor">2735</span>
+								      </td>
+								      <td data-order="467730">467730<br />
+								      	<span>+6814</span>
+								      </td>
+								      <td data-order="385480">385480<br />
+								      	<span>+3911</span>
+								      </td>
+								      <td data-order="12840">12840<br />
+								      	<span>+168</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">방글라데시</td>
+								      <td data-order="78461">78461<br />
+								      	<span style="color: red;" id="numberColor">-204</span>
+								      </td>
+								      <td data-order="456438">456438<br />
+								      	<span>+4448</span>
+								      </td>
+								      <td data-order="371453">371453<br />
+								      	<span>+4576</span>
+								      </td>
+								      <td data-order="6524">6524<br />
+								      	<span>+76</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">루마니아</td>
+								      <td data-order="115123">115123<br />
+								      	<span style="color: red;" id="numberColor">-921</span>
+								      </td>
+								      <td data-order="449349">449349<br />
+								      	<span>+18744</span>
+								      </td>
+								      <td data-order="323514">323514<br />
+								      	<span>+19326</span>
+								      </td>
+								      <td data-order="10712">10712<br />
+								      	<span>+339</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">필리핀</td>
+								      <td data-order="28789">28789<br />
+								      	<span style="color: red;" id="numberColor">2044</span>
+								      </td>
+								      <td data-order="424297">424297<br />
+								      	<span>+2575</span>
+								      </td>
+								      <td data-order="387266">387266<br />
+								      	<span>+474</span>
+								      </td>
+								      <td data-order="8242">8242<br />
+								      	<span>+57</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">파키스탄</td>
+								      <td data-order="43963">43963<br />
+								      	<span style="color: red;" id="numberColor">3584</span>
+								      </td>
+								      <td data-order="386198">386198<br />
+								      	<span>+6315</span>
+								      </td>
+								      <td data-order="334392">334392<br />
+								      	<span>+2632</span>
+								      </td>
+								      <td data-order="7843">7843<br />
+								      	<span>+99</span>
+								      </td>
+								      <td>2.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">사우디아라비아</td>
+								      <td data-order="5455">5455<br />
+								      	<span style="color: red;" id="numberColor">-164</span>
+								      </td>
+								      <td data-order="356067">356067<br />
+								      	<span>+326</span>
+								      </td>
+								      <td data-order="344787">344787<br />
+								      	<span>+476</span>
+								      </td>
+								      <td data-order="5825">5825<br />
+								      	<span>+14</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">캐나다</td>
+								      <td data-order="58524">58524<br />
+								      	<span style="color: red;" id="numberColor">1957</span>
+								      </td>
+								      <td data-order="347466">347466<br />
+								      	<span>+7778</span>
+								      </td>
+								      <td data-order="277232">277232<br />
+								      	<span>+5691</span>
+								      </td>
+								      <td data-order="11710">11710<br />
+								      	<span>+130</span>
+								      </td>
+								      <td>4.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">모로코</td>
+								      <td data-order="46471">46471<br />
+								      	<span style="color: red;" id="numberColor">-311</span>
+								      </td>
+								      <td data-order="336506">336506<br />
+								      	<span>+4979</span>
+								      </td>
+								      <td data-order="284496">284496<br />
+								      	<span>+5220</span>
+								      </td>
+								      <td data-order="5539">5539<br />
+								      	<span>+70</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">이스라엘</td>
+								      <td data-order="9422">9422<br />
+								      	<span style="color: red;" id="numberColor">518</span>
+								      </td>
+								      <td data-order="332317">332317<br />
+								      	<span>+1822</span>
+								      </td>
+								      <td data-order="320069">320069<br />
+								      	<span>+1296</span>
+								      </td>
+								      <td data-order="2826">2826<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">스위스</td>
+								      <td data-order="90660">90660<br />
+								      	<span style="color: red;" id="numberColor">1844</span>
+								      </td>
+								      <td data-order="313978">313978<br />
+								      	<span>+9385</span>
+								      </td>
+								      <td data-order="218900">218900<br />
+								      	<span>+7400</span>
+								      </td>
+								      <td data-order="4418">4418<br />
+								      	<span>+141</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">포르투갈</td>
+								      <td data-order="80528">80528<br />
+								      	<span style="color: red;" id="numberColor">96</span>
+								      </td>
+								      <td data-order="274011">274011<br />
+								      	<span>+5290</span>
+								      </td>
+								      <td data-order="189356">189356<br />
+								      	<span>+5123</span>
+								      </td>
+								      <td data-order="4127">4127<br />
+								      	<span>+71</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">오스트리아</td>
+								      <td data-order="68786">68786<br />
+								      	<span style="color: red;" id="numberColor">-727</span>
+								      </td>
+								      <td data-order="260512">260512<br />
+								      	<span>+5802</span>
+								      </td>
+								      <td data-order="189059">189059<br />
+								      	<span>+6439</span>
+								      </td>
+								      <td data-order="2667">2667<br />
+								      	<span>+90</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">스웨덴</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="230514">230514<br />
+								      	<span>+4954</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="6555">6555<br />
+								      	<span>+55</span>
+								      </td>
+								      <td>100.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">네팔</td>
+								      <td data-order="16639">16639<br />
+								      	<span style="color: red;" id="numberColor">-1220</span>
+								      </td>
+								      <td data-order="226026">226026<br />
+								      	<span>+1948</span>
+								      </td>
+								      <td data-order="207998">207998<br />
+								      	<span>+3140</span>
+								      </td>
+								      <td data-order="1389">1389<br />
+								      	<span>+28</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">요르단</td>
+								      <td data-order="64398">64398<br />
+								      	<span style="color: red;" id="numberColor">-785</span>
+								      </td>
+								      <td data-order="198021">198021<br />
+								      	<span>+5025</span>
+								      </td>
+								      <td data-order="131181">131181<br />
+								      	<span>+5748</span>
+								      </td>
+								      <td data-order="2442">2442<br />
+								      	<span>+62</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">헝가리</td>
+								      <td data-order="138202">138202<br />
+								      	<span style="color: red;" id="numberColor">4349</span>
+								      </td>
+								      <td data-order="192047">192047<br />
+								      	<span>+10166</span>
+								      </td>
+								      <td data-order="49616">49616<br />
+								      	<span>+5596</span>
+								      </td>
+								      <td data-order="4229">4229<br />
+								      	<span>+221</span>
+								      </td>
+								      <td>7.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">에콰도르</td>
+								      <td data-order="9933">9933<br />
+								      	<span style="color: red;" id="numberColor">770</span>
+								      </td>
+								      <td data-order="187230">187230<br />
+								      	<span>+794</span>
+								      </td>
+								      <td data-order="164009">164009<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="13288">13288<br />
+								      	<span>+24</span>
+								      </td>
+								      <td>7.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아랍에미리트</td>
+								      <td data-order="11055">11055<br />
+								      	<span style="color: red;" id="numberColor">510</span>
+								      </td>
+								      <td data-order="162662">162662<br />
+								      	<span>+1297</span>
+								      </td>
+								      <td data-order="151044">151044<br />
+								      	<span>+783</span>
+								      </td>
+								      <td data-order="563">563<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">파나마</td>
+								      <td data-order="16174">16174<br />
+								      	<span style="color: red;" id="numberColor">493</span>
+								      </td>
+								      <td data-order="158532">158532<br />
+								      	<span>+2874</span>
+								      </td>
+								      <td data-order="139356">139356<br />
+								      	<span>+2352</span>
+								      </td>
+								      <td data-order="3002">3002<br />
+								      	<span>+29</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">볼리비아</td>
+								      <td data-order="15134">15134<br />
+								      	<span style="color: red;" id="numberColor">-436</span>
+								      </td>
+								      <td data-order="144276">144276<br />
+								      	<span>+242</span>
+								      </td>
+								      <td data-order="120209">120209<br />
+								      	<span>+661</span>
+								      </td>
+								      <td data-order="8933">8933<br />
+								      	<span>+17</span>
+								      </td>
+								      <td>6.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">쿠웨이트</td>
+								      <td data-order="6313">6313<br />
+								      	<span style="color: red;" id="numberColor">-205</span>
+								      </td>
+								      <td data-order="141217">141217<br />
+								      	<span>+422</span>
+								      </td>
+								      <td data-order="134033">134033<br />
+								      	<span>+626</span>
+								      </td>
+								      <td data-order="871">871<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">세르비아</td>
+								      <td data-order="107757">107757<br />
+								      	<span style="color: red;" id="numberColor">7538</span>
+								      </td>
+								      <td data-order="140608">140608<br />
+								      	<span>+7579</span>
+								      </td>
+								      <td data-order="31536">31536<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1315">1315<br />
+								      	<span>+41</span>
+								      </td>
+								      <td>4.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">도미니카공화국</td>
+								      <td data-order="23818">23818<br />
+								      	<span style="color: red;" id="numberColor">154</span>
+								      </td>
+								      <td data-order="139396">139396<br />
+								      	<span>+285</span>
+								      </td>
+								      <td data-order="113263">113263<br />
+								      	<span>+129</span>
+								      </td>
+								      <td data-order="2315">2315<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">카타르</td>
+								      <td data-order="2664">2664<br />
+								      	<span style="color: red;" id="numberColor">-44</span>
+								      </td>
+								      <td data-order="137851">137851<br />
+								      	<span>+209</span>
+								      </td>
+								      <td data-order="134950">134950<br />
+								      	<span>+252</span>
+								      </td>
+								      <td data-order="237">237<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">일본.</td>
+								      <td data-order="18674">18674<br />
+								      	<span style="color: red;" id="numberColor">74</span>
+								      </td>
+								      <td data-order="135400">135400<br />
+								      	<span>+1471</span>
+								      </td>
+								      <td data-order="114725">114725<br />
+								      	<span>+1385</span>
+								      </td>
+								      <td data-order="2001">2001<br />
+								      	<span>+12</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">코스타리카</td>
+								      <td data-order="50235">50235<br />
+								      	<span style="color: red;" id="numberColor">917</span>
+								      </td>
+								      <td data-order="134520">134520<br />
+								      	<span>+2225</span>
+								      </td>
+								      <td data-order="82611">82611<br />
+								      	<span>+1275</span>
+								      </td>
+								      <td data-order="1674">1674<br />
+								      	<span>+33</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">불가리아</td>
+								      <td data-order="87073">87073<br />
+								      	<span style="color: red;" id="numberColor">3402</span>
+								      </td>
+								      <td data-order="133060">133060<br />
+								      	<span>+8094</span>
+								      </td>
+								      <td data-order="42620">42620<br />
+								      	<span>+4394</span>
+								      </td>
+								      <td data-order="3367">3367<br />
+								      	<span>+298</span>
+								      </td>
+								      <td>7.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아르메니아</td>
+								      <td data-order="25747">25747<br />
+								      	<span style="color: red;" id="numberColor">-829</span>
+								      </td>
+								      <td data-order="130870">130870<br />
+								      	<span>+3348</span>
+								      </td>
+								      <td data-order="103055">103055<br />
+								      	<span>+4111</span>
+								      </td>
+								      <td data-order="2068">2068<br />
+								      	<span>+66</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">벨라루스</td>
+								      <td data-order="20115">20115<br />
+								      	<span style="color: red;" id="numberColor">109</span>
+								      </td>
+								      <td data-order="130012">130012<br />
+								      	<span>+3059</span>
+								      </td>
+								      <td data-order="108769">108769<br />
+								      	<span>+2934</span>
+								      </td>
+								      <td data-order="1128">1128<br />
+								      	<span>+16</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">카자흐스탄</td>
+								      <td data-order="11589">11589<br />
+								      	<span style="color: red;" id="numberColor">320</span>
+								      </td>
+								      <td data-order="128400">128400<br />
+								      	<span>+1540</span>
+								      </td>
+								      <td data-order="114821">114821<br />
+								      	<span>+1175</span>
+								      </td>
+								      <td data-order="1990">1990<br />
+								      	<span>+45</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">오만</td>
+								      <td data-order="7332">7332<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="122579">122579<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="113856">113856<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1391">1391<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">레바논</td>
+								      <td data-order="48155">48155<br />
+								      	<span style="color: red;" id="numberColor">939</span>
+								      </td>
+								      <td data-order="120341">120341<br />
+								      	<span>+1636</span>
+								      </td>
+								      <td data-order="71236">71236<br />
+								      	<span>+681</span>
+								      </td>
+								      <td data-order="950">950<br />
+								      	<span>+16</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">과테말라</td>
+								      <td data-order="7028">7028<br />
+								      	<span style="color: red;" id="numberColor">116</span>
+								      </td>
+								      <td data-order="119989">119989<br />
+								      	<span>+640</span>
+								      </td>
+								      <td data-order="108854">108854<br />
+								      	<span>+516</span>
+								      </td>
+								      <td data-order="4107">4107<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">조지아</td>
+								      <td data-order="18785">18785<br />
+								      	<span style="color: red;" id="numberColor">233</span>
+								      </td>
+								      <td data-order="118690">118690<br />
+								      	<span>+6872</span>
+								      </td>
+								      <td data-order="98781">98781<br />
+								      	<span>+6566</span>
+								      </td>
+								      <td data-order="1124">1124<br />
+								      	<span>+73</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">크로아티아</td>
+								      <td data-order="21725">21725<br />
+								      	<span style="color: red;" id="numberColor">2564</span>
+								      </td>
+								      <td data-order="115626">115626<br />
+								      	<span>+7612</span>
+								      </td>
+								      <td data-order="92349">92349<br />
+								      	<span>+4941</span>
+								      </td>
+								      <td data-order="1552">1552<br />
+								      	<span>+107</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">이집트</td>
+								      <td data-order="5321">5321<br />
+								      	<span style="color: red;" id="numberColor">481</span>
+								      </td>
+								      <td data-order="114107">114107<br />
+								      	<span>+726</span>
+								      </td>
+								      <td data-order="102201">102201<br />
+								      	<span>+220</span>
+								      </td>
+								      <td data-order="6585">6585<br />
+								      	<span>+25</span>
+								      </td>
+								      <td>6.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">에티오피아</td>
+								      <td data-order="38871">38871<br />
+								      	<span style="color: red;" id="numberColor">-41</span>
+								      </td>
+								      <td data-order="107109">107109<br />
+								      	<span>+518</span>
+								      </td>
+								      <td data-order="66574">66574<br />
+								      	<span>+556</span>
+								      </td>
+								      <td data-order="1664">1664<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>2.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">온두라스</td>
+								      <td data-order="56222">56222<br />
+								      	<span style="color: red;" id="numberColor">496</span>
+								      </td>
+								      <td data-order="106116">106116<br />
+								      	<span>+905</span>
+								      </td>
+								      <td data-order="47006">47006<br />
+								      	<span>+390</span>
+								      </td>
+								      <td data-order="2888">2888<br />
+								      	<span>+19</span>
+								      </td>
+								      <td>5.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아제르바이잔</td>
+								      <td data-order="34209">34209<br />
+								      	<span style="color: red;" id="numberColor">2210</span>
+								      </td>
+								      <td data-order="102396">102396<br />
+								      	<span>+3469</span>
+								      </td>
+								      <td data-order="66963">66963<br />
+								      	<span>+1229</span>
+								      </td>
+								      <td data-order="1224">1224<br />
+								      	<span>+30</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">슬로바키아</td>
+								      <td data-order="44130">44130<br />
+								      	<span style="color: red;" id="numberColor">-1916</span>
+								      </td>
+								      <td data-order="101257">101257<br />
+								      	<span>+3764</span>
+								      </td>
+								      <td data-order="56378">56378<br />
+								      	<span>+5640</span>
+								      </td>
+								      <td data-order="749">749<br />
+								      	<span>+40</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">몰도바</td>
+								      <td data-order="15205">15205<br />
+								      	<span style="color: red;" id="numberColor">95</span>
+								      </td>
+								      <td data-order="101203">101203<br />
+								      	<span>+1570</span>
+								      </td>
+								      <td data-order="83789">83789<br />
+								      	<span>+1454</span>
+								      </td>
+								      <td data-order="2209">2209<br />
+								      	<span>+21</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">베네수엘라</td>
+								      <td data-order="4268">4268<br />
+								      	<span style="color: red;" id="numberColor">-17</span>
+								      </td>
+								      <td data-order="100817">100817<br />
+								      	<span>+674</span>
+								      </td>
+								      <td data-order="95669">95669<br />
+								      	<span>+684</span>
+								      </td>
+								      <td data-order="880">880<br />
+								      	<span>+7</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">그리스</td>
+								      <td data-order="85397">85397<br />
+								      	<span style="color: red;" id="numberColor">2064</span>
+								      </td>
+								      <td data-order="97288">97288<br />
+								      	<span>+2151</span>
+								      </td>
+								      <td data-order="9989">9989<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1902">1902<br />
+								      	<span>+87</span>
+								      </td>
+								      <td>16.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">튀니지</td>
+								      <td data-order="21865">21865<br />
+								      	<span style="color: red;" id="numberColor">-623</span>
+								      </td>
+								      <td data-order="91307">91307<br />
+								      	<span>+2111</span>
+								      </td>
+								      <td data-order="66459">66459<br />
+								      	<span>+2613</span>
+								      </td>
+								      <td data-order="2983">2983<br />
+								      	<span>+121</span>
+								      </td>
+								      <td>4.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">바레인</td>
+								      <td data-order="1509">1509<br />
+								      	<span style="color: red;" id="numberColor">-21</span>
+								      </td>
+								      <td data-order="86185">86185<br />
+								      	<span>+299</span>
+								      </td>
+								      <td data-order="84335">84335<br />
+								      	<span>+318</span>
+								      </td>
+								      <td data-order="341">341<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">미얀마</td>
+								      <td data-order="18390">18390<br />
+								      	<span style="color: red;" id="numberColor">-1097</span>
+								      </td>
+								      <td data-order="83566">83566<br />
+								      	<span>+1330</span>
+								      </td>
+								      <td data-order="63366">63366<br />
+								      	<span>+2401</span>
+								      </td>
+								      <td data-order="1810">1810<br />
+								      	<span>+26</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">보스니아 헤르체고비나</td>
+								      <td data-order="32689">32689<br />
+								      	<span style="color: red;" id="numberColor">869</span>
+								      </td>
+								      <td data-order="83328">83328<br />
+								      	<span>+1589</span>
+								      </td>
+								      <td data-order="48210">48210<br />
+								      	<span>+685</span>
+								      </td>
+								      <td data-order="2429">2429<br />
+								      	<span>+35</span>
+								      </td>
+								      <td>4.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">리비아</td>
+								      <td data-order="27682">27682<br />
+								      	<span style="color: red;" id="numberColor">-84</span>
+								      </td>
+								      <td data-order="80407">80407<br />
+								      	<span>+1227</span>
+								      </td>
+								      <td data-order="51585">51585<br />
+								      	<span>+1281</span>
+								      </td>
+								      <td data-order="1140">1140<br />
+								      	<span>+30</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">케냐</td>
+								      <td data-order="24931">24931<br />
+								      	<span style="color: red;" id="numberColor">537</span>
+								      </td>
+								      <td data-order="79322">79322<br />
+								      	<span>+810</span>
+								      </td>
+								      <td data-order="52974">52974<br />
+								      	<span>+265</span>
+								      </td>
+								      <td data-order="1417">1417<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">파라과이</td>
+								      <td data-order="21162">21162<br />
+								      	<span style="color: red;" id="numberColor">801</span>
+								      </td>
+								      <td data-order="78878">78878<br />
+								      	<span>+1806</span>
+								      </td>
+								      <td data-order="56025">56025<br />
+								      	<span>+979</span>
+								      </td>
+								      <td data-order="1691">1691<br />
+								      	<span>+26</span>
+								      </td>
+								      <td>2.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">알제리</td>
+								      <td data-order="24984">24984<br />
+								      	<span style="color: red;" id="numberColor">363</span>
+								      </td>
+								      <td data-order="78025">78025<br />
+								      	<span>+1025</span>
+								      </td>
+								      <td data-order="50712">50712<br />
+								      	<span>+642</span>
+								      </td>
+								      <td data-order="2329">2329<br />
+								      	<span>+20</span>
+								      </td>
+								      <td>4.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">팔레스타인</td>
+								      <td data-order="15563">15563<br />
+								      	<span style="color: red;" id="numberColor">1221</span>
+								      </td>
+								      <td data-order="76727">76727<br />
+								      	<span>+1720</span>
+								      </td>
+								      <td data-order="60499">60499<br />
+								      	<span>+490</span>
+								      </td>
+								      <td data-order="665">665<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">덴마크</td>
+								      <td data-order="15254">15254<br />
+								      	<span style="color: red;" id="numberColor">105</span>
+								      </td>
+								      <td data-order="74204">74204<br />
+								      	<span>+1183</span>
+								      </td>
+								      <td data-order="58148">58148<br />
+								      	<span>+1073</span>
+								      </td>
+								      <td data-order="802">802<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">우즈베키스탄</td>
+								      <td data-order="2206">2206<br />
+								      	<span style="color: red;" id="numberColor">65</span>
+								      </td>
+								      <td data-order="72289">72289<br />
+								      	<span>+304</span>
+								      </td>
+								      <td data-order="69477">69477<br />
+								      	<span>+237</span>
+								      </td>
+								      <td data-order="606">606<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아일랜드</td>
+								      <td data-order="45790">45790<br />
+								      	<span style="color: red;" id="numberColor">466</span>
+								      </td>
+								      <td data-order="71187">71187<br />
+								      	<span>+476</span>
+								      </td>
+								      <td data-order="23364">23364<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2033">2033<br />
+								      	<span>+10</span>
+								      </td>
+								      <td>8.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">키르기스스탄</td>
+								      <td data-order="7376">7376<br />
+								      	<span style="color: red;" id="numberColor">-156</span>
+								      </td>
+								      <td data-order="71171">71171<br />
+								      	<span>+805</span>
+								      </td>
+								      <td data-order="62544">62544<br />
+								      	<span>+951</span>
+								      </td>
+								      <td data-order="1251">1251<br />
+								      	<span>+10</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">슬로베니아</td>
+								      <td data-order="20337">20337<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="69306">69306<br />
+								      	<span>+2226</span>
+								      </td>
+								      <td data-order="47770">47770<br />
+								      	<span>+2183</span>
+								      </td>
+								      <td data-order="1199">1199<br />
+								      	<span>+43</span>
+								      </td>
+								      <td>2.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">나이지리아</td>
+								      <td data-order="3143">3143<br />
+								      	<span style="color: red;" id="numberColor">113</span>
+								      </td>
+								      <td data-order="66805">66805<br />
+								      	<span>+366</span>
+								      </td>
+								      <td data-order="62493">62493<br />
+								      	<span>+252</span>
+								      </td>
+								      <td data-order="1169">1169<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">말레이시아</td>
+								      <td data-order="11348">11348<br />
+								      	<span style="color: red;" id="numberColor">-3005</span>
+								      </td>
+								      <td data-order="60752">60752<br />
+								      	<span>+1905</span>
+								      </td>
+								      <td data-order="49056">49056<br />
+								      	<span>+4903</span>
+								      </td>
+								      <td data-order="348">348<br />
+								      	<span>+7</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">싱가포르</td>
+								      <td data-order="76">76<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="58195">58195<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="58091">58091<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="28">28<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">북마케도니아</td>
+								      <td data-order="20881">20881<br />
+								      	<span style="color: red;" id="numberColor">194</span>
+								      </td>
+								      <td data-order="57451">57451<br />
+								      	<span>+2324</span>
+								      </td>
+								      <td data-order="34970">34970<br />
+								      	<span>+2076</span>
+								      </td>
+								      <td data-order="1600">1600<br />
+								      	<span>+54</span>
+								      </td>
+								      <td>4.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">리투아니아</td>
+								      <td data-order="40653">40653<br />
+								      	<span style="color: red;" id="numberColor">3264</span>
+								      </td>
+								      <td data-order="53757">53757<br />
+								      	<span>+4364</span>
+								      </td>
+								      <td data-order="12655">12655<br />
+								      	<span>+1060</span>
+								      </td>
+								      <td data-order="449">449<br />
+								      	<span>+40</span>
+								      </td>
+								      <td>3.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">가나</td>
+								      <td data-order="775">775<br />
+								      	<span style="color: red;" id="numberColor">-244</span>
+								      </td>
+								      <td data-order="51225">51225<br />
+								      	<span>+284</span>
+								      </td>
+								      <td data-order="50127">50127<br />
+								      	<span>+528</span>
+								      </td>
+								      <td data-order="323">323<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아프가니스탄</td>
+								      <td data-order="7747">7747<br />
+								      	<span style="color: red;" id="numberColor">301</span>
+								      </td>
+								      <td data-order="45716">45716<br />
+								      	<span>+436</span>
+								      </td>
+								      <td data-order="36232">36232<br />
+								      	<span>+110</span>
+								      </td>
+								      <td data-order="1737">1737<br />
+								      	<span>+25</span>
+								      </td>
+								      <td>4.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">엘살바도르</td>
+								      <td data-order="2191">2191<br />
+								      	<span style="color: red;" id="numberColor">-12</span>
+								      </td>
+								      <td data-order="37884">37884<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="34595">34595<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1098">1098<br />
+								      	<span>+12</span>
+								      </td>
+								      <td>3.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">알바니아</td>
+								      <td data-order="17170">17170<br />
+								      	<span style="color: red;" id="numberColor">271</span>
+								      </td>
+								      <td data-order="34944">34944<br />
+								      	<span>+644</span>
+								      </td>
+								      <td data-order="17031">17031<br />
+								      	<span>+365</span>
+								      </td>
+								      <td data-order="743">743<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>4.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">노르웨이</td>
+								      <td data-order="12996">12996<br />
+								      	<span style="color: red;" id="numberColor">835</span>
+								      </td>
+								      <td data-order="34268">34268<br />
+								      	<span>+837</span>
+								      </td>
+								      <td data-order="20956">20956<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="316">316<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">몬테네그로</td>
+								      <td data-order="11120">11120<br />
+								      	<span style="color: red;" id="numberColor">9</span>
+								      </td>
+								      <td data-order="32808">32808<br />
+								      	<span>+620</span>
+								      </td>
+								      <td data-order="21229">21229<br />
+								      	<span>+602</span>
+								      </td>
+								      <td data-order="459">459<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">한국</td>
+								      <td data-order="4853">4853<br />
+								      	<span style="color: red;" id="numberColor">732</span>
+								      </td>
+								      <td data-order="32318">32318<br />
+								      	<span>+965</span>
+								      </td>
+								      <td data-order="26950">26950<br />
+								      	<span>+228</span>
+								      </td>
+								      <td data-order="515">515<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">룩셈부르크</td>
+								      <td data-order="9182">9182<br />
+								      	<span style="color: red;" id="numberColor">170</span>
+								      </td>
+								      <td data-order="32100">32100<br />
+								      	<span>+616</span>
+								      </td>
+								      <td data-order="22630">22630<br />
+								      	<span>+441</span>
+								      </td>
+								      <td data-order="288">288<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">호주</td>
+								      <td data-order="1395">1395<br />
+								      	<span style="color: red;" id="numberColor">-11</span>
+								      </td>
+								      <td data-order="27867">27867<br />
+								      	<span>+20</span>
+								      </td>
+								      <td data-order="25565">25565<br />
+								      	<span>+31</span>
+								      </td>
+								      <td data-order="907">907<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">카메룬</td>
+								      <td data-order="1301">1301<br />
+								      	<span style="color: red;" id="numberColor">71</span>
+								      </td>
+								      <td data-order="23915">23915<br />
+								      	<span>+73</span>
+								      </td>
+								      <td data-order="22177">22177<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="437">437<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">핀란드</td>
+								      <td data-order="5960">5960<br />
+								      	<span style="color: red;" id="numberColor">-645</span>
+								      </td>
+								      <td data-order="23148">23148<br />
+								      	<span>+859</span>
+								      </td>
+								      <td data-order="16800">16800<br />
+								      	<span>+1500</span>
+								      </td>
+								      <td data-order="388">388<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>2.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">스리랑카</td>
+								      <td data-order="5557">5557<br />
+								      	<span style="color: red;" id="numberColor">-354</span>
+								      </td>
+								      <td data-order="21469">21469<br />
+								      	<span>+502</span>
+								      </td>
+								      <td data-order="15816">15816<br />
+								      	<span>+854</span>
+								      </td>
+								      <td data-order="96">96<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">코트디부아르</td>
+								      <td data-order="194">194<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="21168">21168<br />
+								      	<span>+20</span>
+								      </td>
+								      <td data-order="20843">20843<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="131">131<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">우간다</td>
+								      <td data-order="9867">9867<br />
+								      	<span style="color: red;" id="numberColor">411</span>
+								      </td>
+								      <td data-order="18890">18890<br />
+								      	<span>+484</span>
+								      </td>
+								      <td data-order="8832">8832<br />
+								      	<span>+68</span>
+								      </td>
+								      <td data-order="191">191<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">잠비아</td>
+								      <td data-order="423">423<br />
+								      	<span style="color: red;" id="numberColor">21</span>
+								      </td>
+								      <td data-order="17535">17535<br />
+								      	<span>+69</span>
+								      </td>
+								      <td data-order="16755">16755<br />
+								      	<span>+48</span>
+								      </td>
+								      <td data-order="357">357<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">마다가스카르</td>
+								      <td data-order="433">433<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="17341">17341<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="16657">16657<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="251">251<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">수단</td>
+								      <td data-order="5531">5531<br />
+								      	<span style="color: red;" id="numberColor">156</span>
+								      </td>
+								      <td data-order="16649">16649<br />
+								      	<span>+218</span>
+								      </td>
+								      <td data-order="9908">9908<br />
+								      	<span>+54</span>
+								      </td>
+								      <td data-order="1210">1210<br />
+								      	<span>+8</span>
+								      </td>
+								      <td>10.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">세네갈</td>
+								      <td data-order="71">71<br />
+								      	<span style="color: red;" id="numberColor">21</span>
+								      </td>
+								      <td data-order="15960">15960<br />
+								      	<span>+52</span>
+								      </td>
+								      <td data-order="15558">15558<br />
+								      	<span>+31</span>
+								      </td>
+								      <td data-order="331">331<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">모잠비크</td>
+								      <td data-order="1715">1715<br />
+								      	<span style="color: red;" id="numberColor">19</span>
+								      </td>
+								      <td data-order="15302">15302<br />
+								      	<span>+71</span>
+								      </td>
+								      <td data-order="13459">13459<br />
+								      	<span>+51</span>
+								      </td>
+								      <td data-order="128">128<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">앙골라</td>
+								      <td data-order="6964">6964<br />
+								      	<span style="color: red;" id="numberColor">18</span>
+								      </td>
+								      <td data-order="14821">14821<br />
+								      	<span>+187</span>
+								      </td>
+								      <td data-order="7517">7517<br />
+								      	<span>+166</span>
+								      </td>
+								      <td data-order="340">340<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>4.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">라트비아</td>
+								      <td data-order="12403">12403<br />
+								      	<span style="color: red;" id="numberColor">536</span>
+								      </td>
+								      <td data-order="14273">14273<br />
+								      	<span>+580</span>
+								      </td>
+								      <td data-order="1686">1686<br />
+								      	<span>+35</span>
+								      </td>
+								      <td data-order="184">184<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>9.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">나미비아</td>
+								      <td data-order="522">522<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="14006">14006<br />
+								      	<span>+68</span>
+								      </td>
+								      <td data-order="13339">13339<br />
+								      	<span>+67</span>
+								      </td>
+								      <td data-order="145">145<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">프랑스령폴리네시아</td>
+								      <td data-order="8871">8871<br />
+								      	<span style="color: red;" id="numberColor">495</span>
+								      </td>
+								      <td data-order="13783">13783<br />
+								      	<span>+497</span>
+								      </td>
+								      <td data-order="4842">4842<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">기니</td>
+								      <td data-order="951">951<br />
+								      	<span style="color: red;" id="numberColor">40</span>
+								      </td>
+								      <td data-order="12949">12949<br />
+								      	<span>+86</span>
+								      </td>
+								      <td data-order="11922">11922<br />
+								      	<span>+45</span>
+								      </td>
+								      <td data-order="76">76<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">몰디브</td>
+								      <td data-order="1127">1127<br />
+								      	<span style="color: red;" id="numberColor">30</span>
+								      </td>
+								      <td data-order="12854">12854<br />
+								      	<span>+96</span>
+								      </td>
+								      <td data-order="11681">11681<br />
+								      	<span>+66</span>
+								      </td>
+								      <td data-order="46">46<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">콩고민주공화국</td>
+								      <td data-order="601">601<br />
+								      	<span style="color: red;" id="numberColor">55</span>
+								      </td>
+								      <td data-order="12365">12365<br />
+								      	<span>+55</span>
+								      </td>
+								      <td data-order="11433">11433<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="331">331<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">타지키스탄</td>
+								      <td data-order="527">527<br />
+								      	<span style="color: red;" id="numberColor">-3</span>
+								      </td>
+								      <td data-order="12008">12008<br />
+								      	<span>+37</span>
+								      </td>
+								      <td data-order="11395">11395<br />
+								      	<span>+40</span>
+								      </td>
+								      <td data-order="86">86<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">프랑스령 기아나</td>
+								      <td data-order="1051">1051<br />
+								      	<span style="color: red;" id="numberColor">37</span>
+								      </td>
+								      <td data-order="11116">11116<br />
+								      	<span>+37</span>
+								      </td>
+								      <td data-order="9995">9995<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">에스토니아</td>
+								      <td data-order="4359">4359<br />
+								      	<span style="color: red;" id="numberColor">308</span>
+								      </td>
+								      <td data-order="10955">10955<br />
+								      	<span>+796</span>
+								      </td>
+								      <td data-order="6497">6497<br />
+								      	<span>+483</span>
+								      </td>
+								      <td data-order="99">99<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">카보베르데</td>
+								      <td data-order="522">522<br />
+								      	<span style="color: red;" id="numberColor">115</span>
+								      </td>
+								      <td data-order="10526">10526<br />
+								      	<span>+224</span>
+								      </td>
+								      <td data-order="9900">9900<br />
+								      	<span>+109</span>
+								      </td>
+								      <td data-order="104">104<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">자메이카</td>
+								      <td data-order="4618">4618<br />
+								      	<span style="color: red;" id="numberColor">11</span>
+								      </td>
+								      <td data-order="10488">10488<br />
+								      	<span>+66</span>
+								      </td>
+								      <td data-order="5623">5623<br />
+								      	<span>+51</span>
+								      </td>
+								      <td data-order="247">247<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>4.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">보츠와나</td>
+								      <td data-order="2269">2269<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="9992">9992<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="7692">7692<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="31">31<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">짐바브웨</td>
+								      <td data-order="898">898<br />
+								      	<span style="color: red;" id="numberColor">151</span>
+								      </td>
+								      <td data-order="9508">9508<br />
+								      	<span>+200</span>
+								      </td>
+								      <td data-order="8336">8336<br />
+								      	<span>+48</span>
+								      </td>
+								      <td data-order="274">274<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">키프로스</td>
+								      <td data-order="7351">7351<br />
+								      	<span style="color: red;" id="numberColor">503</span>
+								      </td>
+								      <td data-order="9453">9453<br />
+								      	<span>+506</span>
+								      </td>
+								      <td data-order="2055">2055<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="47">47<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">몰타</td>
+								      <td data-order="2069">2069<br />
+								      	<span style="color: red;" id="numberColor">-13</span>
+								      </td>
+								      <td data-order="9253">9253<br />
+								      	<span>+116</span>
+								      </td>
+								      <td data-order="7062">7062<br />
+								      	<span>+124</span>
+								      </td>
+								      <td data-order="122">122<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아이티</td>
+								      <td data-order="1100">1100<br />
+								      	<span style="color: red;" id="numberColor">-6</span>
+								      </td>
+								      <td data-order="9248">9248<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="7916">7916<br />
+								      	<span>+30</span>
+								      </td>
+								      <td data-order="232">232<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">가봉</td>
+								      <td data-order="98">98<br />
+								      	<span style="color: red;" id="numberColor">6</span>
+								      </td>
+								      <td data-order="9173">9173<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="9016">9016<br />
+								      	<span>+17</span>
+								      </td>
+								      <td data-order="59">59<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">과들루프섬</td>
+								      <td data-order="5953">5953<br />
+								      	<span style="color: red;" id="numberColor">114</span>
+								      </td>
+								      <td data-order="8344">8344<br />
+								      	<span>+119</span>
+								      </td>
+								      <td data-order="2242">2242<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="149">149<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>6.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">모리타니</td>
+								      <td data-order="429">429<br />
+								      	<span style="color: red;" id="numberColor">40</span>
+								      </td>
+								      <td data-order="8246">8246<br />
+								      	<span>+79</span>
+								      </td>
+								      <td data-order="7646">7646<br />
+								      	<span>+37</span>
+								      </td>
+								      <td data-order="171">171<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">쿠바</td>
+								      <td data-order="423">423<br />
+								      	<span style="color: red;" id="numberColor">34</span>
+								      </td>
+								      <td data-order="8026">8026<br />
+								      	<span>+76</span>
+								      </td>
+								      <td data-order="7470">7470<br />
+								      	<span>+42</span>
+								      </td>
+								      <td data-order="133">133<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">레위니옹</td>
+								      <td data-order="1137">1137<br />
+								      	<span style="color: red;" id="numberColor">143</span>
+								      </td>
+								      <td data-order="7836">7836<br />
+								      	<span>+147</span>
+								      </td>
+								      <td data-order="6660">6660<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="39">39<br />
+								      	<span>+4</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">바하마</td>
+								      <td data-order="1573">1573<br />
+								      	<span style="color: red;" id="numberColor">-43</span>
+								      </td>
+								      <td data-order="7469">7469<br />
+								      	<span>+38</span>
+								      </td>
+								      <td data-order="5733">5733<br />
+								      	<span>+81</span>
+								      </td>
+								      <td data-order="163">163<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">시리아</td>
+								      <td data-order="3797">3797<br />
+								      	<span style="color: red;" id="numberColor">37</span>
+								      </td>
+								      <td data-order="7459">7459<br />
+								      	<span>+164</span>
+								      </td>
+								      <td data-order="3271">3271<br />
+								      	<span>+116</span>
+								      </td>
+								      <td data-order="391">391<br />
+								      	<span>+11</span>
+								      </td>
+								      <td>10.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">트리니다드토바고</td>
+								      <td data-order="732">732<br />
+								      	<span style="color: red;" id="numberColor">-6</span>
+								      </td>
+								      <td data-order="6503">6503<br />
+								      	<span>+28</span>
+								      </td>
+								      <td data-order="5655">5655<br />
+								      	<span>+33</span>
+								      </td>
+								      <td data-order="116">116<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">안도라</td>
+								      <td data-order="810">810<br />
+								      	<span style="color: red;" id="numberColor">38</span>
+								      </td>
+								      <td data-order="6428">6428<br />
+								      	<span>+77</span>
+								      </td>
+								      <td data-order="5542">5542<br />
+								      	<span>+39</span>
+								      </td>
+								      <td data-order="76">76<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">에스와티니</td>
+								      <td data-order="251">251<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="6272">6272<br />
+								      	<span>+39</span>
+								      </td>
+								      <td data-order="5901">5901<br />
+								      	<span>+32</span>
+								      </td>
+								      <td data-order="120">120<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">말라위</td>
+								      <td data-order="383">383<br />
+								      	<span style="color: red;" id="numberColor">2</span>
+								      </td>
+								      <td data-order="6018">6018<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="5450">5450<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="185">185<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">홍콩</td>
+								      <td data-order="540">540<br />
+								      	<span style="color: red;" id="numberColor">140</span>
+								      </td>
+								      <td data-order="5948">5948<br />
+								      	<span>+166</span>
+								      </td>
+								      <td data-order="5300">5300<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="108">108<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">니카라과</td>
+								      <td data-order="1399">1399<br />
+								      	<span style="color: red;" id="numberColor">58</span>
+								      </td>
+								      <td data-order="5784">5784<br />
+								      	<span>+59</span>
+								      </td>
+								      <td data-order="4225">4225<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="160">160<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">르완다</td>
+								      <td data-order="415">415<br />
+								      	<span style="color: red;" id="numberColor">-67</span>
+								      </td>
+								      <td data-order="5779">5779<br />
+								      	<span>+53</span>
+								      </td>
+								      <td data-order="5317">5317<br />
+								      	<span>+120</span>
+								      </td>
+								      <td data-order="47">47<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">지부티</td>
+								      <td data-order="34">34<br />
+								      	<span style="color: red;" id="numberColor">-5</span>
+								      </td>
+								      <td data-order="5670">5670<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="5575">5575<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="61">61<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">콩고</td>
+								      <td data-order="551">551<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="5632">5632<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="4988">4988<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="93">93<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">벨리즈</td>
+								      <td data-order="2308">2308<br />
+								      	<span style="color: red;" id="numberColor">56</span>
+								      </td>
+								      <td data-order="5423">5423<br />
+								      	<span>+174</span>
+								      </td>
+								      <td data-order="2986">2986<br />
+								      	<span>+109</span>
+								      </td>
+								      <td data-order="129">129<br />
+								      	<span>+9</span>
+								      </td>
+								      <td>4.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">마르티니크섬</td>
+								      <td data-order="5275">5275<br />
+								      	<span style="color: red;" id="numberColor">678</span>
+								      </td>
+								      <td data-order="5413">5413<br />
+								      	<span>+681</span>
+								      </td>
+								      <td data-order="98">98<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="40">40<br />
+								      	<span>+3</span>
+								      </td>
+								      <td>29.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아이슬란드</td>
+								      <td data-order="176">176<br />
+								      	<span style="color: red;" id="numberColor">-10</span>
+								      </td>
+								      <td data-order="5312">5312<br />
+								      	<span>+14</span>
+								      </td>
+								      <td data-order="5110">5110<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="26">26<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">수리남</td>
+								      <td data-order="4">4<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="5305">5305<br />
+								      	<span>+8</span>
+								      </td>
+								      <td data-order="5184">5184<br />
+								      	<span>+11</span>
+								      </td>
+								      <td data-order="117">117<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">가이아나</td>
+								      <td data-order="847">847<br />
+								      	<span style="color: red;" id="numberColor">-127</span>
+								      </td>
+								      <td data-order="5236">5236<br />
+								      	<span>+82</span>
+								      </td>
+								      <td data-order="4242">4242<br />
+								      	<span>+208</span>
+								      </td>
+								      <td data-order="147">147<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">마요트섬</td>
+								      <td data-order="2168">2168<br />
+								      	<span style="color: red;" id="numberColor">59</span>
+								      </td>
+								      <td data-order="5181">5181<br />
+								      	<span>+59</span>
+								      </td>
+								      <td data-order="2964">2964<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="49">49<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">적도기니</td>
+								      <td data-order="47">47<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="5137">5137<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="5005">5005<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="85">85<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">우루과이</td>
+								      <td data-order="992">992<br />
+								      	<span style="color: red;" id="numberColor">64</span>
+								      </td>
+								      <td data-order="4988">4988<br />
+								      	<span>+225</span>
+								      </td>
+								      <td data-order="3923">3923<br />
+								      	<span>+159</span>
+								      </td>
+								      <td data-order="73">73<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">중앙아프리카공화국</td>
+								      <td data-order="2924">2924<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4911">4911<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1924">1924<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="63">63<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">아루바</td>
+								      <td data-order="101">101<br />
+								      	<span style="color: red;" id="numberColor">16</span>
+								      </td>
+								      <td data-order="4778">4778<br />
+								      	<span>+41</span>
+								      </td>
+								      <td data-order="4632">4632<br />
+								      	<span>+25</span>
+								      </td>
+								      <td data-order="45">45<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">말리</td>
+								      <td data-order="1253">1253<br />
+								      	<span style="color: red;" id="numberColor">117</span>
+								      </td>
+								      <td data-order="4461">4461<br />
+								      	<span>+135</span>
+								      </td>
+								      <td data-order="3060">3060<br />
+								      	<span>+16</span>
+								      </td>
+								      <td data-order="148">148<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>4.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">소말리아</td>
+								      <td data-order="920">920<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4445">4445<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3412">3412<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="113">113<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">타이</td>
+								      <td data-order="94">94<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="3942">3942<br />
+								      	<span>+20</span>
+								      </td>
+								      <td data-order="3788">3788<br />
+								      	<span>+16</span>
+								      </td>
+								      <td data-order="60">60<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">감비아</td>
+								      <td data-order="17">17<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="3727">3727<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="3587">3587<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="123">123<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">남수단</td>
+								      <td data-order="74">74<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="3073">3073<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="2938">2938<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="61">61<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">베냉</td>
+								      <td data-order="352">352<br />
+								      	<span style="color: red;" id="numberColor">58</span>
+								      </td>
+								      <td data-order="2974">2974<br />
+								      	<span>+58</span>
+								      </td>
+								      <td data-order="2579">2579<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="43">43<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">토고</td>
+								      <td data-order="505">505<br />
+								      	<span style="color: red;" id="numberColor">-11</span>
+								      </td>
+								      <td data-order="2889">2889<br />
+								      	<span>+35</span>
+								      </td>
+								      <td data-order="2320">2320<br />
+								      	<span>+46</span>
+								      </td>
+								      <td data-order="64">64<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">부르키나파소</td>
+								      <td data-order="142">142<br />
+								      	<span style="color: red;" id="numberColor">8</span>
+								      </td>
+								      <td data-order="2777">2777<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="2567">2567<br />
+								      	<span>+15</span>
+								      </td>
+								      <td data-order="68">68<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">기니비사우</td>
+								      <td data-order="70">70<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="2422">2422<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2309">2309<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="43">43<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">시에라리온</td>
+								      <td data-order="505">505<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="2408">2408<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="1829">1829<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="74">74<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">예멘</td>
+								      <td data-order="39">39<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="2124">2124<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="1474">1474<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="611">611<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>29.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">레소토</td>
+								      <td data-order="771">771<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="2092">2092<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1277">1277<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="44">44<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">뉴질랜드</td>
+								      <td data-order="60">60<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="2040">2040<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="1955">1955<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="25">25<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">퀴라소</td>
+								      <td data-order="869">869<br />
+								      	<span style="color: red;" id="numberColor">130</span>
+								      </td>
+								      <td data-order="1929">1929<br />
+								      	<span>+156</span>
+								      </td>
+								      <td data-order="1057">1057<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">차드</td>
+								      <td data-order="60">60<br />
+								      	<span style="color: red;" id="numberColor">-11</span>
+								      </td>
+								      <td data-order="1655">1655<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="1494">1494<br />
+								      	<span>+18</span>
+								      </td>
+								      <td data-order="101">101<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>6.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">라이베리아</td>
+								      <td data-order="155">155<br />
+								      	<span style="color: red;" id="numberColor">17</span>
+								      </td>
+								      <td data-order="1578">1578<br />
+								      	<span>+27</span>
+								      </td>
+								      <td data-order="1340">1340<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="83">83<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>5.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">산마리노</td>
+								      <td data-order="227">227<br />
+								      	<span style="color: red;" id="numberColor">-8</span>
+								      </td>
+								      <td data-order="1492">1492<br />
+								      	<span>+64</span>
+								      </td>
+								      <td data-order="1221">1221<br />
+								      	<span>+72</span>
+								      </td>
+								      <td data-order="44">44<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.5%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">니제르</td>
+								      <td data-order="179">179<br />
+								      	<span style="color: red;" id="numberColor">34</span>
+								      </td>
+								      <td data-order="1419">1419<br />
+								      	<span>+38</span>
+								      </td>
+								      <td data-order="1170">1170<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>5.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">베트남</td>
+								      <td data-order="130">130<br />
+								      	<span style="color: red;" id="numberColor">2</span>
+								      </td>
+								      <td data-order="1331">1331<br />
+								      	<span>+15</span>
+								      </td>
+								      <td data-order="1166">1166<br />
+								      	<span>+13</span>
+								      </td>
+								      <td data-order="35">35<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">리히텐슈타인</td>
+								      <td data-order="184">184<br />
+								      	<span style="color: red;" id="numberColor">-9</span>
+								      </td>
+								      <td data-order="1183">1183<br />
+								      	<span>+25</span>
+								      </td>
+								      <td data-order="985">985<br />
+								      	<span>+33</span>
+								      </td>
+								      <td data-order="14">14<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">채널제도</td>
+								      <td data-order="139">139<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1147">1147<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="960">960<br />
+								      	<span>+23</span>
+								      </td>
+								      <td data-order="48">48<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>4.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">신트마르턴</td>
+								      <td data-order="92">92<br />
+								      	<span style="color: red;" id="numberColor">5</span>
+								      </td>
+								      <td data-order="1036">1036<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="919">919<br />
+								      	<span>+19</span>
+								      </td>
+								      <td data-order="25">25<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">지브롤터</td>
+								      <td data-order="91">91<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="991">991<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="895">895<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="5">5<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">상투메프린시페</td>
+								      <td data-order="39">39<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="982">982<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="926">926<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="17">17<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">터크스케이커스 제도</td>
+								      <td data-order="40">40<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="746">746<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="700">700<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="6">6<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">몽골</td>
+								      <td data-order="367">367<br />
+								      	<span style="color: red;" id="numberColor">37</span>
+								      </td>
+								      <td data-order="712">712<br />
+								      	<span>+40</span>
+								      </td>
+								      <td data-order="345">345<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">세인트마틴섬</td>
+								      <td data-order="80">80<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="690">690<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="598">598<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="12">12<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">부룬디</td>
+								      <td data-order="97">97<br />
+								      	<span style="color: red;" id="numberColor">9</span>
+								      </td>
+								      <td data-order="673">673<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="575">575<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">파푸아뉴기니</td>
+								      <td data-order="50">50<br />
+								      	<span style="color: red;" id="numberColor">15</span>
+								      </td>
+								      <td data-order="645">645<br />
+								      	<span>+15</span>
+								      </td>
+								      <td data-order="588">588<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">대만</td>
+								      <td data-order="63">63<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="625">625<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="555">555<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">코모로</td>
+								      <td data-order="21">21<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="607">607<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="579">579<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">모나코</td>
+								      <td data-order="61">61<br />
+								      	<span style="color: red;" id="numberColor">-1</span>
+								      </td>
+								      <td data-order="594">594<br />
+								      	<span>+11</span>
+								      </td>
+								      <td data-order="530">530<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.6%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">에리트레아</td>
+								      <td data-order="85">85<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="558">558<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="473">473<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">탄자니아</td>
+								      <td data-order="305">305<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="509">509<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="183">183<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="21">21<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>10.3%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">페로스제도</td>
+								      <td data-order="2">2<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="500">500<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="498">498<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">모리셔스</td>
+								      <td data-order="47">47<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="497">497<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="440">440<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="10">10<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">부탄</td>
+								      <td data-order="19">19<br />
+								      	<span style="color: red;" id="numberColor">-4</span>
+								      </td>
+								      <td data-order="386">386<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="367">367<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">맨섬</td>
+								      <td data-order="6">6<br />
+								      	<span style="color: red;" id="numberColor">-2</span>
+								      </td>
+								      <td data-order="369">369<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="338">338<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="25">25<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>6.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">캄보디아</td>
+								      <td data-order="9">9<br />
+								      	<span style="color: red;" id="numberColor">-1</span>
+								      </td>
+								      <td data-order="307">307<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="298">298<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">케이맨제도</td>
+								      <td data-order="18">18<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="269">269<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="249">249<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">바베이도스</td>
+								      <td data-order="13">13<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="263">263<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="243">243<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="7">7<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">버뮤다제도</td>
+								      <td data-order="25">25<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="239">239<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="205">205<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="9">9<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>4.2%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">세인트루시아</td>
+								      <td data-order="124">124<br />
+								      	<span style="color: red;" id="numberColor">9</span>
+								      </td>
+								      <td data-order="235">235<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="109">109<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.8%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">세이셸</td>
+								      <td data-order="7">7<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="166">166<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="159">159<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">카리브 네덜란드</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="161">161<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="155">155<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">브루나이</td>
+								      <td data-order="2">2<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="150">150<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="145">145<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">앤티가바부다</td>
+								      <td data-order="7">7<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="140">140<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="129">129<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="4">4<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">생바르텔레미</td>
+								      <td data-order="33">33<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="127">127<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="94">94<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">세인트빈센트그레나딘</td>
+								      <td data-order="6">6<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="84">84<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="78">78<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">도미니카</td>
+								      <td data-order="14">14<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="77">77<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="63">63<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">영국령 버진아일랜드</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="71">71<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="70">70<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">마카오</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="46">46<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="46">46<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">그레나다</td>
+								      <td data-order="11">11<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="41">41<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="30">30<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">라오스</td>
+								      <td data-order="15">15<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="39">39<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="24">24<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">피지</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">3</span>
+								      </td>
+								      <td data-order="38">38<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="33">33<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>5.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">누벨칼레도니섬</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="32">32<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="32">32<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">동티모르</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="30">30<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="30">30<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">바티칸</td>
+								      <td data-order="12">12<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="27">27<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="15">15<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">세인트키츠네비스</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">2</span>
+								      </td>
+								      <td data-order="22">22<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="19">19<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">그린란드</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="18">18<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="18">18<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Solomon Islands</td>
+								      <td data-order="12">12<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="17">17<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="5">5<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">포클랜드제도</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="16">16<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="13">13<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">생피에르미클롱</td>
+								      <td data-order="4">4<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="16">16<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="12">12<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">몬트세랫</td>
+								      <td data-order="0">0<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="13">13<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="12">12<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>7.7%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">서사하라</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="10">10<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="8">8<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>11.1%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">앵귈라</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4">4<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Marshall Islands</td>
+								      <td data-order="3">3<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="4">4<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Wallis and Futuna</td>
+								      <td data-order="2">2<br />
+								      	<span style="color: red;" id="numberColor">1</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Samoa</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">Vanuatu</td>
+								      <td data-order="1">1<br />
+								      	<span style="color: red;" id="numberColor">0</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">중국</td>
+								      <td data-order="306">306<br />
+								      	<span style="color: red;" id="numberColor">-16</span>
+								      </td>
+								      <td data-order="86490">86490<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="81550">81550<br />
+								      	<span>+42</span>
+								      </td>
+								      <td data-order="4634">4634<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>5.4%</td>
+								    </tr>
+                                  
+								  </tbody>
+								</table>
+							</div>
+							<div id="datasheet" style="height: 17.5rem;"></div>
+							<div id="worldtransition" style="height: 17.5rem;"></div>
+				        </div><!--TabBox-->
+				    </section>
+                    
+				    <section class="et-slide" id="tab-flexbox">
+				        <div class="demestic">
+					        <h1 style="text-align: center;">국내현황</h1>
+					        <div id="province" style="height:17.5rem; border:0px solid #ccc;padding:0px;position: relative;">
+					        </div>
+					        <div class="TabBox">
+								<table class="data-table" width="100%">
+								  <thead>
+								    <tr>
+								      <th class="nosort">지역</th>
+								      <th>격리</th>
+								      <th>확진</th>
+								      <th>해제</th>
+								      <th>사망</th>
+								      <th>치사율</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">합계</td>
+								      <td data-order="4853">4853<br />
+								      	<span style="color: red;" id="numberColor">732</span>
+								      </td>
+								      <td data-order="32318">32318<br />
+								      	<span>+965</span>
+								      </td>
+								      <td data-order="26950">26950<br />
+								      	<span>+228</span>
+								      </td>
+								      <td data-order="515">515<br />
+								      	<span>+5</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">서울</td>
+								      <td data-order="1725">1725<br />
+								      	<span style="color: red;" id="numberColor">289</span>
+								      </td>
+								      <td data-order="8113">8113<br />
+								      	<span>+355</span>
+								      </td>
+								      <td data-order="6300">6300<br />
+								      	<span>+65</span>
+								      </td>
+								      <td data-order="88">88<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.4%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">부산</td>
+								      <td data-order="74">74<br />
+								      	<span style="color: red;" id="numberColor">33</span>
+								      </td>
+								      <td data-order="683">683<br />
+								      	<span>+40</span>
+								      </td>
+								      <td data-order="594">594<br />
+								      	<span>+7</span>
+								      </td>
+								      <td data-order="15">15<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>2.5%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">대구</td>
+								      <td data-order="34">34<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="7224">7224<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="6991">6991<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="199">199<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>2.8%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">인천</td>
+								      <td data-order="234">234<br />
+								      	<span style="color: red;" id="numberColor">56</span>
+								      </td>
+								      <td data-order="1305">1305<br />
+								      	<span>+59</span>
+								      </td>
+								      <td data-order="1060">1060<br />
+								      	<span>+3</span>
+								      </td>
+								      <td data-order="11">11<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">광주</td>
+								      <td data-order="100">100<br />
+								      	<span style="color: red;" id="numberColor">16</span>
+								      </td>
+								      <td data-order="646">646<br />
+								      	<span>+28</span>
+								      </td>
+								      <td data-order="543">543<br />
+								      	<span>+12</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.5%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">대전</td>
+								      <td data-order="19">19<br />
+								      	<span style="color: red;" id="numberColor">3</span>
+								      </td>
+								      <td data-order="465">465<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="440">440<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="6">6<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.3%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">울산</td>
+								      <td data-order="19">19<br />
+								      	<span style="color: red;" id="numberColor">10</span>
+								      </td>
+								      <td data-order="185">185<br />
+								      	<span>+10</span>
+								      </td>
+								      <td data-order="164">164<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">세종</td>
+								      <td data-order="11">11<br />
+								      	<span style="color: red;" id="numberColor">4</span>
+								      </td>
+								      <td data-order="93">93<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="82">82<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">경기</td>
+								      <td data-order="1076">1076<br />
+								      	<span style="color: red;" id="numberColor">196</span>
+								      </td>
+								      <td data-order="6864">6864<br />
+								      	<span>+265</span>
+								      </td>
+								      <td data-order="5676">5676<br />
+								      	<span>+67</span>
+								      </td>
+								      <td data-order="112">112<br />
+								      	<span>+2</span>
+								      </td>
+								      <td>1.9%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">강원</td>
+								      <td data-order="235">235<br />
+								      	<span style="color: red;" id="numberColor">-5</span>
+								      </td>
+								      <td data-order="583">583<br />
+								      	<span>+21</span>
+								      </td>
+								      <td data-order="342">342<br />
+								      	<span>+26</span>
+								      </td>
+								      <td data-order="6">6<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.7%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">충북</td>
+								      <td data-order="34">34<br />
+								      	<span style="color: red;" id="numberColor">7</span>
+								      </td>
+								      <td data-order="239">239<br />
+								      	<span>+11</span>
+								      </td>
+								      <td data-order="202">202<br />
+								      	<span>+4</span>
+								      </td>
+								      <td data-order="3">3<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.5%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">충남</td>
+								      <td data-order="186">186<br />
+								      	<span style="color: red;" id="numberColor">15</span>
+								      </td>
+								      <td data-order="833">833<br />
+								      	<span>+34</span>
+								      </td>
+								      <td data-order="639">639<br />
+								      	<span>+19</span>
+								      </td>
+								      <td data-order="8">8<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.2%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">전북</td>
+								      <td data-order="94">94<br />
+								      	<span style="color: red;" id="numberColor">21</span>
+								      </td>
+								      <td data-order="268">268<br />
+								      	<span>+24</span>
+								      </td>
+								      <td data-order="172">172<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+1</span>
+								      </td>
+								      <td>1.1%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">전남</td>
+								      <td data-order="189">189<br />
+								      	<span style="color: red;" id="numberColor">15</span>
+								      </td>
+								      <td data-order="382">382<br />
+								      	<span>+17</span>
+								      </td>
+								      <td data-order="191">191<br />
+								      	<span>+2</span>
+								      </td>
+								      <td data-order="2">2<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>1.0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">경북</td>
+								      <td data-order="86">86<br />
+								      	<span style="color: red;" id="numberColor">5</span>
+								      </td>
+								      <td data-order="1681">1681<br />
+								      	<span>+5</span>
+								      </td>
+								      <td data-order="1538">1538<br />
+								      	<span>+0</span>
+								      </td>
+								      <td data-order="57">57<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>3.6%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">경남</td>
+								      <td data-order="168">168<br />
+								      	<span style="color: red;" id="numberColor">48</span>
+								      </td>
+								      <td data-order="537">537<br />
+								      	<span>+56</span>
+								      </td>
+								      <td data-order="368">368<br />
+								      	<span>+8</span>
+								      </td>
+								      <td data-order="1">1<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0.3%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">제주</td>
+								      <td data-order="13">13<br />
+								      	<span style="color: red;" id="numberColor">5</span>
+								      </td>
+								      <td data-order="73">73<br />
+								      	<span>+6</span>
+								      </td>
+								      <td data-order="60">60<br />
+								      	<span>+1</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">검역</td>
+								      <td data-order="556">556<br />
+								      	<span style="color: red;" id="numberColor">10</span>
+								      </td>
+								      <td data-order="2144">2144<br />
+								      	<span>+19</span>
+								      </td>
+								      <td data-order="1588">1588<br />
+								      	<span>+9</span>
+								      </td>
+								      <td data-order="0">0<br />
+								      	<span>+0</span>
+								      </td>
+								      <td>0%</td>
+								    </tr>
+                                  
+								  </tbody>
+								</table>
+							</div>
+							<div id="datasheet2" style="height: 17.5rem;"></div>
+							<div id="transition" style="height: 20rem;"></div>
+				        </div>
+				    </section>
+                    
+				    <section class="et-slide" id="tab-react">
+				    	<div class="prevent">
+					        <h2>예방수칙</h2>
+					        <p class="text-center"><a class="text-reset" href="http://ncov.mohw.go.kr/infoBoardView.do?brdId=3&brdGubun=32&dataGubun=&ncvContSeq=586&contSeq=586&board_id=&gubun=#" target="_blank">출처: 보건복지부, 질병관리본부</a></p>
+					        <div class="Agraphic" style="width: 18.75rem; margin: 0 auto;">
+					        	<img src="/static/images/kr01.jpg" style="width: 100%;" alt="코로나바이러스19 예방,기본수칙">
+								<img src="/static/images/kr02.jpg" style="width: 100%;" alt="코로나바이러스19 예방,기본수칙">
+					        </div>
+					        <div class="hospital-navigation">
+					        	<div class="title"><h2>긴급연락처</h2></div>
+					        	<ul>
+					        		<li>✚
+					        			<a href="https://search.naver.com/search.naver?where=m&sm=mtb_etc&query=%EC%8B%A0%EC%A2%85%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%20%EC%84%A0%EB%B3%84%EC%A7%84%EB%A3%8C%EC%86%8C" target="_blank">선별진료소찾기</a>
+									</li>
+									<li>
+										<h2>의심증상 발생시 콜센터 상담후 선별진료소 방문</h2>
+										<h2>📞질병관리본부 콜센터: <a href="tel:1339">1339</a></h2>
+										<h2>📞지역 콜센터: 지역번호+120</h2>
+									</li>
+								</ul>
+                            </div>
+				        </div>
+				    </section>
+				    <section class="et-slide" id="tab-angular">
+						<div class="container">
+				        <h1>뉴스</h1>
+							<ul>
+								
+							</ul>
+						</div>
+				    </section>
+				</main>
+				<div class="source">
+					<div class="container">
+						<h2>데이터출처</h2>
+						<ul>
+							<li>
+								<a href="http://ncov.mohw.go.kr/" target="_blank">대한민국: 질병관리본부 코로나바이러스감염증-19</a><br />
+								<a href="https://www.worldometers.info/coronavirus/" target="_blank">Worldometer: COVID-19 CORONAVIRUS OUTBREAK</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="footer">
+        	<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			대한민국 <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-xs">
+				<li><a href="#">중국</a></li>
+				<li><a href="#">미국</a></li>
+			</ul>
+			</div>
+				<p>잘못된 정보 정정요청 & 제보</p>
+				<p>jhnam1992@gmail.com</p>
+				<p>*본 사이트에서 제공하는 통계 수치는 질병관리 본부 및 세계 각국 관련 보도자료 토대로 업데이트 되지만, 개인이 취합한 내용이므로 수치의 정확성에 대해 책임질 수 없으며, 공식적인 근거 자료로 활용될 수 없습니다. 본 사이트에서 제공하는 내용의 인용과 사용에 대한 책임은 전적으로 인용자 및 사용자에게 있음을 알립니다.</p>
+		</div>
+	</div>
+	<div class="footer"></div>
+<script type="text/javascript" src="/static/js/echarts.min.js"></script>
+<script type="text/javascript" src="/static/js/world.js"></script>
+<script type="text/javascript" src="/static/js/South_Korea.js"></script>
+<script src="/static/js/navigation.js"></script>
+<script src="/static/js/jquery.dataTables.js"></script>
+<script type="text/javascript">
+		var datasheet11 = [
+				
+					'독일',
+				
+					'우크라이나',
+				
+					'폴란드',
+				
+					'인도',
+				
+					'러시아',
+				
+					'브라질',
+				
+					'벨기에',
+				
+					'이탈리아',
+				
+					'프랑스',
+				
+					'미국',
+				
+			]
+
+		var datasheet12 = [
+			
+					'294096',
+			
+					'348077',
+			
+					'430675',
+			
+					'452306',
+			
+					'464436',
+			
+					'483252',
+			
+					'512321',
+			
+					'791697',
+			
+					'1962927',
+			
+					'5063561',
+			
+			]
+
+		var datasheet21 = [
+				
+					'광주',
+				
+					'경남',
+				
+					'충남',
+				
+					'전남',
+				
+					'인천',
+				
+					'강원',
+				
+					'검역',
+				
+					'경기',
+				
+					'서울',
+				
+					'합계',
+				
+			]
+
+		var datasheet22 = [
+				
+					'100',
+				
+					'168',
+				
+					'186',
+				
+					'189',
+				
+					'234',
+				
+					'235',
+				
+					'556',
+				
+					'1076',
+				
+					'1725',
+				
+					'4853',
+				
+			]
+
+		var worldtransition1 = [
+				
+	        		'2020년 11월 19일',
+				
+	        		'2020년 11월 25일',
+				
+	        		'2020년 11월 26일',
+				
+			]
+
+		var worldtransition2 = [
+				
+		    		'15716184',
+				
+		    		'17041806',
+				
+		    		'17244860',
+				
+			]
+
+		var worldtransition3 = [
+				
+					'0',
+				
+					'0',
+				
+					'796692',
+				
+			]
+
+		var worldtransition4 = [
+				
+					'0',
+				
+					'0',
+				
+					'1020584',
+				
+			]
+
+		var transition1 = [
+				
+	        		'2020년 11월 19일',
+				
+	        		'2020년 11월 25일',
+				
+	        		'2020년 11월 26일',
+				
+		]
+
+		var transition2 = [
+				
+	        		'2842',
+				
+	        		'4121',
+				
+	        		'4853',
+				
+			]
+
+		var transition3 = [
+				
+					'0',
+				
+					'0',
+				
+					'228',
+				
+			]
+
+		var transition4 = [
+				
+					'0',
+				
+					'0',
+				
+					'965',
+				
+			]
+
+
+		var worldmap11 = [
+	            
+	            	{name: 'None', value: 7},
+	            
+	            	{name: '미국', value: 5063561},
+	            
+	            	{name: '인도', value: 452306},
+	            
+	            	{name: '브라질', value: 483252},
+	            
+	            	{name: '러시아', value: 464436},
+	            
+	            	{name: '프랑스', value: 1962927},
+	            
+	            	{name: '스페인', value: 0},
+	            
+	            	{name: '영국', value: 0},
+	            
+	            	{name: '이탈리아', value: 791697},
+	            
+	            	{name: '아르헨티나', value: 135390},
+	            
+	            	{name: '콜롬비아', value: 60172},
+	            
+	            	{name: '멕시코', value: 168853},
+	            
+	            	{name: '독일', value: 294096},
+	            
+	            	{name: '페루', value: 33985},
+	            
+	            	{name: '폴란드', value: 430675},
+	            
+	            	{name: '이란', value: 222572},
+	            
+	            	{name: '남아프리카공화국', value: 37857},
+	            
+	            	{name: '우크라이나', value: 348077},
+	            
+	            	{name: '벨기에', value: 512321},
+	            
+	            	{name: '칠레', value: 8774},
+	            
+	            	{name: '이라크', value: 58047},
+	            
+	            	{name: '인도네시아', value: 66752},
+	            
+	            	{name: '체코', value: 82259},
+	            
+	            	{name: '네덜란드', value: 0},
+	            
+	            	{name: '터키', value: 69410},
+	            
+	            	{name: '방글라데시', value: 78461},
+	            
+	            	{name: '루마니아', value: 115123},
+	            
+	            	{name: '필리핀', value: 28789},
+	            
+	            	{name: '파키스탄', value: 43963},
+	            
+	            	{name: '사우디아라비아', value: 5455},
+	            
+	            	{name: '캐나다', value: 58524},
+	            
+	            	{name: '모로코', value: 46471},
+	            
+	            	{name: '이스라엘', value: 9422},
+	            
+	            	{name: '스위스', value: 90660},
+	            
+	            	{name: '포르투갈', value: 80528},
+	            
+	            	{name: '오스트리아', value: 68786},
+	            
+	            	{name: '스웨덴', value: 0},
+	            
+	            	{name: '네팔', value: 16639},
+	            
+	            	{name: '요르단', value: 64398},
+	            
+	            	{name: '헝가리', value: 138202},
+	            
+	            	{name: '에콰도르', value: 9933},
+	            
+	            	{name: '아랍에미리트', value: 11055},
+	            
+	            	{name: '파나마', value: 16174},
+	            
+	            	{name: '볼리비아', value: 15134},
+	            
+	            	{name: '쿠웨이트', value: 6313},
+	            
+	            	{name: '세르비아', value: 107757},
+	            
+	            	{name: '도미니카공화국', value: 23818},
+	            
+	            	{name: '카타르', value: 2664},
+	            
+	            	{name: '일본.', value: 18674},
+	            
+	            	{name: '코스타리카', value: 50235},
+	            
+	            	{name: '불가리아', value: 87073},
+	            
+	            	{name: '아르메니아', value: 25747},
+	            
+	            	{name: '벨라루스', value: 20115},
+	            
+	            	{name: '카자흐스탄', value: 11589},
+	            
+	            	{name: '오만', value: 7332},
+	            
+	            	{name: '레바논', value: 48155},
+	            
+	            	{name: '과테말라', value: 7028},
+	            
+	            	{name: '조지아', value: 18785},
+	            
+	            	{name: '크로아티아', value: 21725},
+	            
+	            	{name: '이집트', value: 5321},
+	            
+	            	{name: '에티오피아', value: 38871},
+	            
+	            	{name: '온두라스', value: 56222},
+	            
+	            	{name: '아제르바이잔', value: 34209},
+	            
+	            	{name: '슬로바키아', value: 44130},
+	            
+	            	{name: '몰도바', value: 15205},
+	            
+	            	{name: '베네수엘라', value: 4268},
+	            
+	            	{name: '그리스', value: 85397},
+	            
+	            	{name: '튀니지', value: 21865},
+	            
+	            	{name: '바레인', value: 1509},
+	            
+	            	{name: '미얀마', value: 18390},
+	            
+	            	{name: '보스니아 헤르체고비나', value: 32689},
+	            
+	            	{name: '리비아', value: 27682},
+	            
+	            	{name: '케냐', value: 24931},
+	            
+	            	{name: '파라과이', value: 21162},
+	            
+	            	{name: '알제리', value: 24984},
+	            
+	            	{name: '팔레스타인', value: 15563},
+	            
+	            	{name: '덴마크', value: 15254},
+	            
+	            	{name: '우즈베키스탄', value: 2206},
+	            
+	            	{name: '아일랜드', value: 45790},
+	            
+	            	{name: '키르기스스탄', value: 7376},
+	            
+	            	{name: '슬로베니아', value: 20337},
+	            
+	            	{name: '나이지리아', value: 3143},
+	            
+	            	{name: '말레이시아', value: 11348},
+	            
+	            	{name: '싱가포르', value: 76},
+	            
+	            	{name: '북마케도니아', value: 20881},
+	            
+	            	{name: '리투아니아', value: 40653},
+	            
+	            	{name: '가나', value: 775},
+	            
+	            	{name: '아프가니스탄', value: 7747},
+	            
+	            	{name: '엘살바도르', value: 2191},
+	            
+	            	{name: '알바니아', value: 17170},
+	            
+	            	{name: '노르웨이', value: 12996},
+	            
+	            	{name: '몬테네그로', value: 11120},
+	            
+	            	{name: '한국', value: 4853},
+	            
+	            	{name: '룩셈부르크', value: 9182},
+	            
+	            	{name: '호주', value: 1395},
+	            
+	            	{name: '카메룬', value: 1301},
+	            
+	            	{name: '핀란드', value: 5960},
+	            
+	            	{name: '스리랑카', value: 5557},
+	            
+	            	{name: '코트디부아르', value: 194},
+	            
+	            	{name: '우간다', value: 9867},
+	            
+	            	{name: '잠비아', value: 423},
+	            
+	            	{name: '마다가스카르', value: 433},
+	            
+	            	{name: '수단', value: 5531},
+	            
+	            	{name: '세네갈', value: 71},
+	            
+	            	{name: '모잠비크', value: 1715},
+	            
+	            	{name: '앙골라', value: 6964},
+	            
+	            	{name: '라트비아', value: 12403},
+	            
+	            	{name: '나미비아', value: 522},
+	            
+	            	{name: '프랑스령폴리네시아', value: 8871},
+	            
+	            	{name: '기니', value: 951},
+	            
+	            	{name: '몰디브', value: 1127},
+	            
+	            	{name: '콩고민주공화국', value: 601},
+	            
+	            	{name: '타지키스탄', value: 527},
+	            
+	            	{name: '프랑스령 기아나', value: 1051},
+	            
+	            	{name: '에스토니아', value: 4359},
+	            
+	            	{name: '카보베르데', value: 522},
+	            
+	            	{name: '자메이카', value: 4618},
+	            
+	            	{name: '보츠와나', value: 2269},
+	            
+	            	{name: '짐바브웨', value: 898},
+	            
+	            	{name: '키프로스', value: 7351},
+	            
+	            	{name: '몰타', value: 2069},
+	            
+	            	{name: '아이티', value: 1100},
+	            
+	            	{name: '가봉', value: 98},
+	            
+	            	{name: '과들루프섬', value: 5953},
+	            
+	            	{name: '모리타니', value: 429},
+	            
+	            	{name: '쿠바', value: 423},
+	            
+	            	{name: '레위니옹', value: 1137},
+	            
+	            	{name: '바하마', value: 1573},
+	            
+	            	{name: '시리아', value: 3797},
+	            
+	            	{name: '트리니다드토바고', value: 732},
+	            
+	            	{name: '안도라', value: 810},
+	            
+	            	{name: '에스와티니', value: 251},
+	            
+	            	{name: '말라위', value: 383},
+	            
+	            	{name: '홍콩', value: 540},
+	            
+	            	{name: '니카라과', value: 1399},
+	            
+	            	{name: '르완다', value: 415},
+	            
+	            	{name: '지부티', value: 34},
+	            
+	            	{name: '콩고', value: 551},
+	            
+	            	{name: '벨리즈', value: 2308},
+	            
+	            	{name: '마르티니크섬', value: 5275},
+	            
+	            	{name: '아이슬란드', value: 176},
+	            
+	            	{name: '수리남', value: 4},
+	            
+	            	{name: '가이아나', value: 847},
+	            
+	            	{name: '마요트섬', value: 2168},
+	            
+	            	{name: '적도기니', value: 47},
+	            
+	            	{name: '우루과이', value: 992},
+	            
+	            	{name: '중앙아프리카공화국', value: 2924},
+	            
+	            	{name: '아루바', value: 101},
+	            
+	            	{name: '말리', value: 1253},
+	            
+	            	{name: '소말리아', value: 920},
+	            
+	            	{name: '타이', value: 94},
+	            
+	            	{name: '감비아', value: 17},
+	            
+	            	{name: '남수단', value: 74},
+	            
+	            	{name: '베냉', value: 352},
+	            
+	            	{name: '토고', value: 505},
+	            
+	            	{name: '부르키나파소', value: 142},
+	            
+	            	{name: '기니비사우', value: 70},
+	            
+	            	{name: '시에라리온', value: 505},
+	            
+	            	{name: '예멘', value: 39},
+	            
+	            	{name: '레소토', value: 771},
+	            
+	            	{name: '뉴질랜드', value: 60},
+	            
+	            	{name: '퀴라소', value: 869},
+	            
+	            	{name: '차드', value: 60},
+	            
+	            	{name: '라이베리아', value: 155},
+	            
+	            	{name: '산마리노', value: 227},
+	            
+	            	{name: '니제르', value: 179},
+	            
+	            	{name: '베트남', value: 130},
+	            
+	            	{name: '리히텐슈타인', value: 184},
+	            
+	            	{name: '채널제도', value: 139},
+	            
+	            	{name: '신트마르턴', value: 92},
+	            
+	            	{name: '지브롤터', value: 91},
+	            
+	            	{name: '상투메프린시페', value: 39},
+	            
+	            	{name: '터크스케이커스 제도', value: 40},
+	            
+	            	{name: '몽골', value: 367},
+	            
+	            	{name: '세인트마틴섬', value: 80},
+	            
+	            	{name: '부룬디', value: 97},
+	            
+	            	{name: '파푸아뉴기니', value: 50},
+	            
+	            	{name: '대만', value: 63},
+	            
+	            	{name: '코모로', value: 21},
+	            
+	            	{name: '모나코', value: 61},
+	            
+	            	{name: '에리트레아', value: 85},
+	            
+	            	{name: '탄자니아', value: 305},
+	            
+	            	{name: '페로스제도', value: 2},
+	            
+	            	{name: '모리셔스', value: 47},
+	            
+	            	{name: '부탄', value: 19},
+	            
+	            	{name: '맨섬', value: 6},
+	            
+	            	{name: '캄보디아', value: 9},
+	            
+	            	{name: '케이맨제도', value: 18},
+	            
+	            	{name: '바베이도스', value: 13},
+	            
+	            	{name: '버뮤다제도', value: 25},
+	            
+	            	{name: '세인트루시아', value: 124},
+	            
+	            	{name: '세이셸', value: 7},
+	            
+	            	{name: '카리브 네덜란드', value: 3},
+	            
+	            	{name: '브루나이', value: 2},
+	            
+	            	{name: '앤티가바부다', value: 7},
+	            
+	            	{name: '생바르텔레미', value: 33},
+	            
+	            	{name: '세인트빈센트그레나딘', value: 6},
+	            
+	            	{name: '도미니카', value: 14},
+	            
+	            	{name: '영국령 버진아일랜드', value: 0},
+	            
+	            	{name: '마카오', value: 0},
+	            
+	            	{name: '그레나다', value: 11},
+	            
+	            	{name: '라오스', value: 15},
+	            
+	            	{name: '피지', value: 3},
+	            
+	            	{name: '누벨칼레도니섬', value: 0},
+	            
+	            	{name: '동티모르', value: 0},
+	            
+	            	{name: '바티칸', value: 12},
+	            
+	            	{name: '세인트키츠네비스', value: 3},
+	            
+	            	{name: '그린란드', value: 0},
+	            
+	            	{name: 'Solomon Islands', value: 12},
+	            
+	            	{name: '포클랜드제도', value: 3},
+	            
+	            	{name: '생피에르미클롱', value: 4},
+	            
+	            	{name: '몬트세랫', value: 0},
+	            
+	            	{name: '서사하라', value: 1},
+	            
+	            	{name: '앵귈라', value: 1},
+	            
+	            	{name: 'Marshall Islands', value: 3},
+	            
+	            	{name: 'Wallis and Futuna', value: 2},
+	            
+	            	{name: 'Samoa', value: 1},
+	            
+	            	{name: 'Vanuatu', value: 1},
+	            
+	            	{name: '중국', value: 306},
+	            
+            ]
+
+        var province11 = [
+				
+					{name: '합계', value: 4853},
+				
+					{name: '서울', value: 1725},
+				
+					{name: '부산', value: 74},
+				
+					{name: '대구', value: 34},
+				
+					{name: '인천', value: 234},
+				
+					{name: '광주', value: 100},
+				
+					{name: '대전', value: 19},
+				
+					{name: '울산', value: 19},
+				
+					{name: '세종', value: 11},
+				
+					{name: '경기', value: 1076},
+				
+					{name: '강원', value: 235},
+				
+					{name: '충북', value: 34},
+				
+					{name: '충남', value: 186},
+				
+					{name: '전북', value: 94},
+				
+					{name: '전남', value: 189},
+				
+					{name: '경북', value: 86},
+				
+					{name: '경남', value: 168},
+				
+					{name: '제주', value: 13},
+				
+					{name: '검역', value: 556},
+				
+            ]
+
+        var province22 = [
+                
+					{name: '합계', value: 32318},
+				
+					{name: '서울', value: 8113},
+				
+					{name: '부산', value: 683},
+				
+					{name: '대구', value: 7224},
+				
+					{name: '인천', value: 1305},
+				
+					{name: '광주', value: 646},
+				
+					{name: '대전', value: 465},
+				
+					{name: '울산', value: 185},
+				
+					{name: '세종', value: 93},
+				
+					{name: '경기', value: 6864},
+				
+					{name: '강원', value: 583},
+				
+					{name: '충북', value: 239},
+				
+					{name: '충남', value: 833},
+				
+					{name: '전북', value: 268},
+				
+					{name: '전남', value: 382},
+				
+					{name: '경북', value: 1681},
+				
+					{name: '경남', value: 537},
+				
+					{name: '제주', value: 73},
+				
+					{name: '검역', value: 2144},
+				
+            ]
+
+        var province33 = [
+                
+					{name: '합계', value: 515},
+				
+					{name: '서울', value: 88},
+				
+					{name: '부산', value: 15},
+				
+					{name: '대구', value: 199},
+				
+					{name: '인천', value: 11},
+				
+					{name: '광주', value: 3},
+				
+					{name: '대전', value: 6},
+				
+					{name: '울산', value: 2},
+				
+					{name: '세종', value: 0},
+				
+					{name: '경기', value: 112},
+				
+					{name: '강원', value: 6},
+				
+					{name: '충북', value: 3},
+				
+					{name: '충남', value: 8},
+				
+					{name: '전북', value: 2},
+				
+					{name: '전남', value: 2},
+				
+					{name: '경북', value: 57},
+				
+					{name: '경남', value: 1},
+				
+					{name: '제주', value: 0},
+				
+					{name: '검역', value: 0},
+				
+            ]
+</script>
+<script src="/static/js/ko/world-datasheet.js"></script>
+<script src="/static/js/ko/city-datasheet.js"></script>
+<script src="/static/js/ko/world-chart.js"></script>
+<script src="/static/js/ko/city-chart.js"></script>
+<script src="/static/js/ko/world-map.js"></script>
+<script src="/static/js/ko/korea-map.js"></script>
+<script src="/static/js/all-tables.js"></script>
+<script src="/static/js/newstime.js"></script>
+<script type="text/javascript">
+	var dataNumber = document.querySelectorAll('#numberColor');
+	for (i in dataNumber) {
+		if (dataNumber[i].innerText < 0) {
+			dataNumber[i].style.color = '#10aeb5';
+		} else {
+			dataNumber[i].innerText = '+' + dataNumber[i].innerText;
+		}
+	}
+</script>
+</body>
+</html>

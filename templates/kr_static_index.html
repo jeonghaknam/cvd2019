@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ko">
+{% load staticfiles %}
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="canonical" href="https://cvd2019.kr/" />
+	<title>코로나2019 실시간 현황</title>
+	<meta property="og:type" content="website"> 
+    <meta property="og:title" content="코로나2019 실시간 현황">
+    <meta property="og:description" content="코로나19(COVID19)에 관한 세계 각 국가들의 통계 및 뉴스 등을 취합하여 실시간 정보를 제공합니다.">
+    <meta property="og:image" content="https://cvd2019.kr/static/images/krogimage.jpg">
+    <meta property="og:url" content="https://cvd2019.kr">
+	<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <script type="text/javascript" src="{% static 'js/set_root.js' %}"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/jquery.dataTables.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navigation.css' %}">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+	<section class="et-slide" id="tab-top"></section>
+	<div class="main_wrap">
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<a class="logo"><img src="{% static 'images/logo.png' %}" alt="cvd2019 logo" title="코로나19(COVID-19) 실시간 현황"></a>
+					<div class="language">
+						<div class="dropdown">
+						  <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+						    언어
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu dropdown-menu-xs dropdown-menu-left">
+						    <li><a href="{% static 'cnindex.html' %}" target="_blank">중국</a></li>
+						    <li><a href="{% static 'enindex.html' %}" target="_blank">미국</a></li>
+						  </ul>
+						</div>
+					</div>
+					<div class="page-header">
+					  <h1>코로나19(COVID-19)<br />실시간 현황</h1>
+					  	<h3>마지막업데이트: {{ total_world.update_time }}
+					  		<button type="button" class="btn btn-xs" onClick="document.location.reload()">
+						  	<span>↻</span>
+							</button>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="center">
+			<div class="top_info container">
+				<h1>전세계 현황</h1>
+				<div class="row world">
+					<div class="col-xs-6">
+						<span>격리중</span><br />
+						<strong style="color:#ff6f72;" >{{ total_world.quarantine }}</strong><br />
+						<b>전일대비<em style="color: red;" id="numberColor">{{ total_world.compare_quarantine|default:" 0" }}</em></b>
+					</div>
+					<div class="col-xs-6">
+						<span>격리해제</span><br />
+						<strong style="color: #10aeb5;">{{ total_world.cure }}</strong><br />
+						<b>전일대비<em style="color: #10aeb5;">+{{ total_world.compare_cure|default:" 0" }}</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>확진환자</span><br />
+						<strong style="color: #e83132;">{{ total_world.cumulative }}</strong><br />
+						<b>전일대비<em>+{{ total_world.compare_cumulative|default:" 0" }}</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>치사율</span><br />
+						<strong style="color: #476da0;">{{ total_world.death_rate }}%</strong><br />
+					</div>
+					<div class="col-xs-4">
+						<span>사망자</span><br />
+						<strong style="color: #4d5054;">{{ total_world.death }}</strong><br />
+						<b>전일대비<em>+{{ total_world.compare_death|default:" 0" }}</em></b>
+					</div>
+				</div>
+
+				<h1>대한민국</h1>
+				<div class="row Country">
+					<div class="col-xs-4">
+						<span>격리중</span><br />
+						<strong style="color:#ff6f72;" >{{ total_domestic.quarantine }}</strong><br />
+						<b>전일대비<em style="color: red;" id="numberColor">{{ total_domestic.compare_quarantine|default:" 0" }}</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>해외유입</span><br />
+						<strong style="color: #476da0;">{{ total_domestic.overseas }}</strong><br />
+						<b>전일대비<em>+{{ total_domestic.compare_overseas|default:" 0" }}</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>격리해제</span><br />
+						<strong style="color: #10aeb5;">{{ total_domestic.cure }}</strong><br />
+						<b>전일대비<em>+{{ total_domestic.compare_cure|default:" 0" }}</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>확진환자</span><br />
+						<strong style="color: #e83132;">{{ total_domestic.cumulative }}</strong><br />
+						<b>전일대비<em>+{{ total_domestic.compare_cumulative|default:" 0" }}</em></b>
+					</div>
+					<div class="col-xs-4">
+						<span>치사율</span><br />
+						<strong style="color: #e86d48;">{{ total_domestic.death_rate }}%</strong><br />
+					</div>
+					<div class="col-xs-4">
+						<span>사망자</span><br />
+						<strong style="color: #4d5054;">{{ total_domestic.death }}</strong><br />
+						<b>전일대비<em>+{{ total_domestic.compare_death|default:" 0" }}</em></b>
+					</div>
+				</div>
+				<div class="description" style="text-align: center;">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm"><img src="{% static 'images/question.png' %}" alt="설명">
+						<span>&nbsp;&nbsp;용어설명</span>
+					</button>
+
+					<div class="modal fade bs-example-modal-sm bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+					  	<div class="modal-dialog modal-dialog-centered" role="document">
+					  		<div class="modal-content">
+					  	 		<div class="modal-header">
+							        <h4 class="modal-title">용어설명</h4>
+							    </div>
+
+							  	<div class="modal-body">
+							  		<p>* 전일대비+ = 전일 대비 증가량</p>
+							  		<p>* 치사율(%) = 사망자/(사망자+격리해제)</p>
+							  		<p>* 격리중 = 확진환자 - 격리해제 - 사망자</p>
+							  		<p>* 해외유입 = 해외입국 확진환자</p>
+                                    <p>* 대한민국 수치는 질병관리본부 보도자료 기준</p>
+									<p>자세한 사항은 홈페이지 하단 출처 참조</p>
+							  	</div>
+							  	<div class="modal-footer">
+					        		<button type="button" class="btn btn-default" data-dismiss="modal">X</button>
+					      		</div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="breadcrumb">
+				<section class="et-hero-tabs" >
+				    <div class="et-hero-tabs-container">
+				        <a class="et-hero-tab" href="#tab-es6">세계현황</a>
+				        <a class="et-hero-tab" href="#tab-flexbox">국내현황</a>
+				        <a class="et-hero-tab" href="#tab-react">예방수칙</a>
+				        <a class="et-hero-tab" href="#tab-angular">뉴스</a>
+				        <a class="et-hero-tab" href="#tab-top">↑이동</a>
+				        <span class="et-hero-tab-slider"></span>
+				    </div>
+				</section>
+
+				<!-- Main -->
+				<main class="et-main">
+				    <section class="et-slide" id="tab-es6">
+				    	<div class="world">
+					        <h1 style="text-align: center;">세계 현황</h1>
+					        <div id="worldmap" style="height:13rem; border:0px solid #ccc;padding:0px;position: relative;">
+					        </div>
+
+					        <div class="TabBox">
+								<table class="data-table" width="100%">
+								  <thead>
+								    <tr>
+								      <th class="nosort">국가</th>
+								      <th>격리</th>
+								      <th>확진</th>
+								      <th>해제</th>
+								      <th>사망</th>
+								      <th>치사율</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+                                  {% for i in data_country %}
+								    <tr>
+								      <td class="nosort" style="font-weight: bold;">{{ i.lang_name }}</td>
+								      <td data-order="{{ i.quarantine }}">{{ i.quarantine }}<br />
+								      	<span style="color: red;" id="numberColor">{{ i.compare_quarantine|default:"0" }}</span>
+								      </td>
+								      <td data-order="{{ i.cumulative }}">{{ i.cumulative }}<br />
+								      	<span>+{{ i.compare_cumulative|default:"0" }}</span>
+								      </td>
+								      <td data-order="{{ i.cure }}">{{ i.cure }}<br />
+								      	<span>+{{ i.compare_cure|default:"0" }}</span>
+								      </td>
+								      <td data-order="{{ i.death }}">{{ i.death }}<br />
+								      	<span>+{{ i.compare_death|default:"0" }}</span>
+								      </td>
+								      <td>{{ i.death_rate }}%</td>
+								    </tr>
+                                  {% endfor %}
+								  </tbody>
+								</table>
+							</div>
+							<div id="datasheet" style="height: 17.5rem;"></div>
+							<div id="worldtransition" style="height: 17.5rem;"></div>
+				        </div><!--TabBox-->
+				    </section>
+                    
+				    <section class="et-slide" id="tab-flexbox">
+				        <div class="demestic">
+					        <h1 style="text-align: center;">국내현황</h1>
+					        <div id="province" style="height:17.5rem; border:0px solid #ccc;padding:0px;position: relative;">
+					        </div>
+					        <div class="TabBox">
+								<table class="data-table" width="100%">
+								  <thead>
+								    <tr>
+								      <th class="nosort">지역</th>
+								      <th>격리</th>
+								      <th>확진</th>
+								      <th>해제</th>
+								      <th>사망</th>
+								      <th>치사율</th>
+								    </tr>
+								  </thead>
+								  <tbody>
+                                  {% for i in data_area %}
+								    <tr>
+										<td class="nosort" style="font-weight: bold;">{{ i.lang_name }}</td>
+								      <td data-order="{{ i.quarantine }}">{{ i.quarantine }}<br />
+								      	<span style="color: red;" id="numberColor">{{ i.compare_quarantine|default:"0" }}</span>
+								      </td>
+								      <td data-order="{{ i.cumulative }}">{{ i.cumulative }}<br />
+								      	<span>+{{ i.compare_cumulative|default:"0" }}</span>
+								      </td>
+								      <td data-order="{{ i.cure }}">{{ i.cure }}<br />
+								      	<span>+{{ i.compare_cure|default:"0" }}</span>
+								      </td>
+								      <td data-order="{{ i.death }}">{{ i.death }}<br />
+								      	<span>+{{ i.compare_death|default:"0" }}</span>
+								      </td>
+								      <td>{{ i.death_rate }}%</td>
+								    </tr>
+                                  {% endfor %}
+								  </tbody>
+								</table>
+							</div>
+							<div id="datasheet2" style="height: 17.5rem;"></div>
+							<div id="transition" style="height: 20rem;"></div>
+				        </div>
+				    </section>
+                    
+				    <section class="et-slide" id="tab-react">
+				    	<div class="prevent">
+					        <h2>예방수칙</h2>
+					        <p class="text-center"><a class="text-reset" href="http://ncov.mohw.go.kr/infoBoardView.do?brdId=3&brdGubun=32&dataGubun=&ncvContSeq=586&contSeq=586&board_id=&gubun=#" target="_blank">출처: 보건복지부, 질병관리본부</a></p>
+					        <div class="Agraphic" style="width: 18.75rem; margin: 0 auto;">
+					        	<img src="{% static 'images/kr01.jpg' %}" style="width: 100%;" alt="코로나바이러스19 예방,기본수칙">
+								<img src="{% static 'images/kr02.jpg' %}" style="width: 100%;" alt="코로나바이러스19 예방,기본수칙">
+					        </div>
+					        <div class="hospital-navigation">
+					        	<div class="title"><h2>긴급연락처</h2></div>
+					        	<ul>
+					        		<li>✚
+					        			<a href="https://search.naver.com/search.naver?where=m&sm=mtb_etc&query=%EC%8B%A0%EC%A2%85%EC%BD%94%EB%A1%9C%EB%82%98%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4%20%EC%84%A0%EB%B3%84%EC%A7%84%EB%A3%8C%EC%86%8C" target="_blank">선별진료소찾기</a>
+									</li>
+									<li>
+										<h2>의심증상 발생시 콜센터 상담후 선별진료소 방문</h2>
+										<h2>📞질병관리본부 콜센터: <a href="tel:1339">1339</a></h2>
+										<h2>📞지역 콜센터: 지역번호+120</h2>
+									</li>
+								</ul>
+                            </div>
+				        </div>
+				    </section>
+				    <section class="et-slide" id="tab-angular">
+						<div class="container">
+				        <h1>뉴스</h1>
+							<ul>
+								{% for i in data_news %}
+								<li>
+									<a href="{{ i.url }}" target="_blank">{{ i.title }}</a><br />
+                                    {% autoescape off %}
+									<h3>{{ i.description }}</h3><br />
+                                    {% endautoescape %}
+									<span id="newstimes">{{ i.publishedAt }}</span>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+				    </section>
+				</main>
+				<div class="source">
+					<div class="container">
+						<h2>데이터출처</h2>
+						<ul>
+							<li>
+								<a href="http://ncov.mohw.go.kr/" target="_blank">대한민국: 질병관리본부 코로나바이러스감염증-19</a><br />
+								<a href="https://www.worldometers.info/coronavirus/" target="_blank">Worldometer: COVID-19 CORONAVIRUS OUTBREAK</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="footer">
+        	<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			대한민국 <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-menu-xs">
+				<li><a href="#">중국</a></li>
+				<li><a href="#">미국</a></li>
+			</ul>
+			</div>
+				<p>잘못된 정보 정정요청 & 제보</p>
+				<p>jhnam1992@gmail.com</p>
+				<p>*본 사이트에서 제공하는 통계 수치는 질병관리 본부 및 세계 각국 관련 보도자료 토대로 업데이트 되지만, 개인이 취합한 내용이므로 수치의 정확성에 대해 책임질 수 없으며, 공식적인 근거 자료로 활용될 수 없습니다. 본 사이트에서 제공하는 내용의 인용과 사용에 대한 책임은 전적으로 인용자 및 사용자에게 있음을 알립니다.</p>
+		</div>
+	</div>
+	<div class="footer"></div>
+<script type="text/javascript" src="{% static 'js/echarts.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/world.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/South_Korea.js' %}"></script>
+<script src="{% static 'js/navigation.js' %}"></script>
+<script src="{% static 'js/jquery.dataTables.js' %}"></script>
+<script type="text/javascript">
+		var datasheet11 = [
+				{% for i in bar_world %}
+					'{{ i.lang_name }}',
+				{% endfor %}
+			]
+
+		var datasheet12 = [
+			{% for i in bar_world %}
+					'{{ i.quarantine }}',
+			{% endfor %}
+			]
+
+		var datasheet21 = [
+				{% for i in bar_domestic %}
+					'{{ i.lang_name }}',
+				{% endfor %}
+			]
+
+		var datasheet22 = [
+				{% for i in bar_domestic %}
+					'{{ i.quarantine }}',
+				{% endfor %}
+			]
+
+		var worldtransition1 = [
+				{% for i in line_world %}
+	        		'{{ i.create_time }}',
+				{% endfor %}
+			]
+
+		var worldtransition2 = [
+				{% for i in line_world %}
+		    		'{{ i.quarantine }}',
+				{% endfor %}
+			]
+
+		var worldtransition3 = [
+				{% for i in line_world %}
+					'{{ i.compare_cure }}',
+				{% endfor %}
+			]
+
+		var worldtransition4 = [
+				{% for i in line_world %}
+					'{{ i.compare_cumulative }}',
+				{% endfor %}
+			]
+
+		var transition1 = [
+				{% for i in line_domestic %}
+	        		'{{ i.create_time }}',
+				{% endfor %}
+		]
+
+		var transition2 = [
+				{% for i in line_domestic %}
+	        		'{{ i.quarantine }}',
+				{% endfor %}
+			]
+
+		var transition3 = [
+				{% for i in line_domestic %}
+					'{{ i.compare_cure }}',
+				{% endfor %}
+			]
+
+		var transition4 = [
+				{% for i in line_domestic %}
+					'{{ i.compare_cumulative }}',
+				{% endfor %}
+			]
+
+
+		var worldmap11 = [
+	            {% for i in data_country %}
+	            	{name: '{{ i.lang_name }}', value: {{ i.quarantine }}},
+	            {% endfor %}
+            ]
+
+        var province11 = [
+				{% for i in data_area %}
+					{name: '{{ i.lang_name }}', value: {{ i.quarantine }}},
+				{% endfor %}
+            ]
+
+        var province22 = [
+                {% for i in data_area %}
+					{name: '{{ i.lang_name }}', value: {{ i.cumulative }}},
+				{% endfor %}
+            ]
+
+        var province33 = [
+                {% for i in data_area %}
+					{name: '{{ i.lang_name }}', value: {{ i.death }}},
+				{% endfor %}
+            ]
+</script>
+<script src="{% static 'js/ko/world-datasheet.js' %}"></script>
+<script src="{% static 'js/ko/city-datasheet.js' %}"></script>
+<script src="{% static 'js/ko/world-chart.js' %}"></script>
+<script src="{% static 'js/ko/city-chart.js' %}"></script>
+<script src="{% static 'js/ko/world-map.js' %}"></script>
+<script src="{% static 'js/ko/korea-map.js' %}"></script>
+<script src="{% static 'js/all-tables.js' %}"></script>
+<script src="{% static 'js/newstime.js' %}"></script>
+<script type="text/javascript">
+	var dataNumber = document.querySelectorAll('#numberColor');
+	for (i in dataNumber) {
+		if (dataNumber[i].innerText < 0) {
+			dataNumber[i].style.color = '#10aeb5';
+		} else {
+			dataNumber[i].innerText = '+' + dataNumber[i].innerText;
+		}
+	}
+</script>
+</body>
+</html>
