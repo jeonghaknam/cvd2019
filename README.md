@@ -95,6 +95,6 @@ Django MVT 기반으로 제작한 개인 Python 웹 사이트입니다.
 
   <br/>아래와 같이 실행기록이 쌓이는것을 확인하실수 있습니다.
 
-  ![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/update.png)<br/>
+  ![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/031114.png)<br/>
 <br/>
 <br/>
