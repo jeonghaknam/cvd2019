@@ -2,7 +2,7 @@
 URL: https://cvd2019.kr<br/>
 <br/>코로나 보드를 참고하여 간단한 코로나 수치 통계 웹사이트를 만들어보았습니다.   
 Django MVT 기반으로 제작한 개인 Python 웹 사이트입니다.  
-<br/>![avatar](/20201124003622.png)<br/><br/>
+<br/>![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/20201124003622.png)<br/><br/>
 
 ## Frontend
 + HTML
@@ -65,7 +65,7 @@ Django MVT 기반으로 제작한 개인 Python 웹 사이트입니다.
     ``` C
     mysql -u아이디 -p패스워드
     ```
-    ![avatar](/mysql1.png)<br/><br/>
+    ![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/mysql1.png)<br/><br/>
     5.생성 확인후 데이터 입력
     ``` C
     source domesticname.sql
@@ -73,8 +73,8 @@ Django MVT 기반으로 제작한 개인 Python 웹 사이트입니다.
     ``` C
     source worldname.sql
     ```
-    ![avatar](/mysql2.png)<br/><br/>
-    <br/>![avatar](/name.png)<br/>
+    ![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/mysql2.png)<br/><br/>
+    <br/>![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/name.png)<br/>
 
 + ### django crontab 설정
   자동화를 위하여 crontab을 이용하였습니다.  
@@ -91,10 +91,10 @@ Django MVT 기반으로 제작한 개인 Python 웹 사이트입니다.
   python manage.py crontab add
   python manage.py crontab show
   ```
-  ![avatar](/010141.png)<br/>
+  ![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/010141.png)<br/>
 
   <br/>아래와 같이 실행기록이 쌓이는것을 확인하실수 있습니다.
 
-  ![avatar](/update.png)<br/>
+  ![avatar](https://github.com/jeonghaknam/cvd2019_Python/blob/main/about/readme_images/update.png)<br/>
 <br/>
 <br/>
