@@ -76,7 +76,7 @@
 					</div>
 					<div class="col-xs-4">
 						<span>치사율</span><br />
-						<strong style="color: #476da0;">{{ total_world.death_rate }}%</strong><br />
+						<strong style="color: #476da0;">{{ total_world.death_rate }}</strong><br />
 					</div>
 					<div class="col-xs-4">
 						<span>사망자</span><br />
@@ -109,7 +109,7 @@
 					</div>
 					<div class="col-xs-4">
 						<span>치사율</span><br />
-						<strong style="color: #e86d48;">{{ total_domestic.death_rate }}%</strong><br />
+						<strong style="color: #e86d48;">{{ total_domestic.death_rate }}</strong><br />
 					</div>
 					<div class="col-xs-4">
 						<span>사망자</span><br />
@@ -193,7 +193,7 @@
 								      <td data-order="{{ i.death }}">{{ i.death }}<br />
 								      	<span>+{{ i.compare_death|default:"0" }}</span>
 								      </td>
-								      <td>{{ i.death_rate }}%</td>
+								      <td>{{ i.death_rate }}</td>
 								    </tr>
                                   {% endfor %}
 								  </tbody>
@@ -237,7 +237,7 @@
 								      <td data-order="{{ i.death }}">{{ i.death }}<br />
 								      	<span>+{{ i.compare_death|default:"0" }}</span>
 								      </td>
-								      <td>{{ i.death_rate }}%</td>
+								      <td>{{ i.death_rate }}</td>
 								    </tr>
                                   {% endfor %}
 								  </tbody>

@@ -17,9 +17,16 @@ class TotalAdmin(admin.ModelAdmin):
     search_fields = ['create_time']
 
 
+class DomesticAdmin(admin.ModelAdmin):
+    '''데이터관리'''
+    list_per_page = 15
+    list_display = ['id', 'area_name', 'cumulative', 'cure', 'death', 'create_time']
+    search_fields = ['create_time', 'area_name']
+
+
 admin.site.register(WorldTotal, TotalAdmin)
-admin.site.register(World, TotalAdmin)
+admin.site.register(World, DomesticAdmin)
 admin.site.register(DomesticTotal, TotalAdmin)
-admin.site.register(Domestic, TotalAdmin)
+admin.site.register(Domestic, DomesticAdmin)
 admin.site.register(WorldName, NameAdmin)
 admin.site.register(DomesticName, NameAdmin)

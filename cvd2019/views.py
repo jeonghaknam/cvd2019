@@ -60,11 +60,18 @@ class Processing:
         :param model_obj: model object
         :return: model object (+사망률)
         """
-        if model_obj.death != 0:
-            death_rate = model_obj.death / (model_obj.death + model_obj.cure) * 100
-            model_obj.death_rate = '%.01f' % death_rate
+        if model_obj.cumulative - model_obj.quarantine != model_obj.cure + model_obj.death:
+            model_obj.death_rate = 'N/A'
         else:
-            model_obj.death_rate = 0
+            try:
+                death_rate = model_obj.death / (model_obj.death + model_obj.cure) * 100
+                if death_rate > 0:
+                    model_obj.death_rate = '%.01f' % death_rate + '%'
+                else:
+                    model_obj.death_rate = '0%'
+            except ZeroDivisionError:
+                model_obj.death_rate = '0%'
+                return model_obj
 
         return model_obj
 
