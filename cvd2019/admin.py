@@ -13,14 +13,14 @@ class NameAdmin(admin.ModelAdmin):
 class TotalAdmin(admin.ModelAdmin):
     '''데이터관리'''
     list_per_page = 15
-    list_display = ['id', 'cumulative', 'cure', 'death', 'create_time']
+    list_display = ['id', 'cumulative', 'cure', 'death', 'create_time', 'update_time']
     search_fields = ['create_time']
 
 
 class DomesticAdmin(admin.ModelAdmin):
     '''데이터관리'''
     list_per_page = 15
-    list_display = ['id', 'area_name', 'cumulative', 'cure', 'death', 'create_time']
+    list_display = ['id', 'area_name', 'cumulative', 'cure', 'death', 'create_time', 'update_time']
     search_fields = ['create_time', 'area_name']
 
 

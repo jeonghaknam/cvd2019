@@ -205,7 +205,7 @@ class MysqlSave:
         create_count = 0
         # 3. 각 지역별 데이터 업데이트 or 생성
         for area_data in all_data['data']:
-            if area_data['country'] is None:
+            if area_data['country'] is 'None':
                 continue
             try:
                 today_Domestic = Domestic.objects.get(create_time=date.today(), area_name=area_data['country'])
