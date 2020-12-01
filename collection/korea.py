@@ -1,11 +1,15 @@
 # coding=utf-8
 import re
+import time
+import traceback
 import requests
 from lxml import etree
-from datetime import date
+from datetime import date, datetime
 from cvd2019.models import DomesticTotal, Domestic
 
 
+# 질병관리본부
+# 질병관리청 크롤링 None값 반환시 해당 크롤링 실행
 class Crawling:
     """
     국내데이터 수집
@@ -82,6 +86,123 @@ class Crawling:
             covid19_data += self.save_html(html_str, page_num)
 
         return covid19_data
+
+
+# 질병관리청
+# 질병관리청 보도자료 업데이트가 빠르고 정확도가 높기에 우선으로 크롤링
+class Crawling2:
+    """
+    국내데이터 수집
+    ** 크롤링 URL: http://ncov.mohw.go.kr/
+                 (질병관리본부)
+    ** 크롤링 URL: http://www.kdca.go.kr
+                 (질병관리청)
+    """
+
+    def __init__(self):
+        self.url_main = "http://www.kdca.go.kr"
+        self.title_url = "/board/board.es?mid=a20501000000&bid=0015"
+        self.area_data_url = "http://ncov.mohw.go.kr/bdBoardList_Real.do?brdId=1&brdGubun=13"
+        self.headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36"}
+
+    def parse_url(self, url):
+        ''' 응답코드 반환'''
+        response = requests.get(url, headers=self.headers)
+        return response.content.decode()
+
+    def search_url(self, html_str):
+
+        html = etree.HTML(html_str)
+        tr_list = html.xpath('//*[@id="listView"]/ul/li[2]/a')
+        date_time = datetime.now().timetuple()
+        for i in tr_list:
+            page_title = i.xpath('./@title')[0] if len(i.xpath('./@title')) > 0 else None
+            search_title = "코로나바이러스감염증-19 국내 발생 현황({M}월 {D}일, 0시 기준)".format(
+                M=date_time.tm_mon,
+                D=date_time.tm_mday
+            )
+            if page_title == search_title:
+                page_url = i.xpath('./@href')[0] if len(i.xpath('./@href')) > 0 else None
+
+                return page_url
+
+        return None
+
+    def save_html(self, html_str, save_type):
+        ''' 필요한 데이터 필터링 및 반환 (type: list)
+            * html_str = 응답코드
+        '''
+        html = etree.HTML(html_str)
+        data_set = []
+        # total
+        if save_type == 'total':
+            # 텍스트 문장 필터링 1
+            today_text1 = html.xpath('//*[@id="content_detail"]/div[1]/div[2]/p[3]/text()') if len(
+                html.xpath('//*[@id="content_detail"]/div[1]/div[2]/p[3]/text()')) > 0 else None
+            change_data = ''
+            for i in today_text1:
+                change_data += i
+            today_text1 = change_data
+            # 텍스트 문장 필터링 2
+            today_text2 = html.xpath('//*[@id="content_detail"]/div[1]/div[2]/p[5]//text()') if len(
+                html.xpath('//*[@id="content_detail"]/div[1]/div[2]/p[5]//text()')) > 0 else None
+            change_data = ''
+            for i in today_text2:
+                change_data += i
+            today_text2 = change_data
+
+            data = {}
+            # 해외유입
+            total_overseas = re.findall(r"\(해외유입 (.*?)명\)", today_text1)
+            data["total_overseas"] = re.sub(r'[,]', '', total_overseas[0])
+            data_set.append(data)
+
+            data = {}
+            # 총 확진
+            total_cumulative = re.findall(r"총 누적 확진자 수는 (.*?)명", today_text1)
+            data["total_cumulative"] = re.sub(r'[,]', '', total_cumulative[0])
+            # 격리해제
+            total_cure = re.findall(r"격리해제자는 \d*명으로 총 (.*?)명", today_text2)
+            data["total_cure"] = re.sub(r'[,]', '', total_cure[0])
+            # 사망
+            total_death = re.findall(r"누적 사망자는 (.*?)명", today_text2)
+            data["total_death"] = re.sub(r'[,]', '', total_death[0])
+            # 격리중
+            total_quarantine = re.findall(r"현재 (.*?)명이 격리", today_text2)
+            data["total_quarantine"] = re.sub(r'[,]', '', total_quarantine[0])
+
+            data_set.append(data)
+
+            return data_set
+        # 각 지역
+        else:
+            tr_list = html.xpath('//*[@id="content"]/div/div[5]/table/tbody/tr')
+            for i in tr_list:
+                data = {"country": i.xpath('./th/text()')[0] if len(i.xpath('./th/text()')) > 0 else None,
+                        "cure": i.xpath('./td[6]/text()')[0] if len(i.xpath('./td[6]/text()')) > 0 else None,
+                        "death": i.xpath('./td[7]/text()')[0] if len(i.xpath('./td[7]/text()')) > 0 else None,
+                        "quarantine": i.xpath('./td[5]/text()')[0] if len(i.xpath('./td[5]/text()')) > 0 else None,
+                        "cumulative": i.xpath('./td[4]/text()')[0] if len(i.xpath('./td[4]/text()')) > 0 else None}
+                data_set.append(data)
+
+            return data_set
+
+    def run(self):
+        title_html_str = self.parse_url(self.url_main + self.title_url)
+        today_data_url = self.search_url(title_html_str)
+        if today_data_url is None:
+            return None
+        # total data
+        today_html_str = self.parse_url(self.url_main + today_data_url)
+        today_data = self.save_html(today_html_str, 'total')
+
+        # 전국 각 지역
+        area_html_str = self.parse_url(self.area_data_url)
+        today_data += self.save_html(area_html_str, 'domestic')
+
+
+        return today_data
 
 
 class MysqlSave:
@@ -192,7 +313,15 @@ class MysqlSave:
     def run(self):
         '''실행'''
         # 1. 수집한 데이터값 받기
-        all_data = Crawling().run()
+        try:
+            all_data = Crawling2().run()
+            if all_data is None:
+                all_data = Crawling().run()
+        except Exception as err:
+            with open('../logs/Crawling_Error.log', 'a') as f:
+                f.write(time.strftime("%Y-%m-%d %H:%M:%S") + traceback.format_exc() + '\n' + '****' + '\n')
+            all_data = Crawling().run()
+
         # 2. 지역별 합계 데이터 업데이트 or 생성
         try:
             today_total = DomesticTotal.objects.get(create_time=date.today())
